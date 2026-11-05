@@ -137,13 +137,31 @@ closing the windows still leaves the application running in the tray.
 The desktop repository page provides **Update and shut down** before **Disconnect**.
 After native confirmation it snapshots every source belonging to the connected
 repository's local user and host, including manual sources, using that repository's
-configuration. Updates run sequentially through the bundled CLI and are recorded
-in the CLI logs, not the server task list. Failed commands, incomplete snapshots,
-ignored errors, and active server backups prevent shutdown. Identical snapshots
+running server, through the same `/api/v1/sources/upload` endpoint as ordinary
+snapshot updates. Updates run sequentially, with progress and logs available on
+the snapshot and task pages. Each update waits for a new matching snapshot task
+to succeed and for the source manager to refresh its snapshot status; an existing
+snapshot or an accepted upload request alone is not proof of completion.
+API requests first obtain the server's
+UI session cookie and matching CSRF token over certificate-verified HTTPS; CSRF
+checks remain enabled. A confirmed successful task permits shutdown even when
+error counters are nonzero or unavailable, or the snapshot is incomplete.
+Some files may therefore remain unbacked up; review errors on the task pages.
+Failed or canceled tasks, unconfirmed completion, and active server backups
+still prevent shutdown. No extra CLI `--fail-fast` flag is applied.
+Paused or unready sources must be resumed
+before starting. A request that produces no matching task within approximately
+60 seconds fails without shutdown; running backups are allowed to finish without
+a fixed duration limit. Identical snapshots
 may be skipped according to retention policy. Windows, macOS, and Linux schedule
 shutdown in 60 seconds without forcing applications closed; the OS must grant
 shutdown permission. Browser-only and multi-server pages do not offer this action.
 Rebuild the alternate UI, Kopia binary, and Electron package together.
+For desktop-only fixes, reuse the existing UI and Go binary and run
+`npm run build-electron-windows` from `app` on Windows. Run the source-request and
+shutdown regression tests with
+`node --test app/tests/server-sources.node.mjs app/tests/update-and-shutdown.node.mjs`
+from the repository root; these tests do not shut down the machine.
 
 KopiaUI is built using [Electron](https://electronjs.org) and packaged as native binary using [Electron Builder](https://electron.build). The app is just a shell that invokes `kopia server --ui` and connects the browser to it, plus it provides native system tray integration. Kopia executable is embedded as a resource inside KopiaUI app, to simplify usage.
 

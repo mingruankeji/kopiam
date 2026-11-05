@@ -34,7 +34,9 @@ Kopia Alternate UI 官方发布，也不代表上游项目的认可或支持。
   全部成功后调用系统关机命令；此功能仅在桌面版提供。
 
 “更新并关机”会实际关闭运行 KopiaUI 的电脑，请先保存其他程序中的工作。
-命令失败、检测到快照不完整或错误、存在活动备份任务时不会自动关机。
+任务失败、取消、无法确认完成或存在活动备份任务时不会自动关机。
+更新使用与普通快照更新相同的服务端接口和策略；任务成功结束后，即使有错误或快照不完整也允许关机，
+部分文件可能未备份，请查看任务日志。
 系统需要授予关机权限，成功调用后预留约 60 秒。详细行为见 [构建与功能说明](BUILD.md)。
 
 ### 仓库结构
@@ -143,8 +145,11 @@ It is not endorsed or supported by those projects.
   sources in the connected repository before requesting an OS shutdown.
 
 The shutdown action powers off the computer running KopiaUI. Save other work
-before confirming. Failed commands, detected incomplete or erroneous snapshots,
-and active backup tasks prevent automatic shutdown. OS shutdown permission is
+before confirming. Failed or canceled tasks, unconfirmed completion,
+and active backup tasks prevent automatic shutdown.
+Updates use the same server API and policy as ordinary snapshot updates;
+successful tasks permit shutdown even with file errors or incomplete snapshots.
+Some files may remain unbacked up; review task logs. OS shutdown permission is
 required, and a successful request provides approximately 60 seconds before shutdown.
 See [BUILD.md](BUILD.md) for details.
 

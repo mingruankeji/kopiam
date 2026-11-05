@@ -101,7 +101,7 @@ export function Header() {
       { link: "/tasks", label: t`Tasks`, icon: IconClipboardCheck },
       { link: "/preferences", label: t`Preferences`, icon: IconSettings },
       {
-        link: "ext:https://github.com/mingruankeji/kopia-alternate-ui-m",
+        link: "ext:https://github.com/mingruankeji/kopiam/",
         label: "GitHub",
         icon: IconBrandGithub
       }

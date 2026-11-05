@@ -303,18 +303,8 @@ registerUpdateAndShutdown({
   dialog,
   getRepository: repositoryForEvent,
   getSources: (id) => serverForRepo(id).getSources(),
-  getSnapshotCommand(id) {
-    const args = ["--config-file", path.resolve(configDir(), id + ".config")];
-    if (isPortableConfig()) {
-      args.push(
-        "--cache-directory",
-        path.resolve(configDir(), "cache", id),
-        "--log-dir",
-        path.resolve(configDir(), "logs", id),
-      );
-    }
-    return [defaultServerBinary(), args];
-  },
+  getTasks: (id) => serverForRepo(id).getTasks(),
+  startSnapshot: (id, source) => serverForRepo(id).startSnapshot(source),
   log,
 });
 
