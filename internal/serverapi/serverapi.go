@@ -93,6 +93,7 @@ const (
 	ErrorPathNotFound       APIErrorCode = "PATH_NOT_FOUND"
 	ErrorStorageConnection  APIErrorCode = "STORAGE_CONNECTION"
 	ErrorAccessDenied       APIErrorCode = "ACCESS_DENIED"
+	ErrorRestoreConflict    APIErrorCode = "RESTORE_CONFLICT"
 )
 
 // ErrorResponse represents error response.
@@ -241,6 +242,11 @@ type TaskLogResponse struct {
 type RestoreRequest struct {
 	Root string `json:"root"`
 
+	// CheckForConflicts requires confirmation before writing to an existing destination.
+	CheckForConflicts bool `json:"checkForConflicts,omitempty"`
+	// OverwriteConfirmed merges directories and overwrites files without incremental skipping.
+	OverwriteConfirmed bool `json:"overwriteConfirmed,omitempty"`
+
 	Filesystem *restore.FilesystemOutput `json:"fsOutput"`
 
 	ZipFile         string `json:"zipFile"`
@@ -289,11 +295,31 @@ type CLIInfo struct {
 
 // UIPreferences represents JSON object storing UI preferences.
 type UIPreferences struct {
-	BytesStringBase2       bool   `json:"bytesStringBase2"`       // If `true`, display storage values in base-2 (default is base-10)
-	DefaultSnapshotViewAll bool   `json:"defaultSnapshotViewAll"` // If `true` default to showing all snapshots (default is local snapshots)
-	Theme                  string `json:"theme"`                  // Specifies the theme used by the UI
-	FontSize               string `json:"fontSize"`               // Specifies the font size used by the UI
-	PageSize               int    `json:"pageSize"`               // A page size; the actual possible values will only be provided by the frontend
-	Language               string `json:"language"`               // Specifies the language used by the UI
-	Locale                 string `json:"locale"`                 // Specifies the locale used by the UI for formatting numbers and dates
+	BytesStringBase2       bool                `json:"bytesStringBase2"`       // If `true`, display storage values in base-2 (default is base-10)
+	DefaultSnapshotViewAll bool                `json:"defaultSnapshotViewAll"` // If `true` default to showing all snapshots (default is local snapshots)
+	Theme                  string              `json:"theme"`                  // Specifies the theme used by the UI
+	FontSize               string              `json:"fontSize"`               // Specifies the font size used by the UI
+	PageSize               int                 `json:"pageSize"`               // A page size; the actual possible values will only be provided by the frontend
+	Language               string              `json:"language"`               // Specifies the language used by the UI
+	Locale                 string              `json:"locale"`                 // Specifies the locale used by the UI for formatting numbers and dates
+	Restore                *RestorePreferences `json:"restore,omitempty"`
+}
+
+// RestorePreferences stores defaults for UI restores, excluding the destination.
+type RestorePreferences struct {
+	Type                   string `json:"type"`
+	Incremental            bool   `json:"incremental"`
+	ContinueOnErrors       bool   `json:"continueOnErrors"`
+	RestoreOwnership       bool   `json:"restoreOwnership"`
+	RestorePermissions     bool   `json:"restorePermissions"`
+	RestoreModTimes        bool   `json:"restoreModTimes"`
+	UncompressedZip        bool   `json:"uncompressedZip"`
+	OverwriteFiles         bool   `json:"overwriteFiles"`
+	OverwriteDirectories   bool   `json:"overwriteDirectories"`
+	OverwriteSymlinks      bool   `json:"overwriteSymlinks"`
+	IgnorePermissionErrors bool   `json:"ignorePermissionErrors"`
+	WriteFilesAtomically   bool   `json:"writeFilesAtomically"`
+	WriteSparseFiles       bool   `json:"writeSparseFiles"`
+	RestoreDirEntryAtDepth int32  `json:"restoreDirEntryAtDepth"`
+	MinSizeForPlaceholder  int32  `json:"minSizeForPlaceholder"`
 }

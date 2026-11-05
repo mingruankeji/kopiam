@@ -54,6 +54,16 @@ func handleSetUIPreferences(_ context.Context, rc requestContext) (any, *apiErro
 		return nil, requestError(serverapi.ErrorMalformedRequest, "malformed request")
 	}
 
+	if r := p.Restore; r != nil {
+		if r.Type != "directory" && r.Type != "zip" && r.Type != "tar" {
+			return nil, requestError(serverapi.ErrorMalformedRequest, "invalid restore format")
+		}
+
+		if r.RestoreDirEntryAtDepth < 0 || r.MinSizeForPlaceholder < 0 {
+			return nil, requestError(serverapi.ErrorMalformedRequest, "restore depth and placeholder size must not be negative")
+		}
+	}
+
 	if err := atomic.WriteFile(rc.srv.getOptions().UIPreferencesFile, bytes.NewReader(rc.body)); err != nil {
 		return nil, internalServerError(err)
 	}

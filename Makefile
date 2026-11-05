@@ -143,27 +143,16 @@ ifeq ($(GOOS)/$(GOARCH),linux/amd64)
 endif
 	$(MAYBE_XVFB) $(MAKE) -C app e2e-test
 
-# use this to test htmlui changes in full build of KopiaUI, this is rarely needed
-# except when testing htmlui specific features that only light up when running under Electron.
-#
-# You need to have 3 repositories checked out in parallel:
-#
-#   https://github.com/kopia/kopia
-#   https://github.com/kopia/htmlui
-#   https://github.com/kopia/htmluibuild
+# Build the bundled custom UI without changing the upstream module dependency.
+htmlui-build:
+	(cd htmlui && npm run build:kopia)
 
-kopia-ui-with-local-htmlui-changes:
-	(cd ../htmlui && npm run build && ./push_local.sh)
+kopia-ui-with-local-htmlui-changes: htmlui-build
 	rm -f $(kopia_ui_embedded_exe)
 	GOWORK=$(CURDIR)/tools/localhtmlui.work $(MAKE) kopia-ui
 
 install-with-local-htmlui-changes: export GOWORK=$(CURDIR)/tools/localhtmlui.work
-install-with-local-htmlui-changes:
-ifeq ($(GOOS),windows)
-	(cd ../htmlui && npm run build && push_local.cmd)
-else
-	(cd ../htmlui && npm run build && ./push_local.sh)
-endif
+install-with-local-htmlui-changes: htmlui-build
 	$(MAKE) install
 
 # build-current-os-noui compiles a binary for the current os/arch in the same location as goreleaser

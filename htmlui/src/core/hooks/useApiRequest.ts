@@ -1,0 +1,158 @@
+import { t } from "@lingui/core/macro";
+import { showNotification } from "@mantine/notifications";
+import { useCallback, useState } from "react";
+import type { ApiResponse } from "../types";
+
+export type ErrorInformation = {
+  title: string;
+  message?: string;
+  data?: unknown;
+};
+export type WithErrorCallback = {
+  onError: (error?: ErrorInformation) => void;
+};
+
+type UseApiRequestOptions<TResponse, TRequest = unknown> = {
+  action: (data?: TRequest) => Promise<ApiResponse<TResponse>>;
+  onReturn: (data: TResponse, request?: TRequest) => void;
+  handleError?: (data: ErrorInformation, request?: TRequest) => boolean;
+  showErrorAsNotification?: boolean;
+};
+
+type UseApiRequestReturn<TRequest = unknown> = {
+  error: ErrorInformation | undefined;
+  loading: boolean;
+  loadingKey?: string;
+  execute: (data?: TRequest, loadingKey?: string) => Promise<void>;
+};
+
+type LoadingProps = {
+  isLoading: boolean;
+  key?: string;
+};
+
+function useApiRequest<TResponse, TRequest>({
+  action,
+  onReturn,
+  handleError,
+  showErrorAsNotification = false
+}: UseApiRequestOptions<TResponse, TRequest>): UseApiRequestReturn<TRequest> {
+  const [loading, setLoading] = useState<LoadingProps>({ isLoading: false });
+  const [error, setError] = useState<ErrorInformation | undefined>();
+
+  const processError = useCallback(
+    (err: ErrorInformation, data?: TRequest) => {
+      if (showErrorAsNotification) {
+        showNotification({
+          title: err.title,
+          message: err.message,
+          color: "red"
+        });
+        return;
+      }
+      if (handleError) {
+        if (handleError(err, data)) {
+          setError(err);
+        }
+      } else {
+        setError(err);
+      }
+    },
+    [handleError, showErrorAsNotification]
+  );
+  // function processError(err: ErrorInformation, data?: TRequest) {
+  //   if (showErrorAsNotification) {
+  //     showNotification({
+  //       title: err.title,
+  //       message: err.message,
+  //       color: "red"
+  //     });
+  //     return;
+  //   }
+  //   if (handleError) {
+  //     if (handleError(err, data)) {
+  //       setError(err);
+  //     }
+  //   } else {
+  //     setError(err);
+  //   }
+  // }
+
+  const execute = useCallback(
+    async (data?: TRequest, loadingKey?: string) => {
+      try {
+        setLoading({ isLoading: true, key: loadingKey });
+        setError(undefined);
+        const response = await action(data);
+        if (!response.isError) {
+          onReturn(response.data!, data);
+          return;
+        } else {
+          const body: unknown = response.data;
+          const code =
+            body && typeof body === "object" && "code" in body && typeof body.code === "string" ? body.code : undefined;
+          const detail =
+            body && typeof body === "object" && "error" in body && typeof body.error === "string"
+              ? body.error
+              : undefined;
+          const err: ErrorInformation = {
+            title: response.responseCode === 401 ? t`401 Unauthorized` : code || t`Operation failed`,
+            message: detail || (typeof body === "string" ? body : t`Failed due to an unknown error`),
+            data: response.data
+          };
+
+          processError(err, data);
+        }
+      } catch (error: unknown) {
+        console.error(error);
+        const err: ErrorInformation = {
+          title: t`Operation failed`,
+          message: t`Failed due to an unknown error`
+        };
+        processError(err, data);
+      } finally {
+        setLoading({ isLoading: false, key: undefined });
+      }
+    },
+    [action, onReturn, processError]
+  );
+
+  // async function execute(data?: TRequest, loadingKey?: string) {
+  //   try {
+  //     setLoading({ isLoading: true, key: loadingKey });
+  //     setError(undefined);
+  //     const response = await action(data);
+  //     if (!response.isError) {
+  //       onReturn(response.data!, data);
+  //       return;
+  //     } else {
+  //       const dd = response?.data as { code: string; error: string };
+  //       const err: ErrorInformation = {
+  //         title: response.responseCode === 401 ? "401 Unauthorized" : dd.code || "Operation failed",
+  //         message: dd.error || "Failed due to an unknown error",
+  //         data: response.data
+  //       };
+
+  //       processError(err, data);
+  //     }
+  //   } catch (error: unknown) {
+  //     console.error(error);
+  //     const err: ErrorInformation = {
+  //       title: errorInfo?.title ?? "Operation failed",
+  //       message: errorInfo?.message ?? "Failed due to an unknown error"
+  //     };
+  //     processError(err, data);
+  //   } finally {
+  //     setLoading({ isLoading: false, key: undefined });
+  //   }
+  // }
+
+  return {
+    error,
+    loading: loading.isLoading,
+    loadingKey: loading.key,
+    execute
+  };
+}
+
+export default useApiRequest;

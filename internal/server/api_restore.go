@@ -4,6 +4,8 @@ import (
 	"archive/zip"
 	"context"
 	"encoding/json"
+	"io"
+	"net/http"
 	"os"
 
 	"github.com/pkg/errors"
@@ -42,6 +44,44 @@ func handleRestore(ctx context.Context, rc requestContext) (any, *apiError) {
 	rootEntry, err := snapshotfs.FilesystemEntryFromIDWithPath(ctx, rep, req.Root, false)
 	if err != nil {
 		return nil, requestError(serverapi.ErrorMalformedRequest, "invalid root entry")
+	}
+
+	if req.CheckForConflicts {
+		var target string
+
+		switch {
+		case req.Filesystem != nil:
+			target = req.Filesystem.TargetPath
+		case req.ZipFile != "":
+			target = req.ZipFile
+		case req.TarFile != "":
+			target = req.TarFile
+		default:
+			return nil, requestError(serverapi.ErrorMalformedRequest, "output not specified")
+		}
+
+		if target == "" {
+			return nil, requestError(serverapi.ErrorMalformedRequest, "destination not specified")
+		}
+
+		if !req.OverwriteConfirmed {
+			conflict, err := restoreDestinationConflict(target)
+			if err != nil {
+				return nil, internalServerError(err)
+			}
+
+			if conflict {
+				return nil, &apiError{http.StatusConflict, serverapi.ErrorRestoreConflict, target}
+			}
+		} else {
+			req.Options.Incremental = false
+
+			if req.Filesystem != nil {
+				req.Filesystem.OverwriteDirectories = true
+				req.Filesystem.OverwriteFiles = true
+				req.Filesystem.OverwriteSymlinks = true
+			}
+		}
 	}
 
 	var (
@@ -122,4 +162,36 @@ func handleRestore(ctx context.Context, rc requestContext) (any, *apiError) {
 	}
 
 	return task, nil
+}
+
+func restoreDestinationConflict(target string) (bool, error) {
+	st, err := os.Lstat(target)
+	if os.IsNotExist(err) {
+		return false, nil
+	}
+
+	if err != nil {
+		return false, errors.Wrap(err, "checking restore destination")
+	}
+
+	if !st.IsDir() {
+		return true, nil
+	}
+
+	f, err := os.Open(target)
+	if err != nil {
+		return false, errors.Wrap(err, "opening restore destination")
+	}
+	defer f.Close() //nolint:errcheck
+
+	_, err = f.Readdirnames(1)
+	if errors.Is(err, io.EOF) {
+		return false, nil
+	}
+
+	if err != nil {
+		return false, errors.Wrap(err, "reading restore destination")
+	}
+
+	return true, nil
 }

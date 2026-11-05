@@ -3,6 +3,8 @@ package server_test
 import (
 	"context"
 	"math"
+	"net/http"
+	"os"
 	"path/filepath"
 	"testing"
 	"time"
@@ -91,6 +93,102 @@ func TestRestoreSnapshots(t *testing.T) {
 				SkipOwners:      true,
 				SkipPermissions: true,
 			},
+		})
+
+		t.Run("FilesystemConflictConfirmation", func(t *testing.T) {
+			for _, overwrite := range []bool{false, true} {
+				for _, atomic := range []bool{false, true} {
+					target := testutil.TempDirectory(t)
+					req := &serverapi.RestoreRequest{
+						Root: string(id11),
+						Options: restore.Options{RestoreDirEntryAtDepth: math.MaxInt32, Incremental: true},
+						Filesystem: &restore.FilesystemOutput{
+							TargetPath: target, SkipOwners: true, SkipPermissions: true,
+							OverwriteFiles: overwrite, OverwriteDirectories: overwrite,
+							WriteFilesAtomically: atomic,
+						},
+						CheckForConflicts: true,
+					}
+					first, err := serverapi.Restore(ctx, cli, req)
+					require.NoError(t, err)
+					require.Equal(t, uitask.StatusSuccess, waitForTask(t, cli, first.TaskID, 30*time.Second).Status)
+
+					file := filepath.Join(target, "file1")
+					st, err := os.Stat(file)
+					require.NoError(t, err)
+					require.NoError(t, os.WriteFile(file, []byte{9, 9, 9}, 0o600))
+					require.NoError(t, os.Chtimes(file, st.ModTime(), st.ModTime()))
+					require.NoError(t, os.WriteFile(filepath.Join(target, "keep.txt"), []byte("keep"), 0o600))
+
+					var before, after serverapi.TaskListResponse
+					require.NoError(t, cli.Get(ctx, "tasks", nil, &before))
+					_, err = serverapi.Restore(ctx, cli, req)
+					var statusErr apiclient.HTTPStatusError
+					require.ErrorAs(t, err, &statusErr)
+					require.Equal(t, http.StatusConflict, statusErr.HTTPStatusCode)
+					require.NoError(t, cli.Get(ctx, "tasks", nil, &after))
+					require.Len(t, after.Tasks, len(before.Tasks))
+					content, err := os.ReadFile(file)
+					require.NoError(t, err)
+					require.Equal(t, []byte{9, 9, 9}, content)
+
+					req.OverwriteConfirmed = true
+					task, err := serverapi.Restore(ctx, cli, req)
+					require.NoError(t, err)
+					require.Equal(t, uitask.StatusSuccess, waitForTask(t, cli, task.TaskID, 30*time.Second).Status)
+					content, err = os.ReadFile(file)
+					require.NoError(t, err)
+					require.Equal(t, []byte{1, 2, 3}, content)
+					content, err = os.ReadFile(filepath.Join(target, "keep.txt"))
+					require.NoError(t, err)
+					require.Equal(t, "keep", string(content))
+					require.FileExists(t, filepath.Join(target, "dir1", "file2"))
+				}
+			}
+		})
+
+		t.Run("NewDestinationWithConflictChecks", func(t *testing.T) {
+			target := filepath.Join(testutil.TempDirectory(t), "new")
+			task, err := serverapi.Restore(ctx, cli, &serverapi.RestoreRequest{
+				Root: string(id11), CheckForConflicts: true,
+				Options: restore.Options{RestoreDirEntryAtDepth: math.MaxInt32},
+				Filesystem: &restore.FilesystemOutput{TargetPath: target, SkipOwners: true, SkipPermissions: true},
+			})
+			require.NoError(t, err)
+			require.Equal(t, uitask.StatusSuccess, waitForTask(t, cli, task.TaskID, 30*time.Second).Status)
+			require.FileExists(t, filepath.Join(target, "dir1", "file2"))
+		})
+
+		t.Run("ArchiveConflictConfirmation", func(t *testing.T) {
+			for _, format := range []string{"zip", "tar"} {
+				t.Run(format, func(t *testing.T) {
+					target := filepath.Join(testutil.TempDirectory(t), "existing."+format)
+					require.NoError(t, os.WriteFile(target, []byte("original"), 0o600))
+					req := &serverapi.RestoreRequest{
+						Root: string(id11), CheckForConflicts: true,
+						Options: restore.Options{RestoreDirEntryAtDepth: math.MaxInt32},
+					}
+					if format == "zip" {
+						req.ZipFile = target
+					} else {
+						req.TarFile = target
+					}
+					_, err := serverapi.Restore(ctx, cli, req)
+					var statusErr apiclient.HTTPStatusError
+					require.ErrorAs(t, err, &statusErr)
+					require.Equal(t, http.StatusConflict, statusErr.HTTPStatusCode)
+					content, err := os.ReadFile(target)
+					require.NoError(t, err)
+					require.Equal(t, "original", string(content))
+					req.OverwriteConfirmed = true
+					task, err := serverapi.Restore(ctx, cli, req)
+					require.NoError(t, err)
+					require.Equal(t, uitask.StatusSuccess, waitForTask(t, cli, task.TaskID, 30*time.Second).Status)
+					content, err = os.ReadFile(target)
+					require.NoError(t, err)
+					require.NotEqual(t, "original", string(content))
+				})
+			}
 		})
 
 		require.NoError(t, err)

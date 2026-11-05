@@ -1,0 +1,308 @@
+import { t } from "@lingui/core/macro";
+import { Trans } from "@lingui/react/macro";
+import { ActionIcon, Anchor, Badge, Button, Code, Container, Group, Stack, Text, Title, Tooltip } from "@mantine/core";
+import { showNotification } from "@mantine/notifications";
+import { IconArrowLeft, IconClick, IconFileDatabase, IconFileText, IconPin, IconTrash } from "@tabler/icons-react";
+import sortBy from "lodash.sortby";
+import type { DataTableSortStatus } from "mantine-datatable";
+import { useEffect, useMemo, useState } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router";
+import CLIEquivalent from "../core/CLIEquivalent";
+import { refreshButtonProps } from "../core/commonButtons";
+import { useAppContext } from "../core/context/AppContext";
+import { useServerInstanceContext } from "../core/context/ServerInstanceContext";
+import { DataGrid } from "../core/DataGrid/DataGrid";
+import { ErrorAlert } from "../core/ErrorAlert/ErrorAlert";
+import FormattedDate from "../core/FormattedDate";
+import useApiRequest from "../core/hooks/useApiRequest";
+import IconWrapper from "../core/IconWrapper";
+import SnapshotWarnings from "../core/SnapshotWarnings";
+import type { ItemAction, Snapshot, Snapshots, SourceInfo } from "../core/types";
+import { snapshotHistoryCommand } from "../utils/cliCommand";
+import sizeDisplayName from "../utils/formatSize";
+import RetentionBadge from "./components/RetentionBadge";
+import SnapshotCountControl from "./components/SnapshotCountControl";
+import SnapshotHistoryStats from "./components/SnapshotHistoryStats";
+import DeleteSnapshotModal from "./modals/DeleteSnapshotModal";
+import PinSnapshotModal from "./modals/PinSnapshotModal";
+import UpdateDescriptionModal from "./modals/UpdateDescriptionModal";
+
+function SnapshotHistory() {
+  const { kopiaService } = useServerInstanceContext();
+  const { pageSize: tablePageSize, bytesStringBase2, defaultSnapshotViewAll } = useAppContext();
+  const [searchParams] = useSearchParams();
+
+  const navigate = useNavigate();
+  const [data, setData] = useState<Snapshots>();
+  const [selectedRecords, setSelectedRecords] = useState<Snapshot[]>([]);
+  const [showAll, setShowAll] = useState(defaultSnapshotViewAll);
+  const [itemAction, setItemAction] = useState<ItemAction<Snapshot, "description" | "pin" | "delete">>();
+  const [pinAction, setPinAction] = useState<ItemAction<string, "pin">>();
+  const sourceInfo: SourceInfo = useMemo(() => {
+    return {
+      host: searchParams.get("host") as string,
+      userName: searchParams.get("userName") as string,
+      path: searchParams.get("path") as string
+    };
+  }, [searchParams]);
+  const [sortStatus, setSortStatus] = useState<DataTableSortStatus<Snapshot>>({
+    columnAccessor: "startTime",
+    direction: "desc"
+  });
+
+  const visibleData = useMemo(() => {
+    if (data?.snapshots === undefined) return [];
+
+    const filterable = [...data.snapshots];
+    const entries = sortBy(filterable, sortStatus.columnAccessor) as Snapshot[];
+    return sortStatus.direction === "desc" ? entries.reverse() : entries;
+  }, [data, sortStatus]);
+
+  const { error, execute, loading, loadingKey } = useApiRequest({
+    action: () =>
+      kopiaService.getSnapshot(
+        showAll
+          ? {
+              ...sourceInfo,
+              all: "1"
+            }
+          : sourceInfo
+      ),
+    onReturn(resp) {
+      setData(resp);
+    }
+  });
+
+  // biome-ignore lint/correctness/useExhaustiveDependencies: need-to-fix-later
+  useEffect(() => {
+    execute(undefined, "loading");
+  }, [showAll]);
+
+  return (
+    <Container fluid>
+      <Stack>
+        <Group justify="space-between">
+          <Group>
+            <ActionIcon variant="subtle" onClick={() => navigate(-1)}>
+              <IconArrowLeft size={24} />
+            </ActionIcon>
+            <Title order={1}>
+              <Trans>Snapshots</Trans>: {sourceInfo.path}
+            </Title>
+          </Group>
+          <Group>
+            {selectedRecords.length > 0 && (
+              <Button
+                size="xs"
+                leftSection={<IconTrash size={16} />}
+                color="red"
+                onClick={() => {
+                  setItemAction({ action: "delete" });
+                }}
+              >
+                <Trans>Delete Selected</Trans> ({selectedRecords.length})
+              </Button>
+            )}
+            <Button
+              loading={loading && loadingKey === "refresh"}
+              onClick={() => execute(undefined, "refresh")}
+              {...refreshButtonProps}
+            >
+              <Trans>Refresh</Trans>
+            </Button>
+          </Group>
+        </Group>
+
+        {data && (
+          <SnapshotCountControl
+            currentLength={data.snapshots.length}
+            totalLength={data.unfilteredCount}
+            uniqueCount={data.uniqueCount}
+            sourceInfo={sourceInfo}
+            showAll={showAll}
+            onShowAll={(sa) => setShowAll(sa)}
+          />
+        )}
+
+        <ErrorAlert error={error} />
+        <SnapshotHistoryStats sourceInfo={sourceInfo} />
+        <DataGrid
+          selectedRecords={selectedRecords}
+          onSelectedRecordsChange={setSelectedRecords}
+          loading={loading && loadingKey === "loading"}
+          records={visibleData}
+          noRecordsText={t`No snapshots taken`}
+          noRecordsIcon={<IconWrapper icon={IconFileDatabase} size={48} />}
+          pageSize={tablePageSize}
+          sortStatus={sortStatus}
+          onSortStatusChange={setSortStatus}
+          columns={[
+            {
+              accessor: "startTime",
+              title: t`Start Time`,
+              sortable: true,
+              width: 200,
+              render: (item) => (
+                <Anchor
+                  component={Link}
+                  to={`/snapshots/dir/${item.rootID}`}
+                  state={{ label: searchParams.get("path") }}
+                  td="none"
+                  fz="sm"
+                >
+                  <FormattedDate value={item.startTime} />
+                </Anchor>
+              )
+            },
+            {
+              accessor: "rootID",
+              title: t`Root`,
+              width: 300,
+              render: (item) => (
+                <Stack>
+                  <div>
+                    <Code fz="xs">{item.rootID}</Code>
+                  </div>
+                  {item.description && (
+                    <Tooltip label={item.description}>
+                      <Text truncate fz="xs">
+                        {item.description}
+                      </Text>
+                    </Tooltip>
+                  )}
+                  <SnapshotWarnings summary={item.summary} incomplete={item.incomplete} />
+                </Stack>
+              )
+            },
+            {
+              accessor: "retention",
+              title: t`Retention`,
+              visibleMediaQuery: (theme) => `(min-width: ${theme.breakpoints.lg})`,
+              render: (item) => {
+                return (
+                  <Group gap="xs">
+                    {item.retention.map((z) => (
+                      <RetentionBadge retention={z} key={z} />
+                    ))}
+                    {item.pins.map((p) => (
+                      <Badge
+                        tt="none"
+                        radius={5}
+                        rightSection={<IconPin size={14} />}
+                        onClick={() => {
+                          setPinAction({
+                            item: p,
+                            action: "pin"
+                          });
+                          setItemAction({ item: item, action: "pin" });
+                        }}
+                      >
+                        {p}
+                      </Badge>
+                    ))}
+                  </Group>
+                );
+              }
+            },
+            {
+              accessor: "summary.size",
+              title: t`Size`,
+              sortable: true,
+              textAlign: "center",
+              render: (item) => sizeDisplayName(item.summary.size, bytesStringBase2)
+            },
+            {
+              accessor: "summary.files",
+              title: t`Files`,
+              sortable: true,
+              textAlign: "center"
+            },
+            {
+              accessor: "summary.dirs",
+              title: t`Dirs`,
+              sortable: true,
+              textAlign: "center"
+            },
+            {
+              accessor: "actions",
+              title: <IconClick size={16} />,
+              width: "0%",
+              textAlign: "right",
+              render: (item) => (
+                <Group gap={4} justify="right" wrap="nowrap">
+                  <Tooltip label={t`Update description`}>
+                    <ActionIcon
+                      variant="subtle"
+                      color="blue.5"
+                      onClick={() =>
+                        setItemAction({
+                          item,
+                          action: "description"
+                        })
+                      }
+                    >
+                      <IconFileText size={18} />
+                    </ActionIcon>
+                  </Tooltip>
+                  <Tooltip label={t`Add pin to prevent snapshot deletion`}>
+                    <ActionIcon variant="subtle" color="grape.5" onClick={() => setItemAction({ item, action: "pin" })}>
+                      <IconPin size={18} />
+                    </ActionIcon>
+                  </Tooltip>
+                </Group>
+              )
+            }
+          ]}
+        />
+        <CLIEquivalent command={snapshotHistoryCommand(sourceInfo, showAll)} />
+      </Stack>
+      {itemAction?.action === "description" && itemAction?.item && (
+        <UpdateDescriptionModal
+          snapshot={itemAction.item}
+          onCancel={() => setItemAction(undefined)}
+          onUpdated={() => {
+            execute(null, "loading");
+            setItemAction(undefined);
+          }}
+        />
+      )}
+      {itemAction?.action === "pin" && itemAction?.item && (
+        <PinSnapshotModal
+          snapshot={itemAction.item}
+          pin={pinAction?.item}
+          onCancel={() => setItemAction(undefined)}
+          onUpdated={() => {
+            execute(null, "loading");
+            setItemAction(undefined);
+          }}
+        />
+      )}
+      {itemAction?.action == "delete" && selectedRecords.length > 0 && (
+        <DeleteSnapshotModal
+          onCancel={() => {
+            setItemAction(undefined);
+          }}
+          source={sourceInfo}
+          snapshots={selectedRecords}
+          isAll={selectedRecords.length === data?.unfilteredCount}
+          onDeleted={(deleteAll) => {
+            if (deleteAll) {
+              navigate(-1);
+            } else {
+              execute(undefined, "refresh");
+            }
+            setItemAction(undefined);
+            showNotification({
+              title: t`Snapshot(s) deleted`,
+              message: t`The snapshot(s) was delete successfully`,
+              color: "green"
+            });
+            setSelectedRecords([]);
+          }}
+        />
+      )}
+    </Container>
+  );
+}
+
+export default SnapshotHistory;

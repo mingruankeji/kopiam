@@ -1,0 +1,2748 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2025-12-23 16:50+0100\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:55
+msgid ".kopiaignore"
+msgstr ".kopiaignore"
+
+#: src/snapshot-history/components/SnapshotCountControl.tsx:23
+msgid "{currentLength} out of {totalLength}"
+msgstr "{currentLength} out of {totalLength}"
+
+#: src/core/Footer/Footer.tsx:53
+msgid "{failedTaskCount} task(s) failed"
+msgstr "{failedTaskCount} task(s) failed"
+
+#: src/i18n.ts:43
+msgid "{field} has an invalid value"
+msgstr "{field} has an invalid value"
+
+#: src/i18n.ts:39
+msgid "{field} is required"
+msgstr "{field} is required"
+
+#: src/i18n.ts:53
+msgid "{field} must be a valid URL"
+msgstr "{field} must be a valid URL"
+
+#: src/i18n.ts:49
+msgid "{field} must be at most {max} characters"
+msgstr "{field} must be at most {max} characters"
+
+#: src/core/DataGrid/DataGrid.tsx:82
+msgid "{from}–{to} of {totalRecords}"
+msgstr "{from}–{to} of {totalRecords}"
+
+#: src/core/Footer/Footer.tsx:60
+msgid "{inProgressTaskCount} task(s) in progress"
+msgstr "{inProgressTaskCount} task(s) in progress"
+
+#: src/core/Footer/Footer.tsx:46
+msgid "{successTaskCount} task(s) completed"
+msgstr "{successTaskCount} task(s) completed"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:150
+msgid "/my-data/path"
+msgstr "/my-data/path"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:110
+msgid "/some/path/here"
+msgstr "/some/path/here"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:74
+msgid "# of annual snapshots"
+msgstr "# of annual snapshots"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:44
+msgid "# of daily snapshots"
+msgstr "# of daily snapshots"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:34
+msgid "# of hourly snapshots"
+msgstr "# of hourly snapshots"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:24
+msgid "# of latest snapshots"
+msgstr "# of latest snapshots"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:64
+msgid "# of monthly snapshots"
+msgstr "# of monthly snapshots"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:54
+msgid "# of weekly snapshots"
+msgstr "# of weekly snapshots"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:16
+msgid "0 - no output"
+msgstr "0 - no output"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:17
+msgid "1 - minimal details"
+msgstr "1 - minimal details"
+
+#: src/snapshots/SnapshotsPage.tsx:175
+msgid "1 minute"
+msgstr "1 minute"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:26
+msgid "10 - maximum details"
+msgstr "10 - maximum details"
+
+#: src/snapshots/SnapshotsPage.tsx:173
+msgid "10 seconds"
+msgstr "10 seconds"
+
+#: src/snapshots/SnapshotsPage.tsx:172
+msgid "3 seconds"
+msgstr "3 seconds"
+
+#: src/snapshots/SnapshotsPage.tsx:174
+msgid "30 seconds"
+msgstr "30 seconds"
+
+#: src/core/hooks/useApiRequest.ts:99
+msgid "401 Unauthorized"
+msgstr "401 Unauthorized"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:21
+msgid "5 - normal details"
+msgstr "5 - normal details"
+
+#: src/snapshots/SnapshotsPage.tsx:176
+msgid "5 minutes"
+msgstr "5 minutes"
+
+#: src/preferences/NotificationsSection.tsx:51
+msgid "A test notification was send using the defined profile"
+msgstr "A test notification was send using the defined profile"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:36
+#: src/repo/sections/AzureBlobStorageRepo.tsx:80
+msgid "Access Key"
+msgstr "Access Key"
+
+#: src/repo/sections/AmazonS3Repo.tsx:41
+#: src/repo/sections/AmazonS3Repo.tsx:108
+msgid "Access Key ID"
+msgstr "Access Key ID"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:69
+msgid "Actions"
+msgstr "Actions"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:48
+msgid "Active"
+msgstr "Active"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:100
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:111
+#: src/preferences/modals/EmailModal.tsx:268
+#: src/preferences/modals/EmailModal.tsx:291
+#: src/preferences/modals/WebhookModal.tsx:219
+msgid "Add"
+msgstr "Add"
+
+#: src/snapshot-history/SnapshotHistory.tsx:247
+msgid "Add pin to prevent snapshot deletion"
+msgstr "Add pin to prevent snapshot deletion"
+
+#: src/core/SnapshotWarnings.tsx:39
+msgid "Additional failed entry details are not available."
+msgstr "Additional failed entry details are not available."
+
+#: src/repo/ConnectRepoSection.tsx:127
+#: src/repo/CreateRepoSection.tsx:136
+msgid "Advanced Options"
+msgstr "Advanced Options"
+
+#: src/policies/modals/PolicyModal/constants.ts:170
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:69
+msgid "After Folder"
+msgstr "After Folder"
+
+#: src/policies/modals/PolicyModal/constants.ts:184
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:74
+msgid "After Snapshot"
+msgstr "After Snapshot"
+
+#: src/tasks/TasksPage.tsx:113
+#: src/tasks/TasksPage.tsx:147
+msgid "All"
+msgstr "All"
+
+#: src/policies/PoliciesPage.tsx:145
+msgid "All Policies"
+msgstr "All Policies"
+
+#: src/snapshots/SnapshotsPage.tsx:185
+msgid "All Snapshots"
+msgstr "All Snapshots"
+
+#: src/repo/repoConstants.ts:37
+#: src/repo/sections/AmazonS3Repo.tsx:55
+msgid "Amazon S3 or Compatible Storage"
+msgstr "Amazon S3 or Compatible Storage"
+
+#: src/policies/modals/PolicyModal/constants.ts:112
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:72
+#: src/snapshot-history/components/RetentionBadge.tsx:15
+msgid "Annual"
+msgstr "Annual"
+
+#: src/preferences/PreferencesPage.tsx:21
+msgid "Appearance"
+msgstr "Appearance"
+
+#: src/policies/PoliciesPage.tsx:143
+msgid "Applicable Policies"
+msgstr "Applicable Policies"
+
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:30
+msgid "Are you sure you want to delete this policy?"
+msgstr "Are you sure you want to delete this policy?"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:89
+msgid "Are you sure you want to disconnect from this repository?"
+msgstr "Are you sure you want to disconnect from this repository?"
+
+#: src/repo/repoConstants.ts:49
+#: src/repo/sections/AzureBlobStorageRepo.tsx:47
+msgid "Azure Blob Storage"
+msgstr "Azure Blob Storage"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:37
+#: src/repo/sections/AzureBlobStorageRepo.tsx:87
+msgid "Azure Storage Domain"
+msgstr "Azure Storage Domain"
+
+#: src/repo/ConfigureRepoSection.tsx:304
+#: src/repo/ConnectRepoSection.tsx:154
+#: src/repo/CreateRepoSection.tsx:219
+msgid "Back"
+msgstr "Back"
+
+#: src/repo/repoConstants.ts:43
+#: src/repo/sections/BackblazeB2Repo.tsx:41
+msgid "Backblaze B2"
+msgstr "Backblaze B2"
+
+#: src/preferences/AppearanceSection.tsx:104
+msgid "Base-10 (KB, MB, GB, TB)"
+msgstr "Base-10 (KB, MB, GB, TB)"
+
+#: src/preferences/AppearanceSection.tsx:101
+msgid "Base-2 (KiB, MiB, GiB, TiB)"
+msgstr "Base-2 (KiB, MiB, GiB, TiB)"
+
+#: src/policies/modals/PolicyModal/constants.ts:163
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:28
+msgid "Before Folder"
+msgstr "Before Folder"
+
+#: src/policies/modals/PolicyModal/constants.ts:177
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:28
+msgid "Before Snapshot"
+msgstr "Before Snapshot"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:271
+msgid "Begin Restore"
+msgstr "Begin Restore"
+
+#: src/snapshot-directory/components/BrowseMountedDirectory.tsx:42
+msgid "Browse mounted directory"
+msgstr "Browse mounted directory"
+
+#: src/repo/sections/AmazonS3Repo.tsx:39
+#: src/repo/sections/AmazonS3Repo.tsx:68
+#: src/repo/sections/BackblazeB2Repo.tsx:30
+#: src/repo/sections/BackblazeB2Repo.tsx:54
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:30
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:54
+msgid "Bucket"
+msgstr "Bucket"
+
+#: src/repo/sections/SFTPServerRepo.tsx:232
+msgid "By default Kopia connects to the server using internal SSH client which supports limited options. Alternatively it may launch external password-less SSH command, which supports additional options, but is generally less efficient than the built-in client."
+msgstr "By default Kopia connects to the server using internal SSH client which supports limited options. Alternatively it may launch external password-less SSH command, which supports additional options, but is generally less efficient than the built-in client."
+
+#: src/preferences/AppearanceSection.tsx:98
+msgid "Byte representation"
+msgstr "Byte representation"
+
+#: src/tasks/components/TaskCounterGrid.tsx:59
+msgid "Bytes"
+msgstr "Bytes"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:57
+msgid "Cache Hit"
+msgstr "Cache Hit"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:66
+msgid "Cache Miss"
+msgstr "Cache Miss"
+
+#: src/tasks/components/TaskCounterGrid.tsx:39
+msgid "Cached Bytes"
+msgstr "Cached Bytes"
+
+#: src/snapshots/components/UploadingLoader.tsx:52
+msgid "Cached files"
+msgstr "Cached files"
+
+#: src/tasks/components/TaskCounterGrid.tsx:40
+msgid "Cached Files"
+msgstr "Cached Files"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:129
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:115
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:263
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:126
+#: src/preferences/modals/EmailModal.tsx:300
+#: src/preferences/modals/PushoverModal.tsx:152
+#: src/preferences/modals/WebhookModal.tsx:228
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:92
+#: src/snapshot-directory/modals/RestoreModal.tsx:268
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:78
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:83
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:72
+#: src/snapshots/modals/NewSnapshotModal.tsx:142
+#: src/snapshots/modals/TaskEstimationModal.tsx:79
+msgid "Cancel"
+msgstr "Cancel"
+
+#: src/snapshots/SnapshotsPage.tsx:386
+#: src/snapshots/SnapshotsPage.tsx:388
+msgid "Cancel snapshot"
+msgstr "Cancel snapshot"
+
+#: src/tasks/TaskDetailsPage.tsx:77
+msgid "Cancel task"
+msgstr "Cancel task"
+
+#: src/tasks/TasksPage.tsx:226
+msgctxt "cancel-operation"
+msgid "Cancel Task"
+msgstr "Cancel Task"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:57
+#: src/tasks/components/TaskSummaryDisplay.tsx:65
+msgid "Canceled after"
+msgstr "Canceled after"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:48
+#: src/tasks/components/TaskSummaryDisplay.tsx:76
+msgid "Canceling for"
+msgstr "Canceling for"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:72
+msgid "Canceling task"
+msgstr "Canceling task"
+
+#: src/preferences/modals/EmailModal.tsx:272
+msgid "Cc"
+msgstr "Cc"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:129
+msgid "Change policy parameters"
+msgstr "Change policy parameters"
+
+#: src/core/CLIEquivalent.tsx:80
+msgid "CLI equivalent"
+msgstr "CLI equivalent"
+
+#: src/policies/modals/PolicyCodeEditModal/PolicyCodeEditModal.tsx:32
+#: src/snapshots/modals/TaskEstimationModal.tsx:83
+msgid "Close"
+msgstr "Close"
+
+#: src/core/CLIEquivalent.tsx:104
+msgid "Command"
+msgstr "Command"
+
+#: src/policies/modals/PolicyModal/constants.ts:172
+#: src/policies/modals/PolicyModal/constants.ts:186
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:94
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:99
+msgid "Command Mode - After"
+msgstr "Command Mode - After"
+
+#: src/policies/modals/PolicyModal/constants.ts:165
+#: src/policies/modals/PolicyModal/constants.ts:179
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:53
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:57
+msgid "Command Mode - Before"
+msgstr "Command Mode - Before"
+
+#: src/core/CLIEquivalent.tsx:91
+msgid "Command shell"
+msgstr "Command shell"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:54
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:217
+msgid "Compression"
+msgstr "Compression"
+
+#: src/policies/modals/PolicyModal/constants.ts:145
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:23
+msgid "Compression Algorithm"
+msgstr "Compression Algorithm"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:148
+msgid "Config file"
+msgstr "Config file"
+
+#: src/repo/ConfigureRepoSection.tsx:294
+msgid "Configure Provider"
+msgstr "Configure Provider"
+
+#: src/repo/ConfigureRepoSection.tsx:312
+msgid "Configure repository"
+msgstr "Configure repository"
+
+#: src/repo/ConfigureRepoSection.tsx:313
+msgid "Configure the repository"
+msgstr "Configure the repository"
+
+#: src/repo/ConfigureRepoSection.tsx:294
+msgid "Configure the selected provider"
+msgstr "Configure the selected provider"
+
+#: src/policies/modals/PolicyModal/components/PolicyAccordionControl.tsx:22
+msgid "Configured"
+msgstr "Configured"
+
+#: src/repo/CreateRepoSection.tsx:126
+msgid "Confirm Repository Password"
+msgstr "Confirm Repository Password"
+
+#: src/repo/CreateRepoSection.tsx:127
+msgid "Confirm the repository password"
+msgstr "Confirm the repository password"
+
+#: src/repo/ConnectRepoSection.tsx:101
+msgid "Connect as"
+msgstr "Connect as"
+
+#: src/repo/ConnectRepoSection.tsx:132
+msgid "Connect in read-only mode"
+msgstr "Connect in read-only mode"
+
+#: src/repo/ConnectRepoSection.tsx:157
+msgid "Connect to repository"
+msgstr "Connect to repository"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:208
+msgid "Connected as"
+msgstr "Connected as"
+
+#: src/core/Footer/ConnectionInfo.tsx:56
+msgid "Connected to"
+msgstr "Connected to"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:34
+#: src/repo/sections/AzureBlobStorageRepo.tsx:60
+msgid "Container"
+msgstr "Container"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:169
+msgid "Continue on Errors"
+msgstr "Continue on Errors"
+
+#: src/core/CLIEquivalent.tsx:84
+#: src/snapshot-directory/SnapshotDirectory.tsx:167
+msgid "Copied"
+msgstr "Copied"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:167
+msgid "Copy"
+msgstr "Copy"
+
+#: src/core/CLIEquivalent.tsx:84
+msgid "Copy command"
+msgstr "Copy command"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:132
+#: src/preferences/modals/EmailModal.tsx:303
+#: src/preferences/modals/PushoverModal.tsx:155
+#: src/preferences/modals/WebhookModal.tsx:231
+msgid "Create"
+msgstr "Create"
+
+#: src/repo/ConfigureRepoSection.tsx:313
+msgid "Create a new repository"
+msgstr "Create a new repository"
+
+#: src/preferences/modals/EmailModal.tsx:179
+msgid "Create email notification"
+msgstr "Create email notification"
+
+#: src/preferences/NotificationsSection.tsx:70
+msgid "Create new"
+msgstr "Create new"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:74
+msgid "Create policy"
+msgstr "Create policy"
+
+#: src/preferences/modals/PushoverModal.tsx:97
+msgid "Create pushover notification"
+msgstr "Create pushover notification"
+
+#: src/repo/ConfigureRepoSection.tsx:312
+#: src/repo/CreateRepoSection.tsx:222
+msgid "Create repository"
+msgstr "Create repository"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:72
+msgid "Create snapshots at the specified times of day (24hr format)"
+msgstr "Create snapshots at the specified times of day (24hr format)"
+
+#: src/preferences/modals/WebhookModal.tsx:138
+msgid "Create webhook notification"
+msgstr "Create webhook notification"
+
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:32
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:68
+msgid "Credentials File"
+msgstr "Credentials File"
+
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:33
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:73
+msgid "Credentials JSON"
+msgstr "Credentials JSON"
+
+#: src/policies/modals/PolicyModal/constants.ts:141
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:82
+msgid "Cron Expressions"
+msgstr "Cron Expressions"
+
+#: src/core/context/ServerInstanceContext.tsx:94
+msgid "Currently browsing instance {currentName}"
+msgstr "Currently browsing instance {currentName}"
+
+#: src/policies/modals/PolicyModal/constants.ts:109
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:42
+#: src/snapshot-history/components/RetentionBadge.tsx:12
+msgid "Daily"
+msgstr "Daily"
+
+#: src/preferences/AppearanceSection.tsx:91
+msgid "Dark"
+msgstr "Dark"
+
+#: src/preferences/AppearanceSection.tsx:113
+msgid "Default page size"
+msgstr "Default page size"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:81
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyInheritYesNoPolicyInput.tsx:37
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:51
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyNumberInput.tsx:38
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyNumberSelect.tsx:43
+#: src/policies/modals/PolicyModal/policy-inputs/PolicySelect.tsx:37
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextInput.tsx:40
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:64
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:45
+#: src/policies/PoliciesPage.tsx:205
+msgid "Defined"
+msgstr "Defined"
+
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:41
+#: src/preferences/components/NotificationCard.tsx:89
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:82
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:88
+msgid "Delete"
+msgstr "Delete"
+
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:27
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:33
+msgid "Delete policy"
+msgstr "Delete policy"
+
+#: src/snapshot-history/SnapshotHistory.tsx:103
+msgid "Delete Selected"
+msgstr "Delete Selected"
+
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:41
+msgid "Delete snapshot?"
+msgstr "Delete snapshot?"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:60
+msgid "Deprecated"
+msgstr "Deprecated"
+
+#: src/i18n.ts:16
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:119
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:62
+#: src/tasks/TasksPage.tsx:215
+msgid "Description"
+msgstr "Description"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:70
+msgid "Description updated"
+msgstr "Description updated"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:148
+msgid "Destination"
+msgstr "Destination"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:102
+#: src/tasks/components/TaskCounterGrid.tsx:58
+msgid "Directories"
+msgstr "Directories"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:137
+#: src/snapshots/components/UploadingLoader.tsx:61
+msgid "Directory"
+msgstr "Directory"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:30
+msgid "Directory Ignored"
+msgstr "Directory Ignored"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:192
+msgid "Directory Options"
+msgstr "Directory Options"
+
+#: src/repo/sections/FileSystemRepo.tsx:25
+#: src/repo/sections/FileSystemRepo.tsx:46
+msgid "Directory Path"
+msgstr "Directory Path"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:21
+msgid "Directory Snapshotted"
+msgstr "Directory Snapshotted"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:120
+msgid "Directory to create policy for"
+msgstr "Directory to create policy for"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:241
+#: src/snapshot-history/SnapshotHistory.tsx:222
+msgid "Dirs"
+msgstr "Dirs"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:32
+msgid "Disable Parent Policy"
+msgstr "Disable Parent Policy"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:26
+msgid "Disable Parent Policy Evaluation"
+msgstr "Disable Parent Policy Evaluation"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:256
+msgid "Disable ZIP compression"
+msgstr "Disable ZIP compression"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:190
+#: src/repo/CreateRepoSection.tsx:182
+#: src/snapshots/SnapshotsPage.tsx:171
+msgid "Disabled"
+msgstr "Disabled"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:92
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:110
+msgid "Disconnect"
+msgstr "Disconnect"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:86
+msgid "Disconnect repository?"
+msgstr "Disconnect repository?"
+
+#: src/snapshot-history/components/SnapshotCountControl.tsx:32
+msgid "Displaying {textToDisplay} snapshots of"
+msgstr "Displaying {textToDisplay} snapshots of"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:257
+msgid "Do not compress when restoring to a ZIP file (faster)."
+msgstr "Do not compress when restoring to a ZIP file (faster)."
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:86
+msgid "Do not cross filesystem boundaries when creating a snapshot"
+msgstr "Do not cross filesystem boundaries when creating a snapshot"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:83
+msgid "Do NOT save a snapshot when no files have been changed"
+msgstr "Do NOT save a snapshot when no files have been changed"
+
+#: src/repo/sections/AmazonS3Repo.tsx:45
+#: src/repo/sections/AmazonS3Repo.tsx:88
+msgid "Do not verify TLS certificate"
+msgstr "Do not verify TLS certificate"
+
+#. placeholder {0}: snapshots.length
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:57
+msgid "Do you want to delete the selected <0>{0} snapshots</0>?"
+msgstr "Do you want to delete the selected <0>{0} snapshots</0>?"
+
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:53
+msgid "Do you want to delete the selected snapshot?"
+msgstr "Do you want to delete the selected snapshot?"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:33
+msgid "documentation on ignoring files."
+msgstr "documentation on ignoring files."
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:251
+msgid "Download"
+msgstr "Download"
+
+#: src/preferences/StatisticsSection.tsx:12
+msgid "Due to this being a local feature and not a feature in Kopia, these settings are only stored in the local browser. This means that switching browsers or instances you will have to re-apply the settings."
+msgstr "Due to this being a local feature and not a feature in Kopia, these settings are only stored in the local browser. This means that switching browsers or instances you will have to re-apply the settings."
+
+#: src/tasks/TaskDetailsPage.tsx:115
+msgid "Duration"
+msgstr "Duration"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:65
+msgid "e.g. .mp4"
+msgstr "e.g. .mp4"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:55
+msgid "e.g. .txt"
+msgstr "e.g. .txt"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:28
+msgid "e.g. /file.txt"
+msgstr "e.g. /file.txt"
+
+#: src/policies/PoliciesPage.tsx:223
+#: src/preferences/components/NotificationCard.tsx:71
+msgid "Edit"
+msgstr "Edit"
+
+#: src/preferences/modals/EmailModal.tsx:179
+msgid "Edit email notification"
+msgstr "Edit email notification"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:110
+msgid "Edit existing policy"
+msgstr "Edit existing policy"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:86
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:67
+msgid "Edit items"
+msgstr "Edit items"
+
+#: src/preferences/modals/PushoverModal.tsx:97
+msgid "Edit pushover notification"
+msgstr "Edit pushover notification"
+
+#: src/policies/modals/PolicyCodeEditModal/PolicyCodeEditModal.tsx:18
+msgid "Edit script"
+msgstr "Edit script"
+
+#: src/preferences/modals/WebhookModal.tsx:138
+msgid "Edit webhook notification"
+msgstr "Edit webhook notification"
+
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:16
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:91
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyInheritYesNoPolicyInput.tsx:46
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:59
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyNumberInput.tsx:41
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyNumberSelect.tsx:51
+#: src/policies/modals/PolicyModal/policy-inputs/PolicySelect.tsx:40
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextInput.tsx:43
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:94
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:75
+msgid "Effective"
+msgstr "Effective"
+
+#: src/preferences/NotificationsSection.tsx:84
+msgid "Email"
+msgstr "Email"
+
+#: src/preferences/modals/EmailModal.tsx:194
+msgid "email-1"
+msgstr "email-1"
+
+#: src/preferences/StatisticsSection.tsx:18
+msgid "Enable snapshot statistics"
+msgstr "Enable snapshot statistics"
+
+#: src/repo/CreateRepoSection.tsx:142
+msgid "Encryption"
+msgstr "Encryption"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:160
+msgid "Encryption Algorithm"
+msgstr "Encryption Algorithm"
+
+#: src/i18n.ts:21
+#: src/preferences/modals/PushoverModal.tsx:135
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#: src/repo/sections/RcloneRepo.tsx:49
+msgid "Enter <name-of-rclone-remote>:<path>"
+msgstr "Enter <name-of-rclone-remote>:<path>"
+
+#: src/repo/sections/AmazonS3Repo.tsx:109
+msgid "Enter access key ID"
+msgstr "Enter access key ID"
+
+#: src/repo/sections/BackblazeB2Repo.tsx:74
+msgid "Enter application or account key"
+msgstr "Enter application or account key"
+
+#: src/repo/sections/BackblazeB2Repo.tsx:68
+msgid "Enter application or account key ID"
+msgstr "Enter application or account key ID"
+
+#: src/repo/sections/AmazonS3Repo.tsx:69
+#: src/repo/sections/BackblazeB2Repo.tsx:55
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:55
+msgid "Enter bucket name"
+msgstr "Enter bucket name"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:61
+msgid "Enter container name"
+msgstr "Enter container name"
+
+#: src/repo/sections/FileSystemRepo.tsx:47
+msgid "Enter directory path where you want to store repository files"
+msgstr "Enter directory path where you want to store repository files"
+
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:69
+msgid "Enter name of credentials JSON file"
+msgstr "Enter name of credentials JSON file"
+
+#: src/repo/sections/AmazonS3Repo.tsx:102
+#: src/repo/sections/AzureBlobStorageRepo.tsx:76
+#: src/repo/sections/BackblazeB2Repo.tsx:61
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:61
+msgid "Enter object name prefix (optional)"
+msgstr "Enter object name prefix (optional)"
+
+#: src/repo/ConnectRepoSection.tsx:115
+msgid "Enter password to connect to server"
+msgstr "Enter password to connect to server"
+
+#: src/repo/sections/SFTPServerRepo.tsx:243
+msgid "Enter passwordless SSH command to execute (typically 'ssh')"
+msgstr "Enter passwordless SSH command to execute (typically 'ssh')"
+
+#: src/repo/sections/RcloneRepo.tsx:57
+msgid "Enter path to rclone executable"
+msgstr "Enter path to rclone executable"
+
+#: src/repo/sections/SFTPServerRepo.tsx:203
+msgid "Enter path to the key file"
+msgstr "Enter path to the key file"
+
+#: src/repo/sections/SFTPServerRepo.tsx:210
+msgid "Enter path to the known_hosts file"
+msgstr "Enter path to the known_hosts file"
+
+#: src/repo/sections/SFTPServerRepo.tsx:191
+msgid "Enter remote path to repository, e.g., '/mnt/data/repository'"
+msgstr "Enter remote path to repository, e.g., '/mnt/data/repository'"
+
+#: src/repo/ConnectRepoSection.tsx:106
+#: src/repo/CreateRepoSection.tsx:121
+msgid "Enter repository password"
+msgstr "Enter repository password"
+
+#: src/repo/CreateRepoSection.tsx:129
+msgid "Enter repository password again"
+msgstr "Enter repository password again"
+
+#: src/repo/sections/AmazonS3Repo.tsx:115
+#: src/repo/sections/AzureBlobStorageRepo.tsx:81
+msgid "Enter secret access key"
+msgstr "Enter secret access key"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:93
+msgid "Enter secret SAS token"
+msgstr "Enter secret SAS token"
+
+#: src/repo/sections/AmazonS3Repo.tsx:75
+msgid "Enter server address (e.g., s3.amazonaws.com)"
+msgstr "Enter server address (e.g., s3.amazonaws.com)"
+
+#: src/repo/sections/KopiaRepoServerRepo.tsx:47
+msgid "Enter server URL (https://<host>:port)"
+msgstr "Enter server URL (https://<host>:port)"
+
+#: src/repo/sections/AmazonS3Repo.tsx:46
+#: src/repo/sections/AmazonS3Repo.tsx:122
+msgid "Enter session token (optional)"
+msgstr "Enter session token (optional)"
+
+#: src/repo/sections/AmazonS3Repo.tsx:97
+msgid "Enter specific region (e.g., us-west-1) or leave empty"
+msgstr "Enter specific region (e.g., us-west-1) or leave empty"
+
+#: src/repo/sections/SFTPServerRepo.tsx:248
+msgid "Enter SSH command arguments ('user@host -s sftp' will be appended automatically)"
+msgstr "Enter SSH command arguments ('user@host -s sftp' will be appended automatically)"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:67
+msgid "Enter storage account name"
+msgstr "Enter storage account name"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:88
+msgid "Enter storage domain or leave empty for default 'blob.core.windows.net'"
+msgstr "Enter storage domain or leave empty for default 'blob.core.windows.net'"
+
+#: src/repo/sections/KopiaRepoServerRepo.tsx:53
+msgid "Enter trusted server certificate fingerprint printed at server startup"
+msgstr "Enter trusted server certificate fingerprint printed at server startup"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:97
+msgid "Entries over time"
+msgstr "Entries over time"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:59
+#: src/preferences/modals/EmailModal.tsx:207
+#: src/preferences/modals/PushoverModal.tsx:125
+#: src/preferences/modals/WebhookModal.tsx:166
+msgid "Error"
+msgstr "Error"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:196
+#: src/repo/CreateRepoSection.tsx:193
+msgid "Error Correction Algorithm"
+msgstr "Error Correction Algorithm"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:186
+#: src/repo/CreateRepoSection.tsx:180
+msgid "Error Correction Overhead"
+msgstr "Error Correction Overhead"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:44
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:214
+msgid "Error Handling"
+msgstr "Error Handling"
+
+#: src/snapshots/components/UploadingLoader.tsx:58
+#: src/tasks/components/TaskCounterGrid.tsx:41
+msgid "Errors"
+msgstr "Errors"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:54
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:95
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:58
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:100
+msgid "Essential (must succeed; default behavior), optional (failures are tolerated), or async (Kopia will start the action but not wait for it to finish)"
+msgstr "Essential (must succeed; default behavior), optional (failures are tolerated), or async (Kopia will start the action but not wait for it to finish)"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:152
+#: src/tasks/components/TaskKindDisplay.tsx:21
+msgid "Estimate"
+msgstr "Estimate"
+
+#: src/snapshots/modals/TaskEstimationModal.tsx:57
+msgid "Estimate snapshot"
+msgstr "Estimate snapshot"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:48
+msgid "Every"
+msgstr "Every"
+
+#: src/tasks/components/TaskCounterGrid.tsx:44
+msgid "Excluded Bytes"
+msgstr "Excluded Bytes"
+
+#: src/tasks/components/TaskCounterGrid.tsx:42
+msgid "Excluded Directories"
+msgstr "Excluded Directories"
+
+#: src/tasks/components/TaskCounterGrid.tsx:43
+msgid "Excluded Files"
+msgstr "Excluded Files"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:104
+#: src/tasks/TasksPage.tsx:135
+msgid "Failed"
+msgstr "Failed"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:38
+#: src/tasks/components/TaskSummaryDisplay.tsx:48
+msgid "Failed after"
+msgstr "Failed after"
+
+#: src/core/hooks/useApiRequest.ts:100
+#: src/core/hooks/useApiRequest.ts:110
+#: src/core/LocalPathInput.tsx:42
+#: src/snapshot-directory/components/BrowseMountedDirectory.tsx:26
+msgid "Failed due to an unknown error"
+msgstr "Failed due to an unknown error"
+
+#: src/core/SnapshotWarnings.tsx:26
+msgid "Failed entries"
+msgstr "Failed entries"
+
+#: src/policies/PoliciesPage.tsx:89
+msgid "Failed to find policy"
+msgstr "Failed to find policy"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:48
+msgid "File Ignored"
+msgstr "File Ignored"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:39
+msgid "File Snapshotted"
+msgstr "File Snapshotted"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:39
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:208
+#: src/snapshot-directory/SnapshotDirectory.tsx:235
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:101
+#: src/snapshot-history/SnapshotHistory.tsx:216
+#: src/tasks/components/TaskCounterGrid.tsx:57
+msgid "Files"
+msgstr "Files"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:34
+msgid "Files that are smaller than the provided value will not be compressed"
+msgstr "Files that are smaller than the provided value will not be compressed"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:44
+msgid "Files whose size exceeds the provided value will not be compressed"
+msgstr "Files whose size exceeds the provided value will not be compressed"
+
+#: src/tasks/components/TaskLogs.tsx:50
+#~ msgid "Filter matching lines"
+#~ msgstr "Filter matching lines"
+
+#: src/tasks/TaskDetailsPage.tsx:102
+msgid "Finished"
+msgstr "Finished"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:28
+#: src/tasks/components/TaskSummaryDisplay.tsx:36
+msgid "Finished in"
+msgstr "Finished in"
+
+#: src/core/DataGrid/DataGrid.tsx:85
+msgid "First page"
+msgstr "First page"
+
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:232
+msgid "Folder Actions"
+msgstr "Folder Actions"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:87
+msgid "Found an existing policy for"
+msgstr "Found an existing policy for"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:131
+msgid "From now"
+msgstr "From now"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:161
+msgid "General Options"
+msgstr "General Options"
+
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:32
+#: src/policies/PoliciesPage.tsx:147
+msgid "Global Policy"
+msgstr "Global Policy"
+
+#: src/repo/repoConstants.ts:31
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:41
+msgid "Google Cloud Storage"
+msgstr "Google Cloud Storage"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:166
+#: src/repo/CreateRepoSection.tsx:149
+msgid "Hash Algorithm"
+msgstr "Hash Algorithm"
+
+#: src/tasks/components/TaskCounterGrid.tsx:45
+msgid "Hashed Bytes"
+msgstr "Hashed Bytes"
+
+#: src/snapshots/components/UploadingLoader.tsx:49
+msgid "Hashed files"
+msgstr "Hashed files"
+
+#: src/tasks/components/TaskCounterGrid.tsx:46
+msgid "Hashed Files"
+msgstr "Hashed Files"
+
+#: src/preferences/modals/WebhookModal.tsx:199
+msgid "Headers"
+msgstr "Headers"
+
+#: src/repo/ConnectRepoSection.tsx:121
+msgid "Helps to distinguish between multiple connected repositories"
+msgstr "Helps to distinguish between multiple connected repositories"
+
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:45
+#: src/policies/PoliciesPage.tsx:195
+#: src/repo/sections/SFTPServerRepo.tsx:53
+#: src/repo/sections/SFTPServerRepo.tsx:161
+msgid "Host"
+msgstr "Host"
+
+#: src/repo/ConnectRepoSection.tsx:143
+#: src/repo/CreateRepoSection.tsx:208
+msgid "Hostname"
+msgstr "Hostname"
+
+#: src/policies/modals/PolicyModal/constants.ts:108
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:32
+#: src/snapshot-history/components/RetentionBadge.tsx:11
+msgid "Hourly"
+msgstr "Hourly"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:61
+msgid "How frequently to create snapshots in KopiaUI or Kopia server (has no effect outside of the server mode)"
+msgstr "How frequently to create snapshots in KopiaUI or Kopia server (has no effect outside of the server mode)"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:73
+msgid "How many annual snapshots to retain per source. The latest snapshot from each calendar year will be retained"
+msgstr "How many annual snapshots to retain per source. The latest snapshot from each calendar year will be retained"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:43
+msgid "How many daily snapshots to retain per source. The latest snapshot from each day will be retained"
+msgstr "How many daily snapshots to retain per source. The latest snapshot from each day will be retained"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:33
+msgid "How many hourly snapshots to retain per source. The latest snapshot from each hour will be retained"
+msgstr "How many hourly snapshots to retain per source. The latest snapshot from each hour will be retained"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:63
+msgid "How many monthly snapshots to retain per source. The latest snapshot from each calendar month will be retained"
+msgstr "How many monthly snapshots to retain per source. The latest snapshot from each calendar month will be retained"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:53
+msgid "How many weekly snapshots to retain per source. The latest snapshot from each week will be retained"
+msgstr "How many weekly snapshots to retain per source. The latest snapshot from each week will be retained"
+
+#: src/preferences/modals/EmailModal.tsx:242
+#: src/preferences/modals/PushoverModal.tsx:140
+#: src/preferences/modals/WebhookModal.tsx:190
+msgid "HTML Format"
+msgstr "HTML Format"
+
+#: src/i18n.ts:22
+#: src/preferences/modals/WebhookModal.tsx:176
+msgid "HTTP Method"
+msgstr "HTTP Method"
+
+#: src/repo/sections/WebDavRepo.tsx:50
+msgid "http[s]://server:port/path"
+msgstr "http[s]://server:port/path"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:67
+msgid "Ignore directories containing CACHEDIR.TAG and similar"
+msgstr "Ignore directories containing CACHEDIR.TAG and similar"
+
+#: src/policies/modals/PolicyModal/constants.ts:126
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:21
+msgid "Ignore Directory Errors"
+msgstr "Ignore Directory Errors"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:57
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:98
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:61
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:103
+msgid "Ignore failures"
+msgstr "Ignore failures"
+
+#: src/policies/modals/PolicyModal/constants.ts:125
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:30
+msgid "Ignore File Errors"
+msgstr "Ignore File Errors"
+
+#: src/policies/modals/PolicyModal/constants.ts:116
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:24
+msgid "Ignore Files"
+msgstr "Ignore Files"
+
+#: src/policies/modals/PolicyModal/constants.ts:121
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:76
+msgid "Ignore Files larger than"
+msgstr "Ignore Files larger than"
+
+#: src/policies/modals/PolicyModal/constants.ts:113
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:82
+msgid "Ignore Identical Snapshots"
+msgstr "Ignore Identical Snapshots"
+
+#: src/policies/modals/PolicyModal/constants.ts:118
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:50
+msgid "Ignore Rule Files"
+msgstr "Ignore Rule Files"
+
+#: src/policies/modals/PolicyModal/constants.ts:119
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:58
+msgid "Ignore Rule Files From Parent Directories"
+msgstr "Ignore Rule Files From Parent Directories"
+
+#: src/policies/modals/PolicyModal/constants.ts:117
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:41
+msgid "Ignore Rules From Parent Directories"
+msgstr "Ignore Rules From Parent Directories"
+
+#: src/policies/modals/PolicyModal/constants.ts:127
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:39
+msgid "Ignore Unknown Directory Entries"
+msgstr "Ignore Unknown Directory Entries"
+
+#: src/policies/modals/PolicyModal/constants.ts:120
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:66
+msgid "Ignore Well-Known Cache Directories"
+msgstr "Ignore Well-Known Cache Directories"
+
+#: src/core/SnapshotWarnings.tsx:44
+#: src/snapshots/components/UploadingLoader.tsx:58
+msgid "Ignored errors"
+msgstr "Ignored errors"
+
+#: src/tasks/components/TaskCounterGrid.tsx:50
+msgid "Ignored Errors"
+msgstr "Ignored Errors"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:101
+msgid "Immediately run any missed snapshots when kopia starts (only relevant for Time-of-day snapshots)"
+msgstr "Immediately run any missed snapshots when kopia starts (only relevant for Time-of-day snapshots)"
+
+#: src/core/SnapshotWarnings.tsx:21
+msgid "Incomplete snapshot"
+msgstr "Incomplete snapshot"
+
+#: src/policies/modals/PolicyModal/components/InheritYesNoPolicyControl.tsx:38
+msgid "Inherit"
+msgstr "Inherit"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:15
+msgid "Inherit from parent"
+msgstr "Inherit from parent"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:202
+msgid "Internal Compression"
+msgstr "Internal Compression"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:41
+msgid "JSON Representation"
+msgstr "JSON Representation"
+
+#: src/repo/sections/BackblazeB2Repo.tsx:32
+#: src/repo/sections/BackblazeB2Repo.tsx:73
+msgid "Key"
+msgstr "Key"
+
+#: src/repo/sections/SFTPServerRepo.tsx:60
+#: src/repo/sections/SFTPServerRepo.tsx:216
+msgid "Key Data"
+msgstr "Key Data"
+
+#: src/repo/sections/BackblazeB2Repo.tsx:31
+#: src/repo/sections/BackblazeB2Repo.tsx:67
+msgid "Key ID"
+msgstr "Key ID"
+
+#: src/tasks/TasksPage.tsx:145
+#: src/tasks/TasksPage.tsx:210
+msgid "Kind"
+msgstr "Kind"
+
+#: src/repo/sections/SFTPServerRepo.tsx:63
+#: src/repo/sections/SFTPServerRepo.tsx:222
+msgid "Known Hosts Data"
+msgstr "Known Hosts Data"
+
+#: src/repo/repoConstants.ts:73
+#: src/repo/sections/KopiaRepoServerRepo.tsx:34
+msgid "Kopia Repository Server"
+msgstr "Kopia Repository Server"
+
+#: src/core/Header/Header.tsx:228
+#: src/core/Header/SkeletonHeader.tsx:13
+msgid "Kopia UI"
+msgstr "Kopia UI"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:221
+msgid "Last Modification"
+msgstr "Last Modification"
+
+#: src/core/DataGrid/DataGrid.tsx:86
+msgid "Last page"
+msgstr "Last page"
+
+#: src/snapshots/SnapshotsPage.tsx:292
+msgid "Last Snapshot"
+msgstr "Last Snapshot"
+
+#: src/tasks/components/TaskLogs.tsx:62
+msgid "Latest 100 non-error logs and all errors"
+msgstr "Latest 100 non-error logs and all errors"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:181
+#: src/repo/CreateRepoSection.tsx:167
+msgid "Latest format"
+msgstr "Latest format"
+
+#: src/policies/modals/PolicyModal/constants.ts:107
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:22
+#: src/snapshot-history/components/RetentionBadge.tsx:10
+msgid "Latest Snapshots"
+msgstr "Latest Snapshots"
+
+#: src/repo/sections/SFTPServerRepo.tsx:64
+#: src/repo/sections/SFTPServerRepo.tsx:231
+msgid "Launch external password-less SSH command"
+msgstr "Launch external password-less SSH command"
+
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:63
+msgid "Leave empty to remove description"
+msgstr "Leave empty to remove description"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:181
+#: src/repo/CreateRepoSection.tsx:169
+msgid "Legacy format compatible with v0.8"
+msgstr "Legacy format compatible with v0.8"
+
+#: src/preferences/AppearanceSection.tsx:90
+msgid "Light"
+msgstr "Light"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:51
+msgid "List of additional files containing ignore rules (each file configures ignore rules for the directory and its subdirectories)"
+msgstr "List of additional files containing ignore rules (each file configures ignore rules for the directory and its subdirectories)"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:25
+msgid "List of file and directory names to ignore."
+msgstr "List of file and directory names to ignore."
+
+#: src/repo/repoConstants.ts:25
+#: src/repo/sections/FileSystemRepo.tsx:33
+msgid "Local Directory or NAS"
+msgstr "Local Directory or NAS"
+
+#: src/policies/PoliciesPage.tsx:144
+msgid "Local Path Policies"
+msgstr "Local Path Policies"
+
+#: src/snapshots/SnapshotsPage.tsx:186
+msgid "Local Snapshots"
+msgstr "Local Snapshots"
+
+#: src/preferences/AppearanceSection.tsx:127
+msgid "Locale"
+msgstr "Locale"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:67
+msgid "Log verbosity when a cache cannot be used and a file must be hashed"
+msgstr "Log verbosity when a cache cannot be used and a file must be hashed"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:58
+msgid "Log verbosity when a cache is used instead of uploading the file"
+msgstr "Log verbosity when a cache is used instead of uploading the file"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:31
+msgid "Log verbosity when a directory is ignored"
+msgstr "Log verbosity when a directory is ignored"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:22
+msgid "Log verbosity when a directory is snapshotted"
+msgstr "Log verbosity when a directory is snapshotted"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:49
+msgid "Log verbosity when a file, symbolic link, etc. is ignored"
+msgstr "Log verbosity when a file, symbolic link, etc. is ignored"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:40
+msgid "Log verbosity when a file, symbolic link, etc. is snapshotted"
+msgstr "Log verbosity when a file, symbolic link, etc. is snapshotted"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:79
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:235
+msgid "Logging"
+msgstr "Logging"
+
+#: src/core/context/LoginModal.tsx:83
+msgid "Login"
+msgstr "Login"
+
+#: src/core/context/LoginModal.tsx:48
+msgid "Login to {instanceName}"
+msgstr "Login to {instanceName}"
+
+#: src/core/Footer/ConnectionInfo.tsx:64
+msgid "Logout"
+msgstr "Logout"
+
+#: src/snapshots/SnapshotsPage.tsx:376
+#: src/snapshots/SnapshotsPage.tsx:378
+#: src/tasks/components/TaskLogs.tsx:59
+msgid "Logs"
+msgstr "Logs"
+
+#: src/preferences/modals/EmailModal.tsx:233
+msgid "Mail From"
+msgstr "Mail From"
+
+#: src/tasks/components/TaskKindDisplay.tsx:17
+msgid "Maintenance"
+msgstr "Maintenance"
+
+#: src/core/Header/Header.tsx:77
+msgid "Manage mounted snapshots"
+msgstr "Manage mounted snapshots"
+
+#: src/core/Header/Header.tsx:90
+msgid "Manage repository status and configuration"
+msgstr "Manage repository status and configuration"
+
+#: src/core/Header/Header.tsx:97
+msgid "Manage snapshot policies for this repository"
+msgstr "Manage snapshot policies for this repository"
+
+#: src/core/Header/Header.tsx:70
+msgid "Manage snapshots"
+msgstr "Manage snapshots"
+
+#: src/policies/modals/PolicyModal/constants.ts:140
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:109
+msgid "Manual Snapshots Only"
+msgstr "Manual Snapshots Only"
+
+#: src/tasks/components/TaskLogs.tsx:48
+#~ msgid "match"
+#~ msgstr "match"
+
+#: src/tasks/components/TaskLogs.tsx:49
+#~ msgid "matches"
+#~ msgstr "matches"
+
+#: src/policies/modals/PolicyModal/constants.ts:151
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:43
+msgid "Max File Size"
+msgstr "Max File Size"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:33
+msgid "max number of parallel file reads"
+msgstr "max number of parallel file reads"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:45
+msgid "Maximum file size in bytes"
+msgstr "Maximum file size in bytes"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:32
+msgid "Maximum number of files that will be read in parallel (defaults to the number of logical processors)"
+msgstr "Maximum number of files that will be read in parallel (defaults to the number of logical processors)"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:22
+msgid "Maximum number of snapshots that can be uploaded simultaneously"
+msgstr "Maximum number of snapshots that can be uploaded simultaneously"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:31
+msgid "Maximum Parallel File Reads"
+msgstr "Maximum Parallel File Reads"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:21
+msgid "Maximum Parallel Snapshots"
+msgstr "Maximum Parallel Snapshots"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:59
+msgid "Metadata Compression"
+msgstr "Metadata Compression"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:183
+msgid "Minimal File Size For Shallow Restore"
+msgstr "Minimal File Size For Shallow Restore"
+
+#: src/policies/modals/PolicyModal/constants.ts:150
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:33
+msgid "Minimum File Size"
+msgstr "Minimum File Size"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:35
+msgid "Minimum file size in bytes"
+msgstr "Minimum file size in bytes"
+
+#: src/i18n.ts:20
+#: src/preferences/components/NotificationCard.tsx:98
+#: src/preferences/modals/EmailModal.tsx:200
+#: src/preferences/modals/PushoverModal.tsx:118
+#: src/preferences/modals/WebhookModal.tsx:159
+msgid "Minimum Severity"
+msgstr "Minimum Severity"
+
+#: src/preferences/modals/EmailModal.tsx:201
+#: src/preferences/modals/PushoverModal.tsx:119
+#: src/preferences/modals/WebhookModal.tsx:160
+msgid "Minimum severity required to use this notification profile"
+msgstr "Minimum severity required to use this notification profile"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:84
+msgid "minute hour day month weekday #comment"
+msgstr "minute hour day month weekday #comment"
+
+#: src/policies/modals/PolicyModal/constants.ts:111
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:62
+#: src/snapshot-history/components/RetentionBadge.tsx:14
+msgid "Monthly"
+msgstr "Monthly"
+
+#: src/snapshot-directory/components/MountButton.tsx:39
+msgid "Mount"
+msgstr "Mount"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:85
+msgid "Mounted at"
+msgstr "Mounted at"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:52
+msgid "Mounted Snapshots"
+msgstr "Mounted Snapshots"
+
+#: src/core/Header/Header.tsx:74
+msgid "Mounts"
+msgstr "Mounts"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:23
+msgid "must be specified using global, user, or host policy"
+msgstr "must be specified using global, user, or host policy"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:56
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:97
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:60
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:102
+msgid "Must Succeed"
+msgstr "Must Succeed"
+
+#: src/i18n.ts:15
+#: src/preferences/modals/EmailModal.tsx:192
+#: src/preferences/modals/PushoverModal.tsx:110
+#: src/preferences/modals/WebhookModal.tsx:118
+#: src/preferences/modals/WebhookModal.tsx:151
+#: src/snapshot-directory/SnapshotDirectory.tsx:190
+msgid "Name"
+msgstr "Name"
+
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:77
+msgid "Name of the pin"
+msgstr "Name of the pin"
+
+#: src/policies/modals/PolicyModal/constants.ts:148
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:63
+msgid "Never Compress Extensions"
+msgstr "Never Compress Extensions"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:64
+msgid "Never compress the following file extensions (one extension per line)"
+msgstr "Never compress the following file extensions (one extension per line)"
+
+#: src/policies/PoliciesPage.tsx:167
+msgid "New Policy"
+msgstr "New Policy"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:90
+msgctxt "modal-title"
+msgid "New snapshot"
+msgstr "New snapshot"
+
+#: src/snapshots/components/NewSnapshotButton.tsx:33
+#: src/snapshots/SnapshotsPage.tsx:210
+msgid "New Snapshot"
+msgstr "New Snapshot"
+
+#: src/repo/ConfigureRepoSection.tsx:307
+msgid "Next"
+msgstr "Next"
+
+#: src/tasks/components/TaskLogs.tsx:52
+#~ msgid "Next match"
+#~ msgstr "Next match"
+
+#: src/core/DataGrid/DataGrid.tsx:88
+msgid "Next page"
+msgstr "Next page"
+
+#: src/snapshots/SnapshotsPage.tsx:297
+msgid "Next snapshot"
+msgstr "Next snapshot"
+
+#: src/policies/modals/PolicyModal/components/InheritYesNoPolicyControl.tsx:60
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:204
+msgid "No"
+msgstr "No"
+
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:33
+msgid "No don't delete it"
+msgstr "No don't delete it"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:184
+msgid "No entires matching your search"
+msgstr "No entires matching your search"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:184
+msgid "No entries in folder"
+msgstr "No entries in folder"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:36
+msgid "No error message given"
+msgstr "No error message given"
+
+#: src/preferences/modals/WebhookModal.tsx:202
+msgid "No headers defined"
+msgstr "No headers defined"
+
+#: src/tasks/components/TaskLogs.tsx:91
+msgid "No logs to display"
+msgstr "No logs to display"
+
+#: src/preferences/NotificationsSection.tsx:102
+msgid "No notifications defined"
+msgstr "No notifications defined"
+
+#: src/policies/PoliciesPage.tsx:184
+msgid "No policies found"
+msgstr "No policies found"
+
+#: src/preferences/modals/EmailModal.tsx:252
+#: src/preferences/modals/EmailModal.tsx:275
+msgid "No recepients defined"
+msgstr "No recepients defined"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:69
+msgid "No snapshots mounted"
+msgstr "No snapshots mounted"
+
+#: src/snapshot-history/SnapshotHistory.tsx:134
+#: src/snapshots/SnapshotsPage.tsx:236
+msgid "No snapshots taken"
+msgstr "No snapshots taken"
+
+#: src/tasks/TasksPage.tsx:185
+msgid "No tasks found"
+msgstr "No tasks found"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:50
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:63
+msgid "None"
+msgstr "None"
+
+#: src/policies/modals/PolicyModal/components/PolicyAccordionControl.tsx:29
+msgid "Not configured"
+msgstr "Not configured"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:74
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:107
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:55
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:88
+msgid "Not defined"
+msgstr "Not defined"
+
+#: src/i18n.ts:23
+#: src/preferences/modals/EmailModal.tsx:239
+#: src/preferences/modals/WebhookModal.tsx:187
+msgid "Notification Format"
+msgstr "Notification Format"
+
+#: src/preferences/PreferencesPage.tsx:27
+msgid "Notifications"
+msgstr "Notifications"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:23
+msgid "Number of the most recent snapshots to retain per source"
+msgstr "Number of the most recent snapshots to retain per source"
+
+#: src/repo/sections/AmazonS3Repo.tsx:47
+#: src/repo/sections/AmazonS3Repo.tsx:101
+#: src/repo/sections/AzureBlobStorageRepo.tsx:39
+#: src/repo/sections/AzureBlobStorageRepo.tsx:75
+#: src/repo/sections/BackblazeB2Repo.tsx:33
+#: src/repo/sections/BackblazeB2Repo.tsx:60
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:31
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:60
+msgid "Object Name Prefix"
+msgstr "Object Name Prefix"
+
+#: src/policies/modals/PolicyModal/constants.ts:146
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:53
+msgid "Only Compress Extensions"
+msgstr "Only Compress Extensions"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:54
+msgid "Only compress files with the following file extensions (one extension per line)"
+msgstr "Only compress files with the following file extensions (one extension per line)"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:110
+msgid "Only create snapshots manually (disables scheduled snapshots)"
+msgstr "Only create snapshots manually (disables scheduled snapshots)"
+
+#: src/repo/sections/SFTPServerRepo.tsx:78
+msgid "Only one of Password, Path to key file or Key Data must be set"
+msgstr "Only one of Password, Path to key file or Key Data must be set"
+
+#: src/repo/sections/SFTPServerRepo.tsx:117
+msgid "Only one of Path to known_hosts File or Known Hosts Data must be set"
+msgstr "Only one of Path to known_hosts File or Known Hosts Data must be set"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:35
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:76
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:35
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:81
+msgid "Open in large edit"
+msgstr "Open in large edit"
+
+#: src/core/hooks/useApiRequest.ts:99
+#: src/core/hooks/useApiRequest.ts:109
+#: src/core/LocalPathInput.tsx:41
+msgid "Operation failed"
+msgstr "Operation failed"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:74
+msgid "OS Snapshots"
+msgstr "OS Snapshots"
+
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:238
+msgid "Other"
+msgstr "Other"
+
+#: src/snapshots/SnapshotsPage.tsx:313
+msgid "Overdue"
+msgstr "Overdue"
+
+#: src/repo/sections/AmazonS3Repo.tsx:43
+#: src/repo/sections/AmazonS3Repo.tsx:96
+msgid "Override Region"
+msgstr "Override Region"
+
+#: src/repo/ConnectRepoSection.tsx:139
+#: src/repo/CreateRepoSection.tsx:204
+msgid "Override this when restoring a snapshot taken by another user"
+msgstr "Override this when restoring a snapshot taken by another user"
+
+#: src/repo/ConnectRepoSection.tsx:144
+#: src/repo/CreateRepoSection.tsx:209
+msgid "Override this when restoring a snapshot taken on another machine"
+msgstr "Override this when restoring a snapshot taken on another machine"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:223
+msgid "Overwrite Directories"
+msgstr "Overwrite Directories"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:216
+msgid "Overwrite Files"
+msgstr "Overwrite Files"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:230
+msgid "Overwrite Symbolic Links"
+msgstr "Overwrite Symbolic Links"
+
+#: src/snapshots/SnapshotsPage.tsx:265
+msgid "Owner"
+msgstr "Owner"
+
+#: src/core/context/LoginModal.tsx:66
+#: src/core/context/LoginModal.tsx:67
+#: src/i18n.ts:19
+#: src/repo/sections/SFTPServerRepo.tsx:58
+#: src/repo/sections/SFTPServerRepo.tsx:183
+#: src/repo/sections/SFTPServerRepo.tsx:184
+#: src/repo/sections/WebDavRepo.tsx:29
+#: src/repo/sections/WebDavRepo.tsx:57
+#: src/repo/sections/WebDavRepo.tsx:58
+msgid "Password"
+msgstr "Password"
+
+#: src/repo/ConfigureRepoSection.tsx:145
+msgid "Passwords does not match"
+msgstr "Passwords does not match"
+
+#: src/repo/sections/KopiaRepoTokenRepo.tsx:45
+msgid "Paste connection token"
+msgstr "Paste connection token"
+
+#: src/repo/sections/SFTPServerRepo.tsx:217
+msgid "Paste contents of the key file"
+msgstr "Paste contents of the key file"
+
+#: src/repo/sections/SFTPServerRepo.tsx:223
+msgid "Paste contents of the known_hosts file"
+msgstr "Paste contents of the known_hosts file"
+
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:74
+msgid "Paste JSON credentials here"
+msgstr "Paste JSON credentials here"
+
+#: src/i18n.ts:17
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:118
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:52
+#: src/policies/PoliciesPage.tsx:200
+#: src/repo/sections/SFTPServerRepo.tsx:56
+#: src/repo/sections/SFTPServerRepo.tsx:190
+#: src/snapshots/SnapshotsPage.tsx:244
+msgid "Path"
+msgstr "Path"
+
+#: src/repo/sections/SFTPServerRepo.tsx:59
+#: src/repo/sections/SFTPServerRepo.tsx:202
+msgid "Path to key file"
+msgstr "Path to key file"
+
+#: src/repo/sections/SFTPServerRepo.tsx:62
+#: src/repo/sections/SFTPServerRepo.tsx:209
+msgid "Path to known_hosts File"
+msgstr "Path to known_hosts File"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:108
+msgid "Path to snapshot"
+msgstr "Path to snapshot"
+
+#: src/snapshots/SnapshotsPage.tsx:367
+msgid "Pending"
+msgstr "Pending"
+
+#: src/policies/PoliciesPage.tsx:149
+msgid "Per-Host Policies"
+msgstr "Per-Host Policies"
+
+#: src/policies/PoliciesPage.tsx:148
+msgid "Per-User Policies"
+msgstr "Per-User Policies"
+
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:66
+msgid "Pin Snapshot"
+msgstr "Pin Snapshot"
+
+#: src/preferences/modals/EmailModal.tsx:241
+#: src/preferences/modals/PushoverModal.tsx:139
+#: src/preferences/modals/WebhookModal.tsx:189
+msgid "Plain Text Format"
+msgstr "Plain Text Format"
+
+#: src/core/Header/Header.tsx:94
+#: src/policies/PoliciesPage.tsx:137
+msgid "Policies"
+msgstr "Policies"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:85
+msgid "Policy Exists"
+msgstr "Policy Exists"
+
+#: src/repo/sections/SFTPServerRepo.tsx:54
+#: src/repo/sections/SFTPServerRepo.tsx:167
+msgid "Port"
+msgstr "Port"
+
+#: src/repo/sections/SFTPServerRepo.tsx:168
+msgid "Port number (e.g., 22)"
+msgstr "Port number (e.g., 22)"
+
+#: src/core/CLIEquivalent.tsx:94
+msgid "POSIX shell"
+msgstr "POSIX shell"
+
+#: src/core/CLIEquivalent.tsx:95
+msgid "PowerShell (Windows)"
+msgstr "PowerShell (Windows)"
+
+#: src/core/Header/Header.tsx:102
+#: src/preferences/PreferencesPage.tsx:14
+msgid "Preferences"
+msgstr "Preferences"
+
+#: src/preferences/AppearanceSection.tsx:63
+msgid "Preferences updated"
+msgstr "Preferences updated"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:27
+msgid "Prevents any parent policies from affecting this directory and its subdirectories"
+msgstr "Prevents any parent policies from affecting this directory and its subdirectories"
+
+#: src/tasks/components/TaskLogs.tsx:51
+#~ msgid "Previous match"
+#~ msgstr "Previous match"
+
+#: src/core/DataGrid/DataGrid.tsx:87
+msgid "Previous page"
+msgstr "Previous page"
+
+#: src/tasks/components/TaskCounterGrid.tsx:47
+msgid "Processed Bytes"
+msgstr "Processed Bytes"
+
+#: src/tasks/components/TaskCounterGrid.tsx:48
+msgid "Processed Files"
+msgstr "Processed Files"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:154
+msgid "Provider"
+msgstr "Provider"
+
+#: src/preferences/NotificationsSection.tsx:90
+msgid "Pushover"
+msgstr "Pushover"
+
+#: src/i18n.ts:24
+#: src/preferences/modals/PushoverModal.tsx:133
+msgid "Pushover App Token"
+msgstr "Pushover App Token"
+
+#: src/preferences/modals/PushoverModal.tsx:112
+msgid "pushover-1"
+msgstr "pushover-1"
+
+#: src/repo/sections/RcloneRepo.tsx:28
+#: src/repo/sections/RcloneRepo.tsx:56
+msgid "Rclone Executable Path"
+msgstr "Rclone Executable Path"
+
+#: src/repo/repoConstants.ts:61
+#: src/repo/sections/RcloneRepo.tsx:36
+msgid "Rclone Remote"
+msgstr "Rclone Remote"
+
+#: src/repo/sections/RcloneRepo.tsx:27
+#: src/repo/sections/RcloneRepo.tsx:48
+msgid "Rclone Remote Path"
+msgstr "Rclone Remote Path"
+
+#: src/repo/ConnectRepoSection.tsx:133
+msgid "Read-only mode prevents any changes to the repository"
+msgstr "Read-only mode prevents any changes to the repository"
+
+#: src/i18n.ts:25
+#: src/preferences/modals/PushoverModal.tsx:134
+msgid "Recipient User Key or Group Key"
+msgstr "Recipient User Key or Group Key"
+
+#: src/core/DataGrid/DataGrid.tsx:81
+msgid "Records per page"
+msgstr "Records per page"
+
+#: src/policies/PoliciesPage.tsx:174
+#: src/snapshot-directory/SnapshotDirectory.tsx:152
+#: src/snapshot-history/SnapshotHistory.tsx:111
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:59
+#: src/snapshots/SnapshotsPage.tsx:169
+#: src/snapshots/SnapshotsPage.tsx:217
+#: src/tasks/TasksPage.tsx:174
+msgid "Refresh"
+msgstr "Refresh"
+
+#: src/snapshots/SnapshotsPage.tsx:273
+msgid "Remote"
+msgstr "Remote"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:41
+#: src/preferences/modals/EmailModal.tsx:205
+#: src/preferences/modals/PushoverModal.tsx:123
+#: src/preferences/modals/WebhookModal.tsx:164
+msgid "Report"
+msgstr "Report"
+
+#: src/core/Header/Header.tsx:83
+#: src/tasks/components/TaskKindDisplay.tsx:19
+msgid "Repository"
+msgstr "Repository"
+
+#: src/repo/ConnectRepoSection.tsx:120
+msgid "Repository Description"
+msgstr "Repository Description"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:58
+msgid "Repository disconnected"
+msgstr "Repository disconnected"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:178
+#: src/repo/CreateRepoSection.tsx:165
+msgid "Repository Format"
+msgstr "Repository Format"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:140
+msgid "Repository is connected as read-only"
+msgstr "Repository is connected as read-only"
+
+#: src/repo/ConnectRepoSection.tsx:104
+#: src/repo/CreateRepoSection.tsx:119
+msgid "Repository Password"
+msgstr "Repository Password"
+
+#: src/snapshots/SnapshotsPage.tsx:151
+msgid "Repository synchronized"
+msgstr "Repository synchronized"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:114
+msgid "Resolve path"
+msgstr "Resolve path"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:144
+#: src/tasks/components/TaskKindDisplay.tsx:13
+msgid "Restore"
+msgstr "Restore"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:209
+msgid "Restore File Modification Time"
+msgstr "Restore File Modification Time"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:195
+msgid "Restore File Ownership"
+msgstr "Restore File Ownership"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:202
+msgid "Restore File Permissions"
+msgstr "Restore File Permissions"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:123
+msgid "Restore files and directories"
+msgstr "Restore files and directories"
+
+#: src/tasks/components/TaskCounterGrid.tsx:51
+msgid "Restored Bytes"
+msgstr "Restored Bytes"
+
+#: src/tasks/components/TaskCounterGrid.tsx:52
+msgid "Restored Directories"
+msgstr "Restored Directories"
+
+#: src/tasks/components/TaskCounterGrid.tsx:53
+msgid "Restored Files"
+msgstr "Restored Files"
+
+#: src/tasks/components/TaskCounterGrid.tsx:54
+msgid "Restored Symlinks"
+msgstr "Restored Symlinks"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:34
+#: src/snapshot-history/SnapshotHistory.tsx:179
+msgid "Retention"
+msgstr "Retention"
+
+#: src/snapshot-history/SnapshotHistory.tsx:159
+msgid "Root"
+msgstr "Root"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:59
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:100
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:63
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:105
+msgid "Run asynchronously, ignore failures"
+msgstr "Run asynchronously, ignore failures"
+
+#: src/policies/modals/PolicyModal/constants.ts:142
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:100
+msgid "Run Missed Snapshots on Startup"
+msgstr "Run Missed Snapshots on Startup"
+
+#: src/core/CLIEquivalent.tsx:111
+msgid "Run this command on the Kopia server with access to its repository configuration."
+msgstr "Run this command on the Kopia server with access to its repository configuration."
+
+#: src/tasks/TasksPage.tsx:124
+msgid "Running"
+msgstr "Running"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:19
+#: src/tasks/components/TaskSummaryDisplay.tsx:20
+msgid "Running for"
+msgstr "Running for"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:38
+#: src/repo/sections/AzureBlobStorageRepo.tsx:92
+msgid "SAS Token"
+msgstr "SAS Token"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:118
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:268
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:129
+#: src/preferences/AppearanceSection.tsx:154
+#: src/preferences/modals/EmailModal.tsx:303
+#: src/preferences/modals/PushoverModal.tsx:155
+#: src/preferences/modals/WebhookModal.tsx:231
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:92
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:75
+msgid "Save"
+msgstr "Save"
+
+#: src/core/LocalPathInput.tsx:21
+msgid "Save file"
+msgstr "Save file"
+
+#: src/policies/modals/PolicyModal/constants.ts:122
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:85
+msgid "Scan only one filesystem"
+msgstr "Scan only one filesystem"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:49
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:220
+msgid "Scheduling"
+msgstr "Scheduling"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:70
+msgid "Script to run after folder"
+msgstr "Script to run after folder"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:75
+msgid "Script to run after snapshot"
+msgstr "Script to run after snapshot"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:29
+msgid "Script to run before folder"
+msgstr "Script to run before folder"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:29
+msgid "Script to run before snapshot"
+msgstr "Script to run before snapshot"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:138
+msgid "Search files or folder (current level)"
+msgstr "Search files or folder (current level)"
+
+#: src/tasks/components/TaskLogs.tsx:71
+#: src/tasks/components/TaskLogs.tsx:72
+msgid "Search logs"
+msgstr "Search logs"
+
+#: src/tasks/TasksPage.tsx:164
+msgid "Search tasks"
+msgstr "Search tasks"
+
+#: src/repo/sections/AmazonS3Repo.tsx:42
+#: src/repo/sections/AmazonS3Repo.tsx:114
+msgid "Secret Access Key"
+msgstr "Secret Access Key"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:31
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:89
+msgid "See"
+msgstr "See"
+
+#: src/core/CLIEquivalent.tsx:66
+msgid "Select and copy the command manually."
+msgstr "Select and copy the command manually."
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:83
+msgid "Select compression algorithm"
+msgstr "Select compression algorithm"
+
+#: src/core/LocalPathInput.tsx:21
+msgid "Select directory"
+msgstr "Select directory"
+
+#: src/core/LocalPathInput.tsx:21
+msgid "Select file"
+msgstr "Select file"
+
+#: src/repo/ConfigureRepoSection.tsx:270
+msgid "Select Provider"
+msgstr "Select Provider"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:62
+msgid "Select Snapshot Frequency"
+msgstr "Select Snapshot Frequency"
+
+#: src/repo/ConfigureRepoSection.tsx:270
+msgid "Select the preferred storage type"
+msgstr "Select the preferred storage type"
+
+#: src/preferences/components/NotificationCard.tsx:82
+msgid "Send test notification"
+msgstr "Send test notification"
+
+#: src/preferences/modals/EmailModal.tsx:234
+msgid "sender email address"
+msgstr "sender email address"
+
+#: src/core/Footer/ConnectionInfo.tsx:36
+#: src/core/Footer/ConnectionInfo.tsx:50
+msgid "Server"
+msgstr "Server"
+
+#: src/repo/sections/KopiaRepoServerRepo.tsx:25
+#: src/repo/sections/KopiaRepoServerRepo.tsx:46
+msgid "Server address"
+msgstr "Server address"
+
+#: src/repo/sections/AmazonS3Repo.tsx:40
+#: src/repo/sections/AmazonS3Repo.tsx:74
+msgid "Server Endpoint"
+msgstr "Server Endpoint"
+
+#: src/repo/ConnectRepoSection.tsx:113
+msgid "Server Password"
+msgstr "Server Password"
+
+#: src/core/Footer/ConnectionInfo.tsx:84
+msgid "SERVERS"
+msgstr "SERVERS"
+
+#: src/repo/sections/AmazonS3Repo.tsx:121
+msgid "Session token"
+msgstr "Session token"
+
+#: src/preferences/StatisticsSection.tsx:11
+msgid "Settings stored locally"
+msgstr "Settings stored locally"
+
+#: src/repo/repoConstants.ts:55
+#: src/repo/sections/SFTPServerRepo.tsx:147
+msgid "SFTP Server"
+msgstr "SFTP Server"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:178
+msgid "Shallow Restore At Depth"
+msgstr "Shallow Restore At Depth"
+
+#: src/snapshot-history/components/SnapshotCountControl.tsx:40
+msgid "Show {totalLength} individual snapshots"
+msgstr "Show {totalLength} individual snapshots"
+
+#: src/preferences/AppearanceSection.tsx:147
+msgid "Show all snapshots by default"
+msgstr "Show all snapshots by default"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:227
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:91
+#: src/snapshot-history/SnapshotHistory.tsx:209
+#: src/snapshots/SnapshotsPage.tsx:283
+msgid "Size"
+msgstr "Size"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:88
+msgid "Size over time"
+msgstr "Size over time"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:164
+msgid "Skip previously restored files and symlinks"
+msgstr "Skip previously restored files and symlinks"
+
+#: src/tasks/components/TaskCounterGrid.tsx:55
+msgid "Skipped Bytes"
+msgstr "Skipped Bytes"
+
+#: src/tasks/components/TaskCounterGrid.tsx:56
+msgid "Skipped Files"
+msgstr "Skipped Files"
+
+#: src/preferences/modals/EmailModal.tsx:221
+msgid "SMTP Port"
+msgstr "SMTP Port"
+
+#: src/i18n.ts:26
+#: src/preferences/modals/EmailModal.tsx:216
+msgid "SMTP Server"
+msgstr "SMTP Server"
+
+#: src/preferences/modals/EmailModal.tsx:217
+msgid "SMTP server DNS name, e.g. smtp.gmail.com"
+msgstr "SMTP server DNS name, e.g. smtp.gmail.com"
+
+#: src/i18n.ts:28
+#: src/preferences/modals/EmailModal.tsx:230
+msgid "SMTP server password"
+msgstr "SMTP server password"
+
+#: src/preferences/modals/EmailModal.tsx:226
+msgid "SMTP server username, typically the email address"
+msgstr "SMTP server username, typically the email address"
+
+#: src/i18n.ts:27
+#: src/preferences/modals/EmailModal.tsx:225
+msgid "SMTP Username"
+msgstr "SMTP Username"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:129
+#: src/tasks/components/TaskKindDisplay.tsx:15
+msgid "Snapshot"
+msgstr "Snapshot"
+
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:229
+msgid "Snapshot Actions"
+msgstr "Snapshot Actions"
+
+#: src/policies/modals/PolicyModal/constants.ts:130
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:60
+msgid "Snapshot Frequency"
+msgstr "Snapshot Frequency"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:75
+msgid "Snapshot ID"
+msgstr "Snapshot ID"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:160
+msgid "Snapshot is mounted at the following path"
+msgstr "Snapshot is mounted at the following path"
+
+#: src/snapshots/SnapshotsPage.tsx:203
+#: src/snapshots/SnapshotsPage.tsx:410
+msgid "Snapshot logs"
+msgstr "Snapshot logs"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:159
+msgid "Snapshot Mounted"
+msgstr "Snapshot Mounted"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:167
+msgid "Snapshot now"
+msgstr "Snapshot now"
+
+#: src/snapshots/SnapshotsPage.tsx:334
+msgid "Snapshot Now"
+msgstr "Snapshot Now"
+
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:205
+msgid "Snapshot Retention"
+msgstr "Snapshot Retention"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:83
+msgid "Snapshot schedules using UNIX crontab syntax:"
+msgstr "Snapshot schedules using UNIX crontab syntax:"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:35
+msgid "Snapshot unmounted"
+msgstr "Snapshot unmounted"
+
+#: src/snapshot-history/SnapshotHistory.tsx:296
+msgid "Snapshot(s) deleted"
+msgstr "Snapshot(s) deleted"
+
+#: src/core/Header/Header.tsx:61
+#: src/core/Header/Header.tsx:67
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:83
+#: src/snapshot-history/SnapshotHistory.tsx:90
+#: src/snapshots/SnapshotsPage.tsx:164
+msgid "Snapshots"
+msgstr "Snapshots"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:80
+msgid "Snapshots by date"
+msgstr "Snapshots by date"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:24
+msgid "Specify compression algorithm to use when snapshotting files in this directory and subdirectories"
+msgstr "Specify compression algorithm to use when snapshotting files in this directory and subdirectories"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:64
+#: src/repo/CreateRepoSection.tsx:158
+msgid "Splitter"
+msgstr "Splitter"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:172
+msgid "Splitter Algorithm"
+msgstr "Splitter Algorithm"
+
+#: src/repo/sections/SFTPServerRepo.tsx:66
+#: src/repo/sections/SFTPServerRepo.tsx:247
+msgid "SSH Arguments"
+msgstr "SSH Arguments"
+
+#: src/repo/sections/SFTPServerRepo.tsx:65
+#: src/repo/sections/SFTPServerRepo.tsx:242
+msgid "SSH Command"
+msgstr "SSH Command"
+
+#: src/repo/sections/SFTPServerRepo.tsx:162
+msgid "SSH host name (e.g., example.com)"
+msgstr "SSH host name (e.g., example.com)"
+
+#: src/snapshot-history/SnapshotHistory.tsx:142
+#: src/tasks/TasksPage.tsx:196
+msgid "Start Time"
+msgstr "Start Time"
+
+#: src/tasks/TaskDetailsPage.tsx:89
+msgid "Started"
+msgstr "Started"
+
+#: src/preferences/PreferencesPage.tsx:30
+msgid "Statistics"
+msgstr "Statistics"
+
+#: src/core/Header/Header.tsx:88
+#: src/tasks/TasksPage.tsx:205
+msgid "Status"
+msgstr "Status"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:35
+#: src/repo/sections/AzureBlobStorageRepo.tsx:66
+msgid "Storage Account"
+msgstr "Storage Account"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:32
+#: src/preferences/modals/EmailModal.tsx:204
+#: src/preferences/modals/PushoverModal.tsx:122
+#: src/preferences/modals/WebhookModal.tsx:163
+msgid "Success"
+msgstr "Success"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:91
+msgid "supported format details."
+msgstr "supported format details."
+
+#: src/core/context/ServerInstanceContext.tsx:93
+msgid "Switched instance"
+msgstr "Switched instance"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:103
+msgid "Symlinks"
+msgstr "Symlinks"
+
+#: src/snapshots/SnapshotsPage.tsx:226
+msgid "Sync"
+msgstr "Sync"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:139
+msgid "Tar File"
+msgstr "Tar File"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:61
+msgid "Task canceled"
+msgstr "Task canceled"
+
+#: src/tasks/TasksPage.tsx:67
+msgid "Task cancelled"
+msgstr "Task cancelled"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:43
+msgid "Task failed"
+msgstr "Task failed"
+
+#: src/tasks/TasksPage.tsx:191
+msgid "Task ID"
+msgstr "Task ID"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:16
+msgid "Task in progress"
+msgstr "Task in progress"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:32
+msgid "Task succeeded"
+msgstr "Task succeeded"
+
+#: src/core/Header/Header.tsx:101
+#: src/tasks/TasksPage.tsx:100
+msgid "Tasks"
+msgstr "Tasks"
+
+#: src/preferences/NotificationsSection.tsx:50
+msgid "Test notification sent"
+msgstr "Test notification sent"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:71
+msgid "The repository description was successfully updated"
+msgstr "The repository description was successfully updated"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:59
+msgid "The repository was successfully disconnected"
+msgstr "The repository was successfully disconnected"
+
+#: src/snapshots/SnapshotsPage.tsx:152
+msgid "The repository was synchronized successfully"
+msgstr "The repository was synchronized successfully"
+
+#: src/snapshot-history/SnapshotHistory.tsx:297
+msgid "The snapshot(s) was delete successfully"
+msgstr "The snapshot(s) was delete successfully"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:36
+msgid "The snapshout was unmounted from the host"
+msgstr "The snapshout was unmounted from the host"
+
+#: src/tasks/TasksPage.tsx:68
+msgid "The task was cancelled"
+msgstr "The task was cancelled"
+
+#: src/preferences/AppearanceSection.tsx:88
+msgid "Theme"
+msgstr "Theme"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:42
+msgid "This is the internal representation of a policy"
+msgstr "This is the internal representation of a policy"
+
+#: src/policies/modals/PolicyModal/constants.ts:138
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:71
+msgid "Time Of Day"
+msgstr "Time Of Day"
+
+#: src/policies/modals/PolicyModal/constants.ts:171
+#: src/policies/modals/PolicyModal/constants.ts:185
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:85
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:90
+msgid "Timeout - After"
+msgstr "Timeout - After"
+
+#: src/policies/modals/PolicyModal/constants.ts:164
+#: src/policies/modals/PolicyModal/constants.ts:178
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:44
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:48
+msgid "Timeout - Before"
+msgstr "Timeout - Before"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:45
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:86
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:49
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:91
+msgid "Timeout in seconds before Kopia kills the process"
+msgstr "Timeout in seconds before Kopia kills the process"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:119
+msgid "Times of upcoming snapshots calculated based on policy parameters"
+msgstr "Times of upcoming snapshots calculated based on policy parameters"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:128
+msgid "Timestamp"
+msgstr "Timestamp"
+
+#: src/preferences/modals/EmailModal.tsx:249
+msgctxt "email-to"
+msgid "To"
+msgstr "To"
+
+#: src/repo/sections/KopiaRepoTokenRepo.tsx:24
+#: src/repo/sections/KopiaRepoTokenRepo.tsx:43
+msgid "Token"
+msgstr "Token"
+
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:22
+msgid "Treat directory read errors as non-fatal"
+msgstr "Treat directory read errors as non-fatal"
+
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:31
+msgid "Treat file errors as non-fatal"
+msgstr "Treat file errors as non-fatal"
+
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:40
+msgid "Treat unrecognized/unsupported directory entries as non-fatal errors."
+msgstr "Treat unrecognized/unsupported directory entries as non-fatal errors."
+
+#: src/repo/sections/KopiaRepoServerRepo.tsx:26
+#: src/repo/sections/KopiaRepoServerRepo.tsx:52
+msgid "Trusted server certificate fingerprint (SHA256)"
+msgstr "Trusted server certificate fingerprint (SHA256)"
+
+#: src/snapshot-directory/components/BrowseMountedDirectory.tsx:25
+msgid "Unable to browse mounted directory"
+msgstr "Unable to browse mounted directory"
+
+#: src/core/CLIEquivalent.tsx:66
+msgid "Unable to copy command"
+msgstr "Unable to copy command"
+
+#: src/core/CLIEquivalent.tsx:35
+#: src/core/CLIEquivalent.tsx:42
+#: src/core/CLIEquivalent.tsx:50
+msgid "Unable to load CLI information"
+msgstr "Unable to load CLI information"
+
+#: src/preferences/modals/EmailModal.tsx:193
+#: src/preferences/modals/PushoverModal.tsx:111
+#: src/preferences/modals/WebhookModal.tsx:152
+msgid "Unique name for this notification profile"
+msgstr "Unique name for this notification profile"
+
+#: src/core/context/AppContext.tsx:111
+#: src/core/context/LoginModal.tsx:44
+msgid "Unknown"
+msgstr "Unknown"
+
+#: src/repo/ConfigureRepoSection.tsx:115
+msgid "Unknown provider"
+msgstr "Unknown provider"
+
+#: src/snapshot-directory/components/MountButton.tsx:49
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:93
+msgid "Unmount"
+msgstr "Unmount"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:118
+msgid "Upcoming Snapshots"
+msgstr "Upcoming Snapshots"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:130
+msgid "Update"
+msgstr "Update"
+
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:50
+#: src/snapshot-history/SnapshotHistory.tsx:233
+msgid "Update description"
+msgstr "Update description"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:70
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:81
+msgid "Update items"
+msgstr "Update items"
+
+#: src/preferences/AppearanceSection.tsx:62
+msgid "Updated"
+msgstr "Updated"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:84
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:223
+msgid "Upload"
+msgstr "Upload"
+
+#: src/snapshots/components/UploadingLoader.tsx:55
+msgid "Uploaded bytes"
+msgstr "Uploaded bytes"
+
+#: src/tasks/components/TaskCounterGrid.tsx:49
+msgid "Uploaded Bytes"
+msgstr "Uploaded Bytes"
+
+#: src/snapshots/components/UploadingLoader.tsx:17
+msgid "Uploading"
+msgstr "Uploading"
+
+#: src/preferences/modals/WebhookModal.tsx:173
+msgid "URL Endpoint"
+msgstr "URL Endpoint"
+
+#: src/repo/sections/AmazonS3Repo.tsx:44
+#: src/repo/sections/AmazonS3Repo.tsx:82
+msgid "Use HTTP connection (insecure)"
+msgstr "Use HTTP connection (insecure)"
+
+#: src/repo/repoConstants.ts:79
+#: src/repo/sections/KopiaRepoTokenRepo.tsx:32
+msgid "Use Repository Token"
+msgstr "Use Repository Token"
+
+#: src/repo/ConnectRepoSection.tsx:107
+#: src/repo/CreateRepoSection.tsx:122
+msgid "Used to encrypt content of the repository"
+msgstr "Used to encrypt content of the repository"
+
+#: src/repo/sections/SFTPServerRepo.tsx:55
+#: src/repo/sections/SFTPServerRepo.tsx:176
+msgid "User"
+msgstr "User"
+
+#: src/core/context/LoginModal.tsx:60
+#: src/core/context/LoginModal.tsx:62
+#: src/i18n.ts:18
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:39
+#: src/policies/PoliciesPage.tsx:190
+#: src/repo/ConnectRepoSection.tsx:138
+#: src/repo/CreateRepoSection.tsx:203
+#: src/repo/sections/SFTPServerRepo.tsx:177
+#: src/repo/sections/WebDavRepo.tsx:28
+#: src/repo/sections/WebDavRepo.tsx:55
+#: src/repo/sections/WebDavRepo.tsx:55
+msgid "Username"
+msgstr "Username"
+
+#: src/preferences/modals/EmailModal.tsx:151
+#: src/preferences/modals/EmailModal.tsx:165
+#: src/preferences/modals/WebhookModal.tsx:125
+msgid "Value"
+msgstr "Value"
+
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:27
+msgid "Value defined in policy"
+msgstr "Value defined in policy"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:24
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:26
+msgid "Value is required"
+msgstr "Value is required"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:81
+msgid "Value is too short"
+msgstr "Value is too short"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:23
+#: src/preferences/modals/EmailModal.tsx:203
+#: src/preferences/modals/PushoverModal.tsx:121
+#: src/preferences/modals/WebhookModal.tsx:162
+msgid "Verbose"
+msgstr "Verbose"
+
+#: src/snapshots/SnapshotsPage.tsx:346
+msgid "View Policy"
+msgstr "View Policy"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:50
+#: src/preferences/modals/EmailModal.tsx:206
+#: src/preferences/modals/PushoverModal.tsx:124
+#: src/preferences/modals/WebhookModal.tsx:165
+msgid "Warning"
+msgstr "Warning"
+
+#: src/repo/repoConstants.ts:67
+#: src/repo/sections/WebDavRepo.tsx:37
+msgid "WebDAV Server"
+msgstr "WebDAV Server"
+
+#: src/repo/sections/WebDavRepo.tsx:27
+#: src/repo/sections/WebDavRepo.tsx:49
+msgid "WebDAV Server URL"
+msgstr "WebDAV Server URL"
+
+#: src/preferences/NotificationsSection.tsx:78
+msgid "Webhook"
+msgstr "Webhook"
+
+#: src/preferences/modals/WebhookModal.tsx:153
+msgid "webhook-1"
+msgstr "webhook-1"
+
+#: src/policies/modals/PolicyModal/constants.ts:110
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:52
+#: src/snapshot-history/components/RetentionBadge.tsx:13
+msgid "Weekly"
+msgstr "Weekly"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:170
+msgid "When a restore error occurs, attempt to continue instead of failing fast"
+msgstr "When a restore error occurs, attempt to continue instead of failing fast"
+
+#: src/preferences/StatisticsSection.tsx:19
+msgid "When enabled, will show snapshot statistics"
+msgstr "When enabled, will show snapshot statistics"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:42
+msgid "When set, ignore rules from the parent directory are ignored"
+msgstr "When set, ignore rules from the parent directory are ignored"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:77
+msgid "When set, the files larger than the specified size are ignored (specified in bytes)"
+msgstr "When set, the files larger than the specified size are ignored (specified in bytes)"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:59
+msgid "When set, the files specifying ignore rules (.kopiaignore, etc.) from the parent directory are ignored"
+msgstr "When set, the files specifying ignore rules (.kopiaignore, etc.) from the parent directory are ignored"
+
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:68
+msgid "Wipe all snapshots and the policy for this source"
+msgstr "Wipe all snapshots and the policy for this source"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:237
+msgid "Write files atomically"
+msgstr "Write files atomically"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:244
+msgid "Write Sparse Files"
+msgstr "Write Sparse Files"
+
+#: src/policies/modals/PolicyModal/components/InheritYesNoPolicyControl.tsx:49
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:204
+msgid "Yes"
+msgstr "Yes"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:149
+msgid "You can also restore to a .zip or .tar file by providing the appropriate extension"
+msgstr "You can also restore to a .zip or .tar file by providing the appropriate extension"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:138
+msgid "Zip File"
+msgstr "Zip File"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:254
+msgid "Zip options"
+msgstr "Zip options"

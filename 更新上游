@@ -1,0 +1,6 @@
+# 首次设置：git remote add upstream https://github.com/kopia/kopia.git
+# 先提交本地改动，再执行以下命令；保留 htmlui 自定义页面，不导入 UI 上游。
+$env:http_proxy="http://127.0.0.1:7897"
+$env:https_proxy="http://127.0.0.1:7897"
+git fetch upstream
+git merge upstream/master

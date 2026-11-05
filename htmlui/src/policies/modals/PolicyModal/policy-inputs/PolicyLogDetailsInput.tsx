@@ -1,0 +1,71 @@
+import { t } from "@lingui/core/macro";
+import { AccordionItem, AccordionPanel, Group } from "@mantine/core";
+import NumberSelect from "../../../../core/NumberSelect";
+import PolicyAccordionControl from "../components/PolicyAccordionControl";
+import PolicyEffectiveLabel from "../components/PolicyEffectiveLabel";
+import type { PolicyInput } from "../types";
+
+type Props = {
+  id: string;
+  title: string;
+  description: string;
+  effective?: number;
+} & PolicyInput;
+const logDetailsOptions = () => [
+  { label: t`Inherit from parent`, value: "" },
+  { label: t`0 - no output`, value: "0" },
+  { label: t`1 - minimal details`, value: "1" },
+  { label: "2", value: "2" },
+  { label: "3", value: "3" },
+  { label: "4", value: "4" },
+  { label: t`5 - normal details`, value: "5" },
+  { label: "6", value: "6" },
+  { label: "7", value: "7" },
+  { label: "8", value: "8" },
+  { label: "9", value: "9" },
+  { label: t`10 - maximum details`, value: "10" }
+];
+
+export default function PolicyLogDetailsInput({
+  id,
+  title,
+  description,
+  form,
+  formKey,
+  effective,
+  effectiveDefinedIn
+}: Props) {
+  const inputProps = form.getInputProps(formKey);
+  const effectiveValue = inputProps.value || effective || "";
+  const isDefined = inputProps.value || effective;
+  return (
+    <AccordionItem value={id}>
+      <PolicyAccordionControl
+        title={title}
+        description={description}
+        isConfigured={inputProps.value !== undefined && inputProps.value !== ""}
+      />
+      <AccordionPanel>
+        <Group grow align="flex-start">
+          <NumberSelect
+            label={t`Defined`}
+            data={logDetailsOptions()}
+            withCheckIcon={false}
+            defaultIfNotSet=""
+            {...inputProps}
+          />
+          <NumberSelect
+            label={
+              effectiveDefinedIn && isDefined ? <PolicyEffectiveLabel sourceInfo={effectiveDefinedIn} /> : t`Effective`
+            }
+            data={logDetailsOptions()}
+            withCheckIcon={false}
+            readOnly
+            value={effectiveValue}
+            variant="filled"
+          />
+        </Group>
+      </AccordionPanel>
+    </AccordionItem>
+  );
+}

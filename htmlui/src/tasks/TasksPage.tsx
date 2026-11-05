@@ -1,0 +1,249 @@
+import { t } from "@lingui/core/macro";
+import { Trans } from "@lingui/react/macro";
+import {
+  ActionIcon,
+  Anchor,
+  Button,
+  Center,
+  Container,
+  Divider,
+  Group,
+  SegmentedControl,
+  Stack,
+  TextInput,
+  Title,
+  Tooltip
+} from "@mantine/core";
+import { useDebouncedValue, useInputState } from "@mantine/hooks";
+import { showNotification } from "@mantine/notifications";
+import {
+  IconBan,
+  IconCircleXFilled,
+  IconClick,
+  IconList,
+  IconLoader,
+  IconSearch,
+  IconSettingsAutomation
+} from "@tabler/icons-react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router";
+import { refreshButtonProps } from "../core/commonButtons";
+import { useAppContext } from "../core/context/AppContext";
+import { useServerInstanceContext } from "../core/context/ServerInstanceContext";
+import { DataGrid } from "../core/DataGrid/DataGrid";
+import { ErrorAlert } from "../core/ErrorAlert/ErrorAlert";
+import useApiRequest from "../core/hooks/useApiRequest";
+import IconWrapper from "../core/IconWrapper";
+import { MenuButton } from "../core/MenuButton/MenuButton";
+import RelativeDate from "../core/RelativeDate";
+import type { TaskList } from "../core/types";
+import { onlyUnique } from "../utils/onlyUnique";
+import TaskKindDisplay from "./components/TaskKindDisplay";
+import TaskStatusDisplay from "./components/TaskStatusDisplay";
+
+type StatusFilter = "all" | "running" | "failed";
+
+function TasksPage() {
+  const { kopiaService } = useServerInstanceContext();
+  const { pageSize: tablePageSize } = useAppContext();
+  const [searchParams] = useSearchParams();
+  const [data, setData] = useState<TaskList>();
+  const [kindFilter, setKindFilter] = useState<string>(searchParams.get("kind") ?? "all");
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
+  const [query, setQuery] = useInputState("");
+  const [debouncedQuery] = useDebouncedValue(query, 200);
+  const getTasks = useCallback(() => kopiaService.getTasks(), [kopiaService]);
+  const loadAction = useApiRequest({
+    action: getTasks,
+    onReturn: setData
+  });
+
+  const cancelTaskAction = useApiRequest({
+    showErrorAsNotification: true,
+    action: (tid?: string) => kopiaService.cancelTask(tid!),
+    onReturn() {
+      loadAction.execute(undefined, "refresh");
+      showNotification({
+        title: t`Task cancelled`,
+        message: t`The task was cancelled`,
+        color: "green"
+      });
+    }
+  });
+
+  useEffect(() => {
+    loadAction.execute(undefined, "loading");
+  }, [loadAction.execute]);
+
+  const visibleTasks = useMemo(() => {
+    let items = [...(data?.tasks || [])];
+
+    if (kindFilter != "all") {
+      items = items.filter((x) => x.kind === kindFilter);
+    }
+
+    if (statusFilter != "all") {
+      items = items.filter((x) => x.status === statusFilter?.toUpperCase());
+    }
+
+    if (debouncedQuery !== "") {
+      items = items.filter((x) => x.description.indexOf(debouncedQuery) !== -1);
+    }
+
+    return items;
+  }, [data, kindFilter, statusFilter, debouncedQuery]);
+
+  return (
+    <Container fluid>
+      <Stack>
+        <Title order={1}>
+          <Trans>Tasks</Trans>
+        </Title>
+        <Group justify="space-between" align="flex-end">
+          <Group>
+            <SegmentedControl
+              value={statusFilter}
+              onChange={(val) => setStatusFilter(val as StatusFilter)}
+              data={[
+                {
+                  label: (
+                    <Center style={{ gap: 10 }}>
+                      <IconList size={16} />
+                      <span>
+                        <Trans>All</Trans>
+                      </span>
+                    </Center>
+                  ),
+                  value: "all"
+                },
+                {
+                  label: (
+                    <Center style={{ gap: 10 }}>
+                      <IconLoader size={16} color="var(--mantine-color-blue-5)" />
+                      <span>
+                        <Trans>Running</Trans>
+                      </span>
+                    </Center>
+                  ),
+                  value: "running"
+                },
+                {
+                  label: (
+                    <Center style={{ gap: 10 }}>
+                      <IconCircleXFilled color="var(--mantine-color-red-5)" size={16} />
+                      <span>
+                        <Trans>Failed</Trans>
+                      </span>
+                    </Center>
+                  ),
+                  value: "failed"
+                }
+              ]}
+            />
+            <MenuButton
+              value={kindFilter}
+              prefix={t`Kind` + ":"}
+              options={[
+                { label: t`All`, value: "all" },
+                { label: "", value: "divider" },
+                ...(data?.tasks || [])
+                  .map((x) => x.kind)
+                  .filter(onlyUnique)
+                  .map((x) => ({
+                    label: <TaskKindDisplay kind={x} />,
+                    value: x
+                  }))
+              ]}
+              onClick={setKindFilter}
+              disabled={loadAction.loading}
+            />
+          </Group>
+          <Group>
+            <TextInput
+              size="sm"
+              placeholder={t`Search tasks`}
+              leftSection={<IconSearch size={18} />}
+              value={query}
+              onChange={setQuery}
+            />
+            <Button
+              loading={loadAction.loading && loadAction.loadingKey === "refresh"}
+              onClick={() => loadAction.execute(undefined, "refresh")}
+              {...refreshButtonProps}
+            >
+              <Trans>Refresh</Trans>
+            </Button>
+          </Group>
+        </Group>
+        <Divider />
+
+        <ErrorAlert error={loadAction.error} />
+
+        <DataGrid
+          loading={loadAction.loading && loadAction.loadingKey === "loading"}
+          records={visibleTasks}
+          noRecordsText={t`No tasks found`}
+          noRecordsIcon={<IconWrapper icon={IconSettingsAutomation} size={48} />}
+          pageSize={tablePageSize}
+          columns={[
+            {
+              accessor: "id",
+              title: t`Task ID`,
+              width: 75
+            },
+            {
+              accessor: "startTime",
+              title: t`Start Time`,
+              render: (item) => (
+                <Anchor component={Link} to={`/tasks/${item.id}`} td="none">
+                  <RelativeDate value={item.startTime} />
+                </Anchor>
+              )
+            },
+            {
+              accessor: "status",
+              title: t`Status`,
+              render: (item) => <TaskStatusDisplay task={item} />
+            },
+            {
+              accessor: "kind",
+              title: t`Kind`,
+              render: (item) => <TaskKindDisplay kind={item.kind} />
+            },
+            {
+              accessor: "description",
+              title: t`Description`,
+              visibleMediaQuery: (theme) => `(min-width: ${theme.breakpoints.md})`
+            },
+            {
+              accessor: "actions",
+              title: <IconClick size={16} />,
+              width: "0%",
+              textAlign: "right",
+              render: (item) =>
+                item.status === "RUNNING" && (
+                  <Tooltip
+                    label={t({
+                      context: "cancel-operation",
+                      message: "Cancel Task"
+                    })}
+                  >
+                    <ActionIcon
+                      variant="subtle"
+                      color="red.5"
+                      onClick={() => cancelTaskAction.execute(item.id, item.id)}
+                      loading={cancelTaskAction.loading && cancelTaskAction.loadingKey === item.id}
+                    >
+                      <IconBan size={18} />
+                    </ActionIcon>
+                  </Tooltip>
+                )
+            }
+          ]}
+        />
+      </Stack>
+    </Container>
+  );
+}
+
+export default TasksPage;

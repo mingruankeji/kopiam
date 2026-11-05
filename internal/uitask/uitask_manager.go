@@ -15,7 +15,7 @@ import (
 
 const (
 	maxFinishedTasks      = 50
-	maxLogMessagesPerTask = 1000
+	maxLogMessagesPerTask = 100
 	minWaitInterval       = 500 * time.Millisecond
 	maxWaitInterval       = time.Second
 )
@@ -30,7 +30,8 @@ type Manager struct {
 	// +checklocks:mu
 	finished map[string]*Info
 
-	MaxFinishedTasks      int // +checklocksignore
+	MaxFinishedTasks int // +checklocksignore
+	// MaxLogMessagesPerTask limits non-error logs; error logs are retained until the task is evicted.
 	MaxLogMessagesPerTask int // +checklocksignore
 
 	persistentLogs bool // +checklocksignore
@@ -212,6 +213,7 @@ func (m *Manager) completeTask(r *runningTaskInfo, err error) {
 	}
 
 	r.Error = err
+	r.LogLines = r.logLocked()
 
 	if r.Status != StatusCanceling {
 		if err != nil {

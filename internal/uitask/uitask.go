@@ -8,6 +8,7 @@ import (
 	"sync"
 	"time"
 
+	"github.com/pkg/errors"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 
@@ -74,6 +75,17 @@ type runningTaskInfo struct {
 	mu sync.Mutex
 	// +checklocks:mu
 	taskCancel []context.CancelFunc
+	// +checklocks:mu
+	recentLogs []taskLogEntry
+	// +checklocks:mu
+	errorLogs []taskLogEntry
+	// +checklocks:mu
+	logSequence int
+}
+
+type taskLogEntry struct {
+	message  json.RawMessage
+	sequence int
 }
 
 // CurrentTaskID implements the Controller interface.
@@ -132,6 +144,7 @@ func (t *runningTaskInfo) info() Info {
 
 	i := t.Info
 	i.Counters = maps.Clone(i.Counters)
+	i.LogLines = t.logLocked()
 
 	return i
 }
@@ -182,10 +195,10 @@ func uiLevelEncoder(l zapcore.Level, enc zapcore.PrimitiveArrayEncoder) {
 //nolint:gochecknoglobals
 var containsFormatLogModule = []byte(`"` + uiLogModuleKey + `":"` + content.FormatLogModule + `"`)
 
-func (t *runningTaskInfo) addLogEntry(le json.RawMessage) {
+func (t *runningTaskInfo) addLogEntry(le json.RawMessage, level LogLevel) {
 	// do not store noisy output from format log.
 	// compare JSON bytes to avoid having to parse.
-	if bytes.Contains(le, containsFormatLogModule) {
+	if level < LogLevelError && bytes.Contains(le, containsFormatLogModule) {
 		return
 	}
 
@@ -196,9 +209,21 @@ func (t *runningTaskInfo) addLogEntry(le json.RawMessage) {
 		return
 	}
 
-	t.LogLines = append(t.LogLines, le)
-	if len(t.LogLines) > t.maxLogMessages {
-		t.LogLines = t.LogLines[1:]
+	t.logSequence++
+	entry := taskLogEntry{le, t.logSequence}
+	if level >= LogLevelError {
+		t.errorLogs = append(t.errorLogs, entry)
+		return
+	}
+
+	if t.maxLogMessages <= 0 {
+		return
+	}
+
+	t.recentLogs = append(t.recentLogs, entry)
+	if len(t.recentLogs) > t.maxLogMessages {
+		t.recentLogs[0] = taskLogEntry{}
+		t.recentLogs = t.recentLogs[1:]
 	}
 }
 
@@ -206,15 +231,40 @@ func (t *runningTaskInfo) log() []json.RawMessage {
 	t.mu.Lock()
 	defer t.mu.Unlock()
 
-	return append([]json.RawMessage(nil), t.LogLines...)
+	return t.logLocked()
+}
+
+// +checklocks:t.mu
+func (t *runningTaskInfo) logLocked() []json.RawMessage {
+	var result []json.RawMessage
+
+	i, j := 0, 0
+	for i < len(t.recentLogs) || j < len(t.errorLogs) {
+		if j == len(t.errorLogs) || (i < len(t.recentLogs) && t.recentLogs[i].sequence < t.errorLogs[j].sequence) {
+			result = append(result, t.recentLogs[i].message)
+			i++
+		} else {
+			result = append(result, t.errorLogs[j].message)
+			j++
+		}
+	}
+
+	return result
 }
 
 func (t *runningTaskInfo) Write(p []byte) (int, error) {
 	n := len(p)
+	var entry struct {
+		Level LogLevel `json:"level"`
+	}
+
+	if err := json.Unmarshal(p, &entry); err != nil {
+		return 0, errors.Wrap(err, "decode task log entry")
+	}
 
 	p = append([]byte(nil), p...)
 
-	t.addLogEntry(json.RawMessage(p))
+	t.addLogEntry(json.RawMessage(p), entry.Level)
 
 	return n, nil
 }

@@ -1,0 +1,2 @@
+# 在仓库根目录执行；首次构建先分别在 htmlui 和 app 目录执行 npm ci。
+& .\tools\build-local-ui.ps1

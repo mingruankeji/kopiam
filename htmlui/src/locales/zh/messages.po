@@ -1,0 +1,2786 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:55
+msgid ".kopiaignore"
+msgstr ".kopiaignore"
+
+msgid "Restore format"
+msgstr "默认恢复格式"
+
+msgid "Update and shut down"
+msgstr "更新并关机"
+
+msgid "Repository updated"
+msgstr "仓库更新完成"
+
+msgid "All local sources were updated. The computer will shut down in 60 seconds."
+msgstr "所有本机备份源已更新，电脑将在 60 秒后关机。"
+
+msgid "Update and shutdown failed"
+msgstr "更新并关机失败"
+
+msgid "Updating all local backup sources. Keep KopiaUI running until the update finishes."
+msgstr "正在更新所有本机备份源，请保持 KopiaUI 运行直到更新完成。"
+
+msgid "Invalid value"
+msgstr "请输入有效的非负整数"
+
+msgid "Ignore Permission Errors"
+msgstr "忽略权限错误"
+
+msgid "These defaults apply to every restore. Existing files and directories always require confirmation."
+msgstr "这些设置用于每次恢复。无论是否启用覆盖选项，遇到同名文件或文件夹都会先提示确认。"
+
+msgid "Restore options are saved in Preferences."
+msgstr "恢复选项在“偏好设置 → 恢复”中统一保存。"
+
+msgid "The destination already contains files or directories."
+msgstr "目标位置已存在文件或文件夹。"
+
+msgid "Replace all merges folders and overwrites matching files, keeping other files. Cancel stops the entire restore without writing anything."
+msgstr "“全部替换”将合并文件夹并覆盖同名文件，保留其他文件。“取消”将终止本次恢复，不写入任何文件。"
+
+msgid "Replace all"
+msgstr "全部替换"
+
+#: src/snapshot-history/components/SnapshotCountControl.tsx:23
+msgid "{currentLength} out of {totalLength}"
+msgstr "共 {totalLength} 条，已显示 {currentLength} 条"
+
+#: src/core/Footer/Footer.tsx:53
+msgid "{failedTaskCount} task(s) failed"
+msgstr "{failedTaskCount} 个任务失败"
+
+#: src/i18n.ts:43
+msgid "{field} has an invalid value"
+msgstr "{field}的值无效"
+
+#: src/i18n.ts:39
+msgid "{field} is required"
+msgstr "请填写{field}"
+
+#: src/i18n.ts:53
+msgid "{field} must be a valid URL"
+msgstr "{field}必须是有效的 URL"
+
+#: src/i18n.ts:49
+msgid "{field} must be at most {max} characters"
+msgstr "{field}不能超过 {max} 个字符"
+
+#: src/core/DataGrid/DataGrid.tsx:82
+msgid "{from}–{to} of {totalRecords}"
+msgstr "第 {from}–{to} 条，共 {totalRecords} 条"
+
+#: src/core/Footer/Footer.tsx:60
+msgid "{inProgressTaskCount} task(s) in progress"
+msgstr "{inProgressTaskCount} 个任务正在运行"
+
+#: src/core/Footer/Footer.tsx:46
+msgid "{successTaskCount} task(s) completed"
+msgstr "{successTaskCount} 个任务已完成"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:150
+msgid "/my-data/path"
+msgstr "/my-data/path"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:110
+msgid "/some/path/here"
+msgstr "/some/path/here"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:74
+msgid "# of annual snapshots"
+msgstr "年度快照保留数量"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:44
+msgid "# of daily snapshots"
+msgstr "每日快照保留数量"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:34
+msgid "# of hourly snapshots"
+msgstr "每小时快照保留数量"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:24
+msgid "# of latest snapshots"
+msgstr "最新快照保留数量"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:64
+msgid "# of monthly snapshots"
+msgstr "每月快照保留数量"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:54
+msgid "# of weekly snapshots"
+msgstr "每周快照保留数量"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:16
+msgid "0 - no output"
+msgstr "0 - 不输出"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:17
+msgid "1 - minimal details"
+msgstr "1 - 最少信息"
+
+#: src/snapshots/SnapshotsPage.tsx:175
+msgid "1 minute"
+msgstr "1 分钟"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:26
+msgid "10 - maximum details"
+msgstr "10 - 最详细信息"
+
+#: src/snapshots/SnapshotsPage.tsx:173
+msgid "10 seconds"
+msgstr "10 秒"
+
+#: src/snapshots/SnapshotsPage.tsx:172
+msgid "3 seconds"
+msgstr "3 秒"
+
+#: src/snapshots/SnapshotsPage.tsx:174
+msgid "30 seconds"
+msgstr "30 秒"
+
+#: src/core/hooks/useApiRequest.ts:99
+msgid "401 Unauthorized"
+msgstr "401 未授权"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:21
+msgid "5 - normal details"
+msgstr "5 - 常规信息"
+
+#: src/snapshots/SnapshotsPage.tsx:176
+msgid "5 minutes"
+msgstr "5 分钟"
+
+#: src/preferences/NotificationsSection.tsx:51
+msgid "A test notification was send using the defined profile"
+msgstr "已使用此配置发送测试通知"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:36
+#: src/repo/sections/AzureBlobStorageRepo.tsx:80
+msgid "Access Key"
+msgstr "访问密钥"
+
+#: src/repo/sections/AmazonS3Repo.tsx:41
+#: src/repo/sections/AmazonS3Repo.tsx:108
+msgid "Access Key ID"
+msgstr "访问密钥 ID"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:69
+msgid "Actions"
+msgstr "操作"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:48
+msgid "Active"
+msgstr "已启用"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:100
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:111
+#: src/preferences/modals/EmailModal.tsx:268
+#: src/preferences/modals/EmailModal.tsx:291
+#: src/preferences/modals/WebhookModal.tsx:219
+msgid "Add"
+msgstr "添加"
+
+#: src/snapshot-history/SnapshotHistory.tsx:247
+msgid "Add pin to prevent snapshot deletion"
+msgstr "添加保护标签，防止快照被自动删除"
+
+#: src/core/SnapshotWarnings.tsx:39
+msgid "Additional failed entry details are not available."
+msgstr "服务端未提供其余失败条目的详细信息。"
+
+#: src/repo/ConnectRepoSection.tsx:127
+#: src/repo/CreateRepoSection.tsx:136
+msgid "Advanced Options"
+msgstr "高级选项"
+
+#: src/policies/modals/PolicyModal/constants.ts:170
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:69
+msgid "After Folder"
+msgstr "目录处理后"
+
+#: src/policies/modals/PolicyModal/constants.ts:184
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:74
+msgid "After Snapshot"
+msgstr "快照创建后"
+
+#: src/tasks/TasksPage.tsx:113
+#: src/tasks/TasksPage.tsx:147
+msgid "All"
+msgstr "全部"
+
+#: src/policies/PoliciesPage.tsx:145
+msgid "All Policies"
+msgstr "全部策略"
+
+#: src/snapshots/SnapshotsPage.tsx:185
+msgid "All Snapshots"
+msgstr "全部快照"
+
+#: src/repo/repoConstants.ts:37
+#: src/repo/sections/AmazonS3Repo.tsx:55
+msgid "Amazon S3 or Compatible Storage"
+msgstr "Amazon S3 或兼容存储"
+
+#: src/policies/modals/PolicyModal/constants.ts:112
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:72
+#: src/snapshot-history/components/RetentionBadge.tsx:15
+msgid "Annual"
+msgstr "年度"
+
+#: src/preferences/PreferencesPage.tsx:21
+msgid "Appearance"
+msgstr "外观"
+
+#: src/policies/PoliciesPage.tsx:143
+msgid "Applicable Policies"
+msgstr "适用策略"
+
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:30
+msgid "Are you sure you want to delete this policy?"
+msgstr "确定要删除此策略吗？"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:89
+msgid "Are you sure you want to disconnect from this repository?"
+msgstr "确定要断开此仓库的连接吗？"
+
+#: src/repo/repoConstants.ts:49
+#: src/repo/sections/AzureBlobStorageRepo.tsx:47
+msgid "Azure Blob Storage"
+msgstr "Azure Blob 存储"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:37
+#: src/repo/sections/AzureBlobStorageRepo.tsx:87
+msgid "Azure Storage Domain"
+msgstr "Azure 存储域名"
+
+#: src/repo/ConfigureRepoSection.tsx:304
+#: src/repo/ConnectRepoSection.tsx:154
+#: src/repo/CreateRepoSection.tsx:219
+msgid "Back"
+msgstr "返回"
+
+#: src/repo/repoConstants.ts:43
+#: src/repo/sections/BackblazeB2Repo.tsx:41
+msgid "Backblaze B2"
+msgstr "Backblaze B2"
+
+#: src/preferences/AppearanceSection.tsx:104
+msgid "Base-10 (KB, MB, GB, TB)"
+msgstr "十进制（KB、MB、GB、TB）"
+
+#: src/preferences/AppearanceSection.tsx:101
+msgid "Base-2 (KiB, MiB, GiB, TiB)"
+msgstr "二进制（KiB、MiB、GiB、TiB）"
+
+#: src/policies/modals/PolicyModal/constants.ts:163
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:28
+msgid "Before Folder"
+msgstr "目录处理前"
+
+#: src/policies/modals/PolicyModal/constants.ts:177
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:28
+msgid "Before Snapshot"
+msgstr "快照创建前"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:271
+msgid "Begin Restore"
+msgstr "开始恢复"
+
+#: src/snapshot-directory/components/BrowseMountedDirectory.tsx:42
+msgid "Browse mounted directory"
+msgstr "浏览挂载目录"
+
+#: src/repo/sections/AmazonS3Repo.tsx:39
+#: src/repo/sections/AmazonS3Repo.tsx:68
+#: src/repo/sections/BackblazeB2Repo.tsx:30
+#: src/repo/sections/BackblazeB2Repo.tsx:54
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:30
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:54
+msgid "Bucket"
+msgstr "存储桶"
+
+#: src/repo/sections/SFTPServerRepo.tsx:232
+msgid "By default Kopia connects to the server using internal SSH client which supports limited options. Alternatively it may launch external password-less SSH command, which supports additional options, but is generally less efficient than the built-in client."
+msgstr "Kopia 默认使用内置 SSH 客户端连接服务器，支持的选项有限。也可以启动外部免密 SSH 命令以使用更多选项，但通常不如内置客户端高效。"
+
+#: src/preferences/AppearanceSection.tsx:98
+msgid "Byte representation"
+msgstr "容量单位"
+
+#: src/tasks/components/TaskCounterGrid.tsx:59
+msgid "Bytes"
+msgstr "字节"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:57
+msgid "Cache Hit"
+msgstr "缓存命中"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:66
+msgid "Cache Miss"
+msgstr "缓存未命中"
+
+#: src/tasks/components/TaskCounterGrid.tsx:39
+msgid "Cached Bytes"
+msgstr "缓存字节"
+
+#: src/snapshots/components/UploadingLoader.tsx:52
+msgid "Cached files"
+msgstr "缓存文件"
+
+#: src/tasks/components/TaskCounterGrid.tsx:40
+msgid "Cached Files"
+msgstr "缓存文件"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:129
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:115
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:263
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:126
+#: src/preferences/modals/EmailModal.tsx:300
+#: src/preferences/modals/PushoverModal.tsx:152
+#: src/preferences/modals/WebhookModal.tsx:228
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:92
+#: src/snapshot-directory/modals/RestoreModal.tsx:268
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:78
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:83
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:72
+#: src/snapshots/modals/NewSnapshotModal.tsx:142
+#: src/snapshots/modals/TaskEstimationModal.tsx:79
+msgid "Cancel"
+msgstr "取消"
+
+#: src/snapshots/SnapshotsPage.tsx:386
+#: src/snapshots/SnapshotsPage.tsx:388
+msgid "Cancel snapshot"
+msgstr "取消快照"
+
+#: src/tasks/TaskDetailsPage.tsx:77
+msgid "Cancel task"
+msgstr "停止任务"
+
+#: src/tasks/TasksPage.tsx:226
+msgctxt "cancel-operation"
+msgid "Cancel Task"
+msgstr "取消任务"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:57
+#: src/tasks/components/TaskSummaryDisplay.tsx:65
+msgid "Canceled after"
+msgstr "取消前耗时"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:48
+#: src/tasks/components/TaskSummaryDisplay.tsx:76
+msgid "Canceling for"
+msgstr "取消中，已耗时"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:72
+msgid "Canceling task"
+msgstr "正在取消任务"
+
+#: src/preferences/modals/EmailModal.tsx:272
+msgid "Cc"
+msgstr "抄送"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:129
+msgid "Change policy parameters"
+msgstr "修改策略参数"
+
+#: src/core/CLIEquivalent.tsx:80
+msgid "CLI equivalent"
+msgstr "等效命令行"
+
+#: src/policies/modals/PolicyCodeEditModal/PolicyCodeEditModal.tsx:32
+#: src/snapshots/modals/TaskEstimationModal.tsx:83
+msgid "Close"
+msgstr "关闭"
+
+#: src/core/CLIEquivalent.tsx:104
+msgid "Command"
+msgstr "命令"
+
+#: src/policies/modals/PolicyModal/constants.ts:172
+#: src/policies/modals/PolicyModal/constants.ts:186
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:94
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:99
+msgid "Command Mode - After"
+msgstr "后置命令执行模式"
+
+#: src/policies/modals/PolicyModal/constants.ts:165
+#: src/policies/modals/PolicyModal/constants.ts:179
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:53
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:57
+msgid "Command Mode - Before"
+msgstr "前置命令执行模式"
+
+#: src/core/CLIEquivalent.tsx:91
+msgid "Command shell"
+msgstr "命令行环境"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:54
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:217
+msgid "Compression"
+msgstr "压缩"
+
+#: src/policies/modals/PolicyModal/constants.ts:145
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:23
+msgid "Compression Algorithm"
+msgstr "压缩算法"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:148
+msgid "Config file"
+msgstr "配置文件"
+
+#: src/repo/ConfigureRepoSection.tsx:294
+msgid "Configure Provider"
+msgstr "配置存储服务"
+
+#: src/repo/ConfigureRepoSection.tsx:312
+msgid "Configure repository"
+msgstr "配置仓库"
+
+#: src/repo/ConfigureRepoSection.tsx:313
+msgid "Configure the repository"
+msgstr "配置仓库"
+
+#: src/repo/ConfigureRepoSection.tsx:294
+msgid "Configure the selected provider"
+msgstr "配置所选存储服务"
+
+#: src/policies/modals/PolicyModal/components/PolicyAccordionControl.tsx:22
+msgid "Configured"
+msgstr "已配置"
+
+#: src/repo/CreateRepoSection.tsx:126
+msgid "Confirm Repository Password"
+msgstr "确认仓库密码"
+
+#: src/repo/CreateRepoSection.tsx:127
+msgid "Confirm the repository password"
+msgstr "确认仓库密码"
+
+#: src/repo/ConnectRepoSection.tsx:101
+msgid "Connect as"
+msgstr "连接身份"
+
+#: src/repo/ConnectRepoSection.tsx:132
+msgid "Connect in read-only mode"
+msgstr "以只读模式连接"
+
+#: src/repo/ConnectRepoSection.tsx:157
+msgid "Connect to repository"
+msgstr "连接仓库"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:208
+msgid "Connected as"
+msgstr "当前连接身份"
+
+#: src/core/Footer/ConnectionInfo.tsx:56
+msgid "Connected to"
+msgstr "已连接到"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:34
+#: src/repo/sections/AzureBlobStorageRepo.tsx:60
+msgid "Container"
+msgstr "容器"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:169
+msgid "Continue on Errors"
+msgstr "发生错误时继续"
+
+#: src/core/CLIEquivalent.tsx:84
+#: src/snapshot-directory/SnapshotDirectory.tsx:167
+msgid "Copied"
+msgstr "已复制"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:167
+msgid "Copy"
+msgstr "复制"
+
+#: src/core/CLIEquivalent.tsx:84
+msgid "Copy command"
+msgstr "复制命令"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:132
+#: src/preferences/modals/EmailModal.tsx:303
+#: src/preferences/modals/PushoverModal.tsx:155
+#: src/preferences/modals/WebhookModal.tsx:231
+msgid "Create"
+msgstr "创建"
+
+#: src/repo/ConfigureRepoSection.tsx:313
+msgid "Create a new repository"
+msgstr "创建新仓库"
+
+#: src/preferences/modals/EmailModal.tsx:179
+msgid "Create email notification"
+msgstr "创建邮件通知"
+
+#: src/preferences/NotificationsSection.tsx:70
+msgid "Create new"
+msgstr "新建"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:74
+msgid "Create policy"
+msgstr "创建策略"
+
+#: src/preferences/modals/PushoverModal.tsx:97
+msgid "Create pushover notification"
+msgstr "创建 Pushover 通知"
+
+#: src/repo/ConfigureRepoSection.tsx:312
+#: src/repo/CreateRepoSection.tsx:222
+msgid "Create repository"
+msgstr "创建仓库"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:72
+msgid "Create snapshots at the specified times of day (24hr format)"
+msgstr "在每天指定的时刻创建快照（24 小时制）"
+
+#: src/preferences/modals/WebhookModal.tsx:138
+msgid "Create webhook notification"
+msgstr "创建 Webhook 通知"
+
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:32
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:68
+msgid "Credentials File"
+msgstr "凭据文件"
+
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:33
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:73
+msgid "Credentials JSON"
+msgstr "JSON 凭据"
+
+#: src/policies/modals/PolicyModal/constants.ts:141
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:82
+msgid "Cron Expressions"
+msgstr "Cron 表达式"
+
+#: src/core/context/ServerInstanceContext.tsx:94
+msgid "Currently browsing instance {currentName}"
+msgstr "当前正在查看实例 {currentName}"
+
+#: src/policies/modals/PolicyModal/constants.ts:109
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:42
+#: src/snapshot-history/components/RetentionBadge.tsx:12
+msgid "Daily"
+msgstr "每日"
+
+#: src/preferences/AppearanceSection.tsx:91
+msgid "Dark"
+msgstr "深色"
+
+#: src/preferences/AppearanceSection.tsx:113
+msgid "Default page size"
+msgstr "默认每页条数"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:81
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyInheritYesNoPolicyInput.tsx:37
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:51
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyNumberInput.tsx:38
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyNumberSelect.tsx:43
+#: src/policies/modals/PolicyModal/policy-inputs/PolicySelect.tsx:37
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextInput.tsx:40
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:64
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:45
+#: src/policies/PoliciesPage.tsx:205
+msgid "Defined"
+msgstr "已定义"
+
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:41
+#: src/preferences/components/NotificationCard.tsx:89
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:82
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:88
+msgid "Delete"
+msgstr "删除"
+
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:27
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:33
+msgid "Delete policy"
+msgstr "删除策略"
+
+#: src/snapshot-history/SnapshotHistory.tsx:103
+msgid "Delete Selected"
+msgstr "删除所选项"
+
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:41
+msgid "Delete snapshot?"
+msgstr "删除快照？"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:60
+msgid "Deprecated"
+msgstr "已弃用"
+
+#: src/i18n.ts:16
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:119
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:62
+#: src/tasks/TasksPage.tsx:215
+msgid "Description"
+msgstr "描述"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:70
+msgid "Description updated"
+msgstr "描述已更新"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:148
+msgid "Destination"
+msgstr "目标位置"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:102
+#: src/tasks/components/TaskCounterGrid.tsx:58
+msgid "Directories"
+msgstr "目录"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:137
+#: src/snapshots/components/UploadingLoader.tsx:61
+msgid "Directory"
+msgstr "目录"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:30
+msgid "Directory Ignored"
+msgstr "已忽略的目录"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:192
+msgid "Directory Options"
+msgstr "目录选项"
+
+#: src/repo/sections/FileSystemRepo.tsx:25
+#: src/repo/sections/FileSystemRepo.tsx:46
+msgid "Directory Path"
+msgstr "目录路径"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:21
+msgid "Directory Snapshotted"
+msgstr "已创建快照的目录"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:120
+msgid "Directory to create policy for"
+msgstr "要创建策略的目录"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:241
+#: src/snapshot-history/SnapshotHistory.tsx:222
+msgid "Dirs"
+msgstr "目录"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:32
+msgid "Disable Parent Policy"
+msgstr "禁用父级策略"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:26
+msgid "Disable Parent Policy Evaluation"
+msgstr "禁用父级策略继承"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:256
+msgid "Disable ZIP compression"
+msgstr "禁用 ZIP 压缩"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:190
+#: src/repo/CreateRepoSection.tsx:182
+#: src/snapshots/SnapshotsPage.tsx:171
+msgid "Disabled"
+msgstr "已禁用"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:92
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:110
+msgid "Disconnect"
+msgstr "断开连接"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:86
+msgid "Disconnect repository?"
+msgstr "断开仓库连接？"
+
+#: src/snapshot-history/components/SnapshotCountControl.tsx:32
+msgid "Displaying {textToDisplay} snapshots of"
+msgstr "正在显示以下来源的 {textToDisplay} 个快照"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:257
+msgid "Do not compress when restoring to a ZIP file (faster)."
+msgstr "恢复到 ZIP 文件时不压缩（速度更快）。"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:86
+msgid "Do not cross filesystem boundaries when creating a snapshot"
+msgstr "创建快照时不跨越文件系统边界"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:83
+msgid "Do NOT save a snapshot when no files have been changed"
+msgstr "没有文件变化时不保存快照"
+
+#: src/repo/sections/AmazonS3Repo.tsx:45
+#: src/repo/sections/AmazonS3Repo.tsx:88
+msgid "Do not verify TLS certificate"
+msgstr "不验证 TLS 证书"
+
+#. placeholder {0}: snapshots.length
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:57
+msgid "Do you want to delete the selected <0>{0} snapshots</0>?"
+msgstr "确定要删除所选的 <0>{0} 个快照</0> 吗？"
+
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:53
+msgid "Do you want to delete the selected snapshot?"
+msgstr "确定要删除所选快照吗？"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:33
+msgid "documentation on ignoring files."
+msgstr "文件忽略规则文档。"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:251
+msgid "Download"
+msgstr "下载"
+
+#: src/preferences/StatisticsSection.tsx:12
+msgid "Due to this being a local feature and not a feature in Kopia, these settings are only stored in the local browser. This means that switching browsers or instances you will have to re-apply the settings."
+msgstr "此功能由界面提供，并非 Kopia 后端功能，设置仅保存在当前浏览器中。更换浏览器或实例后需要重新设置。"
+
+#: src/tasks/TaskDetailsPage.tsx:115
+msgid "Duration"
+msgstr "耗时"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:65
+msgid "e.g. .mp4"
+msgstr "例如 .mp4"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:55
+msgid "e.g. .txt"
+msgstr "例如 .txt"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:28
+msgid "e.g. /file.txt"
+msgstr "例如 /file.txt"
+
+#: src/policies/PoliciesPage.tsx:223
+#: src/preferences/components/NotificationCard.tsx:71
+msgid "Edit"
+msgstr "编辑"
+
+#: src/preferences/modals/EmailModal.tsx:179
+msgid "Edit email notification"
+msgstr "编辑邮件通知"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:110
+msgid "Edit existing policy"
+msgstr "编辑现有策略"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:86
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:67
+msgid "Edit items"
+msgstr "编辑条目"
+
+#: src/preferences/modals/PushoverModal.tsx:97
+msgid "Edit pushover notification"
+msgstr "编辑 Pushover 通知"
+
+#: src/policies/modals/PolicyCodeEditModal/PolicyCodeEditModal.tsx:18
+msgid "Edit script"
+msgstr "编辑脚本"
+
+#: src/preferences/modals/WebhookModal.tsx:138
+msgid "Edit webhook notification"
+msgstr "编辑 Webhook 通知"
+
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:16
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:91
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyInheritYesNoPolicyInput.tsx:46
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:59
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyNumberInput.tsx:41
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyNumberSelect.tsx:51
+#: src/policies/modals/PolicyModal/policy-inputs/PolicySelect.tsx:40
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextInput.tsx:43
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:94
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:75
+msgid "Effective"
+msgstr "实际生效值"
+
+#: src/preferences/NotificationsSection.tsx:84
+msgid "Email"
+msgstr "邮件"
+
+#: src/preferences/modals/EmailModal.tsx:194
+msgid "email-1"
+msgstr "email-1"
+
+#: src/preferences/StatisticsSection.tsx:18
+msgid "Enable snapshot statistics"
+msgstr "启用快照统计"
+
+#: src/repo/CreateRepoSection.tsx:142
+msgid "Encryption"
+msgstr "加密"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:160
+msgid "Encryption Algorithm"
+msgstr "加密算法"
+
+#: src/i18n.ts:21
+#: src/preferences/modals/PushoverModal.tsx:135
+msgid "Endpoint"
+msgstr "服务地址"
+
+#: src/repo/sections/RcloneRepo.tsx:49
+msgid "Enter <name-of-rclone-remote>:<path>"
+msgstr "输入 <rclone 远程名称>:<路径>"
+
+#: src/repo/sections/AmazonS3Repo.tsx:109
+msgid "Enter access key ID"
+msgstr "输入访问密钥 ID"
+
+#: src/repo/sections/BackblazeB2Repo.tsx:74
+msgid "Enter application or account key"
+msgstr "输入应用或账户密钥"
+
+#: src/repo/sections/BackblazeB2Repo.tsx:68
+msgid "Enter application or account key ID"
+msgstr "输入应用或账户密钥 ID"
+
+#: src/repo/sections/AmazonS3Repo.tsx:69
+#: src/repo/sections/BackblazeB2Repo.tsx:55
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:55
+msgid "Enter bucket name"
+msgstr "输入存储桶名称"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:61
+msgid "Enter container name"
+msgstr "输入容器名称"
+
+#: src/repo/sections/FileSystemRepo.tsx:47
+msgid "Enter directory path where you want to store repository files"
+msgstr "输入用于存放仓库文件的目录路径"
+
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:69
+msgid "Enter name of credentials JSON file"
+msgstr "输入 JSON 凭据文件名称"
+
+#: src/repo/sections/AmazonS3Repo.tsx:102
+#: src/repo/sections/AzureBlobStorageRepo.tsx:76
+#: src/repo/sections/BackblazeB2Repo.tsx:61
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:61
+msgid "Enter object name prefix (optional)"
+msgstr "输入对象名称前缀（可选）"
+
+#: src/repo/ConnectRepoSection.tsx:115
+msgid "Enter password to connect to server"
+msgstr "输入服务器连接密码"
+
+#: src/repo/sections/SFTPServerRepo.tsx:243
+msgid "Enter passwordless SSH command to execute (typically 'ssh')"
+msgstr "输入要执行的免密 SSH 命令（通常为 'ssh'）"
+
+#: src/repo/sections/RcloneRepo.tsx:57
+msgid "Enter path to rclone executable"
+msgstr "输入 rclone 可执行文件路径"
+
+#: src/repo/sections/SFTPServerRepo.tsx:203
+msgid "Enter path to the key file"
+msgstr "输入密钥文件路径"
+
+#: src/repo/sections/SFTPServerRepo.tsx:210
+msgid "Enter path to the known_hosts file"
+msgstr "输入 known_hosts 文件路径"
+
+#: src/repo/sections/SFTPServerRepo.tsx:191
+msgid "Enter remote path to repository, e.g., '/mnt/data/repository'"
+msgstr "输入仓库的远程路径，例如 '/mnt/data/repository'"
+
+#: src/repo/ConnectRepoSection.tsx:106
+#: src/repo/CreateRepoSection.tsx:121
+msgid "Enter repository password"
+msgstr "输入仓库密码"
+
+#: src/repo/CreateRepoSection.tsx:129
+msgid "Enter repository password again"
+msgstr "再次输入仓库密码"
+
+#: src/repo/sections/AmazonS3Repo.tsx:115
+#: src/repo/sections/AzureBlobStorageRepo.tsx:81
+msgid "Enter secret access key"
+msgstr "输入私有访问密钥"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:93
+msgid "Enter secret SAS token"
+msgstr "输入 SAS 密钥令牌"
+
+#: src/repo/sections/AmazonS3Repo.tsx:75
+msgid "Enter server address (e.g., s3.amazonaws.com)"
+msgstr "输入服务器地址（例如 s3.amazonaws.com）"
+
+#: src/repo/sections/KopiaRepoServerRepo.tsx:47
+msgid "Enter server URL (https://<host>:port)"
+msgstr "输入服务器 URL（https://<主机>:端口）"
+
+#: src/repo/sections/AmazonS3Repo.tsx:46
+#: src/repo/sections/AmazonS3Repo.tsx:122
+msgid "Enter session token (optional)"
+msgstr "输入会话令牌（可选）"
+
+#: src/repo/sections/AmazonS3Repo.tsx:97
+msgid "Enter specific region (e.g., us-west-1) or leave empty"
+msgstr "输入指定区域（例如 us-west-1），或留空"
+
+#: src/repo/sections/SFTPServerRepo.tsx:248
+msgid "Enter SSH command arguments ('user@host -s sftp' will be appended automatically)"
+msgstr "输入 SSH 命令参数（将自动追加 'user@host -s sftp'）"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:67
+msgid "Enter storage account name"
+msgstr "输入存储账户名称"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:88
+msgid "Enter storage domain or leave empty for default 'blob.core.windows.net'"
+msgstr "输入存储域名，留空则使用默认值 'blob.core.windows.net'"
+
+#: src/repo/sections/KopiaRepoServerRepo.tsx:53
+msgid "Enter trusted server certificate fingerprint printed at server startup"
+msgstr "输入服务器启动时输出的可信证书指纹"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:97
+msgid "Entries over time"
+msgstr "条目数量变化"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:59
+#: src/preferences/modals/EmailModal.tsx:207
+#: src/preferences/modals/PushoverModal.tsx:125
+#: src/preferences/modals/WebhookModal.tsx:166
+msgid "Error"
+msgstr "错误"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:196
+#: src/repo/CreateRepoSection.tsx:193
+msgid "Error Correction Algorithm"
+msgstr "纠错算法"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:186
+#: src/repo/CreateRepoSection.tsx:180
+msgid "Error Correction Overhead"
+msgstr "纠错冗余开销"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:44
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:214
+msgid "Error Handling"
+msgstr "错误处理"
+
+#: src/snapshots/components/UploadingLoader.tsx:58
+#: src/tasks/components/TaskCounterGrid.tsx:41
+msgid "Errors"
+msgstr "错误"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:54
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:95
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:58
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:100
+msgid "Essential (must succeed; default behavior), optional (failures are tolerated), or async (Kopia will start the action but not wait for it to finish)"
+msgstr "必须成功（默认）、允许失败，或异步执行（Kopia 启动操作后不等待其完成）"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:152
+#: src/tasks/components/TaskKindDisplay.tsx:21
+msgid "Estimate"
+msgstr "估算"
+
+#: src/snapshots/modals/TaskEstimationModal.tsx:57
+msgid "Estimate snapshot"
+msgstr "估算快照"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:48
+msgid "Every"
+msgstr "每隔"
+
+#: src/tasks/components/TaskCounterGrid.tsx:44
+msgid "Excluded Bytes"
+msgstr "排除字节"
+
+#: src/tasks/components/TaskCounterGrid.tsx:42
+msgid "Excluded Directories"
+msgstr "排除目录"
+
+#: src/tasks/components/TaskCounterGrid.tsx:43
+msgid "Excluded Files"
+msgstr "排除文件"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:104
+#: src/tasks/TasksPage.tsx:135
+msgid "Failed"
+msgstr "失败"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:38
+#: src/tasks/components/TaskSummaryDisplay.tsx:48
+msgid "Failed after"
+msgstr "失败前耗时"
+
+#: src/core/hooks/useApiRequest.ts:100
+#: src/core/hooks/useApiRequest.ts:110
+#: src/core/LocalPathInput.tsx:42
+#: src/snapshot-directory/components/BrowseMountedDirectory.tsx:26
+msgid "Failed due to an unknown error"
+msgstr "发生未知错误，操作失败"
+
+#: src/core/SnapshotWarnings.tsx:26
+msgid "Failed entries"
+msgstr "失败条目"
+
+#: src/policies/PoliciesPage.tsx:89
+msgid "Failed to find policy"
+msgstr "找不到策略"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:48
+msgid "File Ignored"
+msgstr "已忽略的文件"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:39
+msgid "File Snapshotted"
+msgstr "已创建快照的文件"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:39
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:208
+#: src/snapshot-directory/SnapshotDirectory.tsx:235
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:101
+#: src/snapshot-history/SnapshotHistory.tsx:216
+#: src/tasks/components/TaskCounterGrid.tsx:57
+msgid "Files"
+msgstr "文件"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:34
+msgid "Files that are smaller than the provided value will not be compressed"
+msgstr "小于指定大小的文件不压缩"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:44
+msgid "Files whose size exceeds the provided value will not be compressed"
+msgstr "大于指定大小的文件不压缩"
+
+#: src/tasks/components/TaskLogs.tsx:50
+#~ msgid "Filter matching lines"
+#~ msgstr "仅显示匹配行"
+
+#: src/tasks/TaskDetailsPage.tsx:102
+msgid "Finished"
+msgstr "已完成"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:28
+#: src/tasks/components/TaskSummaryDisplay.tsx:36
+msgid "Finished in"
+msgstr "完成耗时"
+
+#: src/core/DataGrid/DataGrid.tsx:85
+msgid "First page"
+msgstr "第一页"
+
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:232
+msgid "Folder Actions"
+msgstr "目录操作"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:87
+msgid "Found an existing policy for"
+msgstr "已找到以下来源的现有策略"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:131
+msgid "From now"
+msgstr "距现在"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:161
+msgid "General Options"
+msgstr "常规选项"
+
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:32
+#: src/policies/PoliciesPage.tsx:147
+msgid "Global Policy"
+msgstr "全局策略"
+
+#: src/repo/repoConstants.ts:31
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:41
+msgid "Google Cloud Storage"
+msgstr "Google Cloud 存储"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:166
+#: src/repo/CreateRepoSection.tsx:149
+msgid "Hash Algorithm"
+msgstr "哈希算法"
+
+#: src/tasks/components/TaskCounterGrid.tsx:45
+msgid "Hashed Bytes"
+msgstr "已计算哈希的字节"
+
+#: src/snapshots/components/UploadingLoader.tsx:49
+msgid "Hashed files"
+msgstr "已计算哈希的文件"
+
+#: src/tasks/components/TaskCounterGrid.tsx:46
+msgid "Hashed Files"
+msgstr "已计算哈希的文件"
+
+#: src/preferences/modals/WebhookModal.tsx:199
+msgid "Headers"
+msgstr "请求头"
+
+#: src/repo/ConnectRepoSection.tsx:121
+msgid "Helps to distinguish between multiple connected repositories"
+msgstr "用于区分多个已连接的仓库"
+
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:45
+#: src/policies/PoliciesPage.tsx:195
+#: src/repo/sections/SFTPServerRepo.tsx:53
+#: src/repo/sections/SFTPServerRepo.tsx:161
+msgid "Host"
+msgstr "主机"
+
+#: src/repo/ConnectRepoSection.tsx:143
+#: src/repo/CreateRepoSection.tsx:208
+msgid "Hostname"
+msgstr "主机名"
+
+#: src/policies/modals/PolicyModal/constants.ts:108
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:32
+#: src/snapshot-history/components/RetentionBadge.tsx:11
+msgid "Hourly"
+msgstr "每小时"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:61
+msgid "How frequently to create snapshots in KopiaUI or Kopia server (has no effect outside of the server mode)"
+msgstr "KopiaUI 或 Kopia 服务器创建快照的频率（非服务器模式下无效）"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:73
+msgid "How many annual snapshots to retain per source. The latest snapshot from each calendar year will be retained"
+msgstr "每个来源保留的年度快照数量。每年保留该年的最新快照"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:43
+msgid "How many daily snapshots to retain per source. The latest snapshot from each day will be retained"
+msgstr "每个来源保留的每日快照数量。每天保留当天的最新快照"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:33
+msgid "How many hourly snapshots to retain per source. The latest snapshot from each hour will be retained"
+msgstr "每个来源保留的每小时快照数量。每小时保留该小时的最新快照"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:63
+msgid "How many monthly snapshots to retain per source. The latest snapshot from each calendar month will be retained"
+msgstr "每个来源保留的每月快照数量。每月保留该月的最新快照"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:53
+msgid "How many weekly snapshots to retain per source. The latest snapshot from each week will be retained"
+msgstr "每个来源保留的每周快照数量。每周保留该周的最新快照"
+
+#: src/preferences/modals/EmailModal.tsx:242
+#: src/preferences/modals/PushoverModal.tsx:140
+#: src/preferences/modals/WebhookModal.tsx:190
+msgid "HTML Format"
+msgstr "HTML 格式"
+
+#: src/i18n.ts:22
+#: src/preferences/modals/WebhookModal.tsx:176
+msgid "HTTP Method"
+msgstr "HTTP 方法"
+
+#: src/repo/sections/WebDavRepo.tsx:50
+msgid "http[s]://server:port/path"
+msgstr "http[s]://server:port/path"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:67
+msgid "Ignore directories containing CACHEDIR.TAG and similar"
+msgstr "忽略包含 CACHEDIR.TAG 等标记文件的目录"
+
+#: src/policies/modals/PolicyModal/constants.ts:126
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:21
+msgid "Ignore Directory Errors"
+msgstr "忽略目录错误"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:57
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:98
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:61
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:103
+msgid "Ignore failures"
+msgstr "忽略失败"
+
+#: src/policies/modals/PolicyModal/constants.ts:125
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:30
+msgid "Ignore File Errors"
+msgstr "忽略文件错误"
+
+#: src/policies/modals/PolicyModal/constants.ts:116
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:24
+msgid "Ignore Files"
+msgstr "忽略文件"
+
+#: src/policies/modals/PolicyModal/constants.ts:121
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:76
+msgid "Ignore Files larger than"
+msgstr "忽略大于此大小的文件"
+
+#: src/policies/modals/PolicyModal/constants.ts:113
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:82
+msgid "Ignore Identical Snapshots"
+msgstr "忽略相同快照"
+
+#: src/policies/modals/PolicyModal/constants.ts:118
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:50
+msgid "Ignore Rule Files"
+msgstr "忽略规则文件"
+
+#: src/policies/modals/PolicyModal/constants.ts:119
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:58
+msgid "Ignore Rule Files From Parent Directories"
+msgstr "不继承父目录的忽略规则文件"
+
+#: src/policies/modals/PolicyModal/constants.ts:117
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:41
+msgid "Ignore Rules From Parent Directories"
+msgstr "不继承父目录的忽略规则"
+
+#: src/policies/modals/PolicyModal/constants.ts:127
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:39
+msgid "Ignore Unknown Directory Entries"
+msgstr "忽略未知目录条目"
+
+#: src/policies/modals/PolicyModal/constants.ts:120
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:66
+msgid "Ignore Well-Known Cache Directories"
+msgstr "忽略常见缓存目录"
+
+#: src/core/SnapshotWarnings.tsx:44
+#: src/snapshots/components/UploadingLoader.tsx:58
+msgid "Ignored errors"
+msgstr "已忽略的错误"
+
+#: src/tasks/components/TaskCounterGrid.tsx:50
+msgid "Ignored Errors"
+msgstr "已忽略错误"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:101
+msgid "Immediately run any missed snapshots when kopia starts (only relevant for Time-of-day snapshots)"
+msgstr "Kopia 启动时立即补建错过的快照（仅适用于按时刻调度的快照）"
+
+#: src/core/SnapshotWarnings.tsx:21
+msgid "Incomplete snapshot"
+msgstr "未完成的快照"
+
+#: src/policies/modals/PolicyModal/components/InheritYesNoPolicyControl.tsx:38
+msgid "Inherit"
+msgstr "继承"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyLogDetailsInput.tsx:15
+msgid "Inherit from parent"
+msgstr "继承父级"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:202
+msgid "Internal Compression"
+msgstr "内部压缩"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:41
+msgid "JSON Representation"
+msgstr "JSON 表示"
+
+#: src/repo/sections/BackblazeB2Repo.tsx:32
+#: src/repo/sections/BackblazeB2Repo.tsx:73
+msgid "Key"
+msgstr "键"
+
+#: src/repo/sections/SFTPServerRepo.tsx:60
+#: src/repo/sections/SFTPServerRepo.tsx:216
+msgid "Key Data"
+msgstr "密钥内容"
+
+#: src/repo/sections/BackblazeB2Repo.tsx:31
+#: src/repo/sections/BackblazeB2Repo.tsx:67
+msgid "Key ID"
+msgstr "密钥 ID"
+
+#: src/tasks/TasksPage.tsx:145
+#: src/tasks/TasksPage.tsx:210
+msgid "Kind"
+msgstr "类型"
+
+#: src/repo/sections/SFTPServerRepo.tsx:63
+#: src/repo/sections/SFTPServerRepo.tsx:222
+msgid "Known Hosts Data"
+msgstr "可信主机内容"
+
+#: src/repo/repoConstants.ts:73
+#: src/repo/sections/KopiaRepoServerRepo.tsx:34
+msgid "Kopia Repository Server"
+msgstr "Kopia 仓库服务器"
+
+#: src/core/Header/Header.tsx:228
+#: src/core/Header/SkeletonHeader.tsx:13
+msgid "Kopia UI"
+msgstr "Kopia 备份管理"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:221
+msgid "Last Modification"
+msgstr "最后修改时间"
+
+#: src/core/DataGrid/DataGrid.tsx:86
+msgid "Last page"
+msgstr "最后一页"
+
+#: src/snapshots/SnapshotsPage.tsx:292
+msgid "Last Snapshot"
+msgstr "最近一次快照"
+
+#: src/tasks/components/TaskLogs.tsx:62
+msgid "Latest 100 non-error logs and all errors"
+msgstr "最近 100 条普通日志和所有错误日志"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:181
+#: src/repo/CreateRepoSection.tsx:167
+msgid "Latest format"
+msgstr "最新格式"
+
+#: src/policies/modals/PolicyModal/constants.ts:107
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:22
+#: src/snapshot-history/components/RetentionBadge.tsx:10
+msgid "Latest Snapshots"
+msgstr "最新快照"
+
+#: src/repo/sections/SFTPServerRepo.tsx:64
+#: src/repo/sections/SFTPServerRepo.tsx:231
+msgid "Launch external password-less SSH command"
+msgstr "使用外部免密 SSH 命令"
+
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:63
+msgid "Leave empty to remove description"
+msgstr "留空以移除描述"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:181
+#: src/repo/CreateRepoSection.tsx:169
+msgid "Legacy format compatible with v0.8"
+msgstr "兼容 v0.8 的旧格式"
+
+#: src/preferences/AppearanceSection.tsx:90
+msgid "Light"
+msgstr "浅色"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:51
+msgid "List of additional files containing ignore rules (each file configures ignore rules for the directory and its subdirectories)"
+msgstr "包含忽略规则的附加文件列表（每个文件为所在目录及其子目录配置忽略规则）"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:25
+msgid "List of file and directory names to ignore."
+msgstr "要忽略的文件和目录名称列表。"
+
+#: src/repo/repoConstants.ts:25
+#: src/repo/sections/FileSystemRepo.tsx:33
+msgid "Local Directory or NAS"
+msgstr "本地目录或 NAS"
+
+#: src/policies/PoliciesPage.tsx:144
+msgid "Local Path Policies"
+msgstr "本地路径策略"
+
+#: src/snapshots/SnapshotsPage.tsx:186
+msgid "Local Snapshots"
+msgstr "本地快照"
+
+#: src/preferences/AppearanceSection.tsx:127
+msgid "Locale"
+msgstr "界面语言"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:67
+msgid "Log verbosity when a cache cannot be used and a file must be hashed"
+msgstr "无法使用缓存、必须计算文件哈希时的日志详细程度"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:58
+msgid "Log verbosity when a cache is used instead of uploading the file"
+msgstr "使用缓存而不上传文件时的日志详细程度"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:31
+msgid "Log verbosity when a directory is ignored"
+msgstr "忽略目录时的日志详细程度"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:22
+msgid "Log verbosity when a directory is snapshotted"
+msgstr "为目录创建快照时的日志详细程度"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:49
+msgid "Log verbosity when a file, symbolic link, etc. is ignored"
+msgstr "忽略文件、符号链接等条目时的日志详细程度"
+
+#: src/policies/modals/PolicyModal/tabs/LoggingTab.tsx:40
+msgid "Log verbosity when a file, symbolic link, etc. is snapshotted"
+msgstr "为文件、符号链接等条目创建快照时的日志详细程度"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:79
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:235
+msgid "Logging"
+msgstr "日志"
+
+#: src/core/context/LoginModal.tsx:83
+msgid "Login"
+msgstr "登录"
+
+#: src/core/context/LoginModal.tsx:48
+msgid "Login to {instanceName}"
+msgstr "登录到 {instanceName}"
+
+#: src/core/Footer/ConnectionInfo.tsx:64
+msgid "Logout"
+msgstr "退出登录"
+
+#: src/snapshots/SnapshotsPage.tsx:376
+#: src/snapshots/SnapshotsPage.tsx:378
+#: src/tasks/components/TaskLogs.tsx:59
+msgid "Logs"
+msgstr "日志"
+
+#: src/preferences/modals/EmailModal.tsx:233
+msgid "Mail From"
+msgstr "发件地址"
+
+#: src/tasks/components/TaskKindDisplay.tsx:17
+msgid "Maintenance"
+msgstr "维护"
+
+#: src/core/Header/Header.tsx:77
+msgid "Manage mounted snapshots"
+msgstr "管理已挂载快照"
+
+#: src/core/Header/Header.tsx:90
+msgid "Manage repository status and configuration"
+msgstr "管理仓库状态与配置"
+
+#: src/core/Header/Header.tsx:97
+msgid "Manage snapshot policies for this repository"
+msgstr "管理此仓库的快照策略"
+
+#: src/core/Header/Header.tsx:70
+msgid "Manage snapshots"
+msgstr "管理快照"
+
+#: src/policies/modals/PolicyModal/constants.ts:140
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:109
+msgid "Manual Snapshots Only"
+msgstr "仅手动创建快照"
+
+#: src/tasks/components/TaskLogs.tsx:48
+#~ msgid "match"
+#~ msgstr "处匹配"
+
+#: src/tasks/components/TaskLogs.tsx:49
+#~ msgid "matches"
+#~ msgstr "处匹配"
+
+#: src/policies/modals/PolicyModal/constants.ts:151
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:43
+msgid "Max File Size"
+msgstr "最大文件大小"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:33
+msgid "max number of parallel file reads"
+msgstr "最大并行读取文件数"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:45
+msgid "Maximum file size in bytes"
+msgstr "最大文件大小（字节）"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:32
+msgid "Maximum number of files that will be read in parallel (defaults to the number of logical processors)"
+msgstr "同时读取的最大文件数（默认为逻辑处理器数量）"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:22
+msgid "Maximum number of snapshots that can be uploaded simultaneously"
+msgstr "同时上传的最大快照数"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:31
+msgid "Maximum Parallel File Reads"
+msgstr "最大并行读取文件数"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:21
+msgid "Maximum Parallel Snapshots"
+msgstr "最大并行快照数"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:59
+msgid "Metadata Compression"
+msgstr "元数据压缩"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:183
+msgid "Minimal File Size For Shallow Restore"
+msgstr "浅恢复的最小文件大小"
+
+#: src/policies/modals/PolicyModal/constants.ts:150
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:33
+msgid "Minimum File Size"
+msgstr "最小文件大小"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:35
+msgid "Minimum file size in bytes"
+msgstr "最小文件大小（字节）"
+
+#: src/i18n.ts:20
+#: src/preferences/components/NotificationCard.tsx:98
+#: src/preferences/modals/EmailModal.tsx:200
+#: src/preferences/modals/PushoverModal.tsx:118
+#: src/preferences/modals/WebhookModal.tsx:159
+msgid "Minimum Severity"
+msgstr "最低通知级别"
+
+#: src/preferences/modals/EmailModal.tsx:201
+#: src/preferences/modals/PushoverModal.tsx:119
+#: src/preferences/modals/WebhookModal.tsx:160
+msgid "Minimum severity required to use this notification profile"
+msgstr "触发此通知配置的最低级别"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:84
+msgid "minute hour day month weekday #comment"
+msgstr "分钟 小时 日 月 星期 #注释"
+
+#: src/policies/modals/PolicyModal/constants.ts:111
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:62
+#: src/snapshot-history/components/RetentionBadge.tsx:14
+msgid "Monthly"
+msgstr "每月"
+
+#: src/snapshot-directory/components/MountButton.tsx:39
+msgid "Mount"
+msgstr "挂载"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:85
+msgid "Mounted at"
+msgstr "挂载位置"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:52
+msgid "Mounted Snapshots"
+msgstr "已挂载快照"
+
+#: src/core/Header/Header.tsx:74
+msgid "Mounts"
+msgstr "挂载"
+
+#: src/policies/modals/PolicyModal/tabs/UploadTab.tsx:23
+msgid "must be specified using global, user, or host policy"
+msgstr "必须通过全局、用户或主机策略指定"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:56
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:97
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:60
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:102
+msgid "Must Succeed"
+msgstr "必须成功"
+
+#: src/i18n.ts:15
+#: src/preferences/modals/EmailModal.tsx:192
+#: src/preferences/modals/PushoverModal.tsx:110
+#: src/preferences/modals/WebhookModal.tsx:118
+#: src/preferences/modals/WebhookModal.tsx:151
+#: src/snapshot-directory/SnapshotDirectory.tsx:190
+msgid "Name"
+msgstr "名称"
+
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:77
+msgid "Name of the pin"
+msgstr "保护标签名称"
+
+#: src/policies/modals/PolicyModal/constants.ts:148
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:63
+msgid "Never Compress Extensions"
+msgstr "不压缩的扩展名"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:64
+msgid "Never compress the following file extensions (one extension per line)"
+msgstr "不压缩以下扩展名的文件（每行一个扩展名）"
+
+#: src/policies/PoliciesPage.tsx:167
+msgid "New Policy"
+msgstr "新建策略"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:90
+msgctxt "modal-title"
+msgid "New snapshot"
+msgstr "新建快照"
+
+#: src/snapshots/components/NewSnapshotButton.tsx:33
+#: src/snapshots/SnapshotsPage.tsx:210
+msgid "New Snapshot"
+msgstr "新建快照"
+
+#: src/repo/ConfigureRepoSection.tsx:307
+msgid "Next"
+msgstr "下一步"
+
+#: src/tasks/components/TaskLogs.tsx:52
+#~ msgid "Next match"
+#~ msgstr "下一个匹配"
+
+#: src/core/DataGrid/DataGrid.tsx:88
+msgid "Next page"
+msgstr "下一页"
+
+#: src/snapshots/SnapshotsPage.tsx:297
+msgid "Next snapshot"
+msgstr "下一次快照"
+
+#: src/policies/modals/PolicyModal/components/InheritYesNoPolicyControl.tsx:60
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:204
+msgid "No"
+msgstr "否"
+
+#: src/policies/modals/PolicyModal/components/DeletePolicyButton.tsx:33
+msgid "No don't delete it"
+msgstr "不，保留它"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:184
+msgid "No entires matching your search"
+msgstr "没有匹配的条目"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:184
+msgid "No entries in folder"
+msgstr "目录为空"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:36
+msgid "No error message given"
+msgstr "未提供错误信息"
+
+#: src/preferences/modals/WebhookModal.tsx:202
+msgid "No headers defined"
+msgstr "未定义请求头"
+
+#: src/tasks/components/TaskLogs.tsx:91
+msgid "No logs to display"
+msgstr "暂无可显示的日志"
+
+#: src/preferences/NotificationsSection.tsx:102
+msgid "No notifications defined"
+msgstr "未配置通知"
+
+#: src/policies/PoliciesPage.tsx:184
+msgid "No policies found"
+msgstr "未找到策略"
+
+#: src/preferences/modals/EmailModal.tsx:252
+#: src/preferences/modals/EmailModal.tsx:275
+msgid "No recepients defined"
+msgstr "未设置收件人"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:69
+msgid "No snapshots mounted"
+msgstr "没有已挂载的快照"
+
+#: src/snapshot-history/SnapshotHistory.tsx:134
+#: src/snapshots/SnapshotsPage.tsx:236
+msgid "No snapshots taken"
+msgstr "尚无快照"
+
+#: src/tasks/TasksPage.tsx:185
+msgid "No tasks found"
+msgstr "没有任务"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:50
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:63
+msgid "None"
+msgstr "无"
+
+#: src/policies/modals/PolicyModal/components/PolicyAccordionControl.tsx:29
+msgid "Not configured"
+msgstr "未配置"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:74
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTextListInput.tsx:107
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:55
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyTimeOfDayInput.tsx:88
+msgid "Not defined"
+msgstr "未定义"
+
+#: src/i18n.ts:23
+#: src/preferences/modals/EmailModal.tsx:239
+#: src/preferences/modals/WebhookModal.tsx:187
+msgid "Notification Format"
+msgstr "通知格式"
+
+#: src/preferences/PreferencesPage.tsx:27
+msgid "Notifications"
+msgstr "通知"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:23
+msgid "Number of the most recent snapshots to retain per source"
+msgstr "每个来源保留的最新快照数量"
+
+#: src/repo/sections/AmazonS3Repo.tsx:47
+#: src/repo/sections/AmazonS3Repo.tsx:101
+#: src/repo/sections/AzureBlobStorageRepo.tsx:39
+#: src/repo/sections/AzureBlobStorageRepo.tsx:75
+#: src/repo/sections/BackblazeB2Repo.tsx:33
+#: src/repo/sections/BackblazeB2Repo.tsx:60
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:31
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:60
+msgid "Object Name Prefix"
+msgstr "对象名称前缀"
+
+#: src/policies/modals/PolicyModal/constants.ts:146
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:53
+msgid "Only Compress Extensions"
+msgstr "仅压缩指定扩展名"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:54
+msgid "Only compress files with the following file extensions (one extension per line)"
+msgstr "仅压缩以下扩展名的文件（每行一个扩展名）"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:110
+msgid "Only create snapshots manually (disables scheduled snapshots)"
+msgstr "仅手动创建快照（禁用计划快照）"
+
+#: src/repo/sections/SFTPServerRepo.tsx:78
+msgid "Only one of Password, Path to key file or Key Data must be set"
+msgstr "密码、密钥文件路径和密钥内容必须且只能设置一项"
+
+#: src/repo/sections/SFTPServerRepo.tsx:117
+msgid "Only one of Path to known_hosts File or Known Hosts Data must be set"
+msgstr "known_hosts 文件路径和可信主机内容必须且只能设置一项"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:35
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:76
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:35
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:81
+msgid "Open in large edit"
+msgstr "打开大编辑窗口"
+
+#: src/core/hooks/useApiRequest.ts:99
+#: src/core/hooks/useApiRequest.ts:109
+#: src/core/LocalPathInput.tsx:41
+msgid "Operation failed"
+msgstr "操作失败"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:74
+msgid "OS Snapshots"
+msgstr "操作系统快照"
+
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:238
+msgid "Other"
+msgstr "其他"
+
+#: src/snapshots/SnapshotsPage.tsx:313
+msgid "Overdue"
+msgstr "已逾期"
+
+#: src/repo/sections/AmazonS3Repo.tsx:43
+#: src/repo/sections/AmazonS3Repo.tsx:96
+msgid "Override Region"
+msgstr "指定区域"
+
+#: src/repo/ConnectRepoSection.tsx:139
+#: src/repo/CreateRepoSection.tsx:204
+msgid "Override this when restoring a snapshot taken by another user"
+msgstr "恢复其他用户创建的快照时可覆盖此值"
+
+#: src/repo/ConnectRepoSection.tsx:144
+#: src/repo/CreateRepoSection.tsx:209
+msgid "Override this when restoring a snapshot taken on another machine"
+msgstr "恢复其他主机创建的快照时可覆盖此值"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:223
+msgid "Overwrite Directories"
+msgstr "覆盖目录"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:216
+msgid "Overwrite Files"
+msgstr "覆盖文件"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:230
+msgid "Overwrite Symbolic Links"
+msgstr "覆盖符号链接"
+
+#: src/snapshots/SnapshotsPage.tsx:265
+msgid "Owner"
+msgstr "所有者"
+
+#: src/core/context/LoginModal.tsx:66
+#: src/core/context/LoginModal.tsx:67
+#: src/i18n.ts:19
+#: src/repo/sections/SFTPServerRepo.tsx:58
+#: src/repo/sections/SFTPServerRepo.tsx:183
+#: src/repo/sections/SFTPServerRepo.tsx:184
+#: src/repo/sections/WebDavRepo.tsx:29
+#: src/repo/sections/WebDavRepo.tsx:57
+#: src/repo/sections/WebDavRepo.tsx:58
+msgid "Password"
+msgstr "密码"
+
+#: src/repo/ConfigureRepoSection.tsx:145
+msgid "Passwords does not match"
+msgstr "两次输入的密码不一致"
+
+#: src/repo/sections/KopiaRepoTokenRepo.tsx:45
+msgid "Paste connection token"
+msgstr "粘贴连接令牌"
+
+#: src/repo/sections/SFTPServerRepo.tsx:217
+msgid "Paste contents of the key file"
+msgstr "粘贴密钥文件内容"
+
+#: src/repo/sections/SFTPServerRepo.tsx:223
+msgid "Paste contents of the known_hosts file"
+msgstr "粘贴 known_hosts 文件内容"
+
+#: src/repo/sections/GoogleCloudStorageRepo.tsx:74
+msgid "Paste JSON credentials here"
+msgstr "在此粘贴 JSON 凭据"
+
+#: src/i18n.ts:17
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:118
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:52
+#: src/policies/PoliciesPage.tsx:200
+#: src/repo/sections/SFTPServerRepo.tsx:56
+#: src/repo/sections/SFTPServerRepo.tsx:190
+#: src/snapshots/SnapshotsPage.tsx:244
+msgid "Path"
+msgstr "路径"
+
+#: src/repo/sections/SFTPServerRepo.tsx:59
+#: src/repo/sections/SFTPServerRepo.tsx:202
+msgid "Path to key file"
+msgstr "密钥文件路径"
+
+#: src/repo/sections/SFTPServerRepo.tsx:62
+#: src/repo/sections/SFTPServerRepo.tsx:209
+msgid "Path to known_hosts File"
+msgstr "known_hosts 文件路径"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:108
+msgid "Path to snapshot"
+msgstr "快照源路径"
+
+#: src/snapshots/SnapshotsPage.tsx:367
+msgid "Pending"
+msgstr "等待中"
+
+#: src/policies/PoliciesPage.tsx:149
+msgid "Per-Host Policies"
+msgstr "主机策略"
+
+#: src/policies/PoliciesPage.tsx:148
+msgid "Per-User Policies"
+msgstr "用户策略"
+
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:66
+msgid "Pin Snapshot"
+msgstr "保护快照"
+
+#: src/preferences/modals/EmailModal.tsx:241
+#: src/preferences/modals/PushoverModal.tsx:139
+#: src/preferences/modals/WebhookModal.tsx:189
+msgid "Plain Text Format"
+msgstr "纯文本格式"
+
+#: src/core/Header/Header.tsx:94
+#: src/policies/PoliciesPage.tsx:137
+msgid "Policies"
+msgstr "策略"
+
+#: src/policies/modals/CreatePolicyModal/CreatePolicyModal.tsx:85
+msgid "Policy Exists"
+msgstr "策略已存在"
+
+#: src/repo/sections/SFTPServerRepo.tsx:54
+#: src/repo/sections/SFTPServerRepo.tsx:167
+msgid "Port"
+msgstr "端口"
+
+#: src/repo/sections/SFTPServerRepo.tsx:168
+msgid "Port number (e.g., 22)"
+msgstr "端口号（例如 22）"
+
+#: src/core/CLIEquivalent.tsx:94
+msgid "POSIX shell"
+msgstr "POSIX Shell"
+
+#: src/core/CLIEquivalent.tsx:95
+msgid "PowerShell (Windows)"
+msgstr "PowerShell（Windows）"
+
+#: src/core/Header/Header.tsx:102
+#: src/preferences/PreferencesPage.tsx:14
+msgid "Preferences"
+msgstr "偏好设置"
+
+#: src/preferences/AppearanceSection.tsx:63
+msgid "Preferences updated"
+msgstr "偏好设置已更新"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:27
+msgid "Prevents any parent policies from affecting this directory and its subdirectories"
+msgstr "阻止父级策略影响此目录及其子目录"
+
+#: src/tasks/components/TaskLogs.tsx:51
+#~ msgid "Previous match"
+#~ msgstr "上一个匹配"
+
+#: src/core/DataGrid/DataGrid.tsx:87
+msgid "Previous page"
+msgstr "上一页"
+
+#: src/tasks/components/TaskCounterGrid.tsx:47
+msgid "Processed Bytes"
+msgstr "已处理字节"
+
+#: src/tasks/components/TaskCounterGrid.tsx:48
+msgid "Processed Files"
+msgstr "已处理文件"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:154
+msgid "Provider"
+msgstr "存储服务"
+
+#: src/preferences/NotificationsSection.tsx:90
+msgid "Pushover"
+msgstr "Pushover"
+
+#: src/i18n.ts:24
+#: src/preferences/modals/PushoverModal.tsx:133
+msgid "Pushover App Token"
+msgstr "Pushover 应用令牌"
+
+#: src/preferences/modals/PushoverModal.tsx:112
+msgid "pushover-1"
+msgstr "pushover-1"
+
+#: src/repo/sections/RcloneRepo.tsx:28
+#: src/repo/sections/RcloneRepo.tsx:56
+msgid "Rclone Executable Path"
+msgstr "Rclone 可执行文件路径"
+
+#: src/repo/repoConstants.ts:61
+#: src/repo/sections/RcloneRepo.tsx:36
+msgid "Rclone Remote"
+msgstr "Rclone 远程存储"
+
+#: src/repo/sections/RcloneRepo.tsx:27
+#: src/repo/sections/RcloneRepo.tsx:48
+msgid "Rclone Remote Path"
+msgstr "Rclone 远程路径"
+
+#: src/repo/ConnectRepoSection.tsx:133
+msgid "Read-only mode prevents any changes to the repository"
+msgstr "只读模式禁止对仓库进行任何修改"
+
+#: src/i18n.ts:25
+#: src/preferences/modals/PushoverModal.tsx:134
+msgid "Recipient User Key or Group Key"
+msgstr "接收用户密钥或群组密钥"
+
+#: src/core/DataGrid/DataGrid.tsx:81
+msgid "Records per page"
+msgstr "每页条数"
+
+#: src/policies/PoliciesPage.tsx:174
+#: src/snapshot-directory/SnapshotDirectory.tsx:152
+#: src/snapshot-history/SnapshotHistory.tsx:111
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:59
+#: src/snapshots/SnapshotsPage.tsx:169
+#: src/snapshots/SnapshotsPage.tsx:217
+#: src/tasks/TasksPage.tsx:174
+msgid "Refresh"
+msgstr "刷新"
+
+#: src/snapshots/SnapshotsPage.tsx:273
+msgid "Remote"
+msgstr "远程"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:41
+#: src/preferences/modals/EmailModal.tsx:205
+#: src/preferences/modals/PushoverModal.tsx:123
+#: src/preferences/modals/WebhookModal.tsx:164
+msgid "Report"
+msgstr "报告"
+
+#: src/core/Header/Header.tsx:83
+#: src/tasks/components/TaskKindDisplay.tsx:19
+msgid "Repository"
+msgstr "仓库"
+
+#: src/repo/ConnectRepoSection.tsx:120
+msgid "Repository Description"
+msgstr "仓库描述"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:58
+msgid "Repository disconnected"
+msgstr "仓库已断开连接"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:178
+#: src/repo/CreateRepoSection.tsx:165
+msgid "Repository Format"
+msgstr "仓库格式"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:140
+msgid "Repository is connected as read-only"
+msgstr "仓库已以只读模式连接"
+
+#: src/repo/ConnectRepoSection.tsx:104
+#: src/repo/CreateRepoSection.tsx:119
+msgid "Repository Password"
+msgstr "仓库密码"
+
+#: src/snapshots/SnapshotsPage.tsx:151
+msgid "Repository synchronized"
+msgstr "仓库已同步"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:114
+msgid "Resolve path"
+msgstr "解析路径"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:144
+#: src/tasks/components/TaskKindDisplay.tsx:13
+msgid "Restore"
+msgstr "恢复"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:209
+msgid "Restore File Modification Time"
+msgstr "恢复文件修改时间"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:195
+msgid "Restore File Ownership"
+msgstr "恢复文件所有权"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:202
+msgid "Restore File Permissions"
+msgstr "恢复文件权限"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:123
+msgid "Restore files and directories"
+msgstr "恢复文件和目录"
+
+#: src/tasks/components/TaskCounterGrid.tsx:51
+msgid "Restored Bytes"
+msgstr "已恢复字节"
+
+#: src/tasks/components/TaskCounterGrid.tsx:52
+msgid "Restored Directories"
+msgstr "已恢复目录"
+
+#: src/tasks/components/TaskCounterGrid.tsx:53
+msgid "Restored Files"
+msgstr "已恢复文件"
+
+#: src/tasks/components/TaskCounterGrid.tsx:54
+msgid "Restored Symlinks"
+msgstr "已恢复符号链接"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:34
+#: src/snapshot-history/SnapshotHistory.tsx:179
+msgid "Retention"
+msgstr "保留规则"
+
+#: src/snapshot-history/SnapshotHistory.tsx:159
+msgid "Root"
+msgstr "根目录"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:59
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:100
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:63
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:105
+msgid "Run asynchronously, ignore failures"
+msgstr "异步执行，忽略失败"
+
+#: src/policies/modals/PolicyModal/constants.ts:142
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:100
+msgid "Run Missed Snapshots on Startup"
+msgstr "启动时补建错过的快照"
+
+#: src/core/CLIEquivalent.tsx:111
+msgid "Run this command on the Kopia server with access to its repository configuration."
+msgstr "请在可访问仓库配置的 Kopia 服务器上运行此命令。"
+
+#: src/tasks/TasksPage.tsx:124
+msgid "Running"
+msgstr "运行中"
+
+#: src/tasks/components/TaskStatusDisplay.tsx:19
+#: src/tasks/components/TaskSummaryDisplay.tsx:20
+msgid "Running for"
+msgstr "已运行"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:38
+#: src/repo/sections/AzureBlobStorageRepo.tsx:92
+msgid "SAS Token"
+msgstr "SAS 令牌"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:118
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:268
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:129
+#: src/preferences/AppearanceSection.tsx:154
+#: src/preferences/modals/EmailModal.tsx:303
+#: src/preferences/modals/PushoverModal.tsx:155
+#: src/preferences/modals/WebhookModal.tsx:231
+#: src/snapshot-history/modals/PinSnapshotModal.tsx:92
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:75
+msgid "Save"
+msgstr "保存"
+
+#: src/core/LocalPathInput.tsx:21
+msgid "Save file"
+msgstr "保存文件"
+
+#: src/policies/modals/PolicyModal/constants.ts:122
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:85
+msgid "Scan only one filesystem"
+msgstr "仅扫描一个文件系统"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:49
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:220
+msgid "Scheduling"
+msgstr "计划调度"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:70
+msgid "Script to run after folder"
+msgstr "目录处理后执行的脚本"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:75
+msgid "Script to run after snapshot"
+msgstr "快照创建后执行的脚本"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:29
+msgid "Script to run before folder"
+msgstr "目录处理前执行的脚本"
+
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:29
+msgid "Script to run before snapshot"
+msgstr "快照创建前执行的脚本"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:138
+msgid "Search files or folder (current level)"
+msgstr "搜索文件或目录（当前层级）"
+
+#: src/tasks/components/TaskLogs.tsx:71
+#: src/tasks/components/TaskLogs.tsx:72
+msgid "Search logs"
+msgstr "搜索日志"
+
+#: src/tasks/TasksPage.tsx:164
+msgid "Search tasks"
+msgstr "搜索任务"
+
+#: src/repo/sections/AmazonS3Repo.tsx:42
+#: src/repo/sections/AmazonS3Repo.tsx:114
+msgid "Secret Access Key"
+msgstr "私有访问密钥"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:31
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:89
+msgid "See"
+msgstr "参见"
+
+#: src/core/CLIEquivalent.tsx:66
+msgid "Select and copy the command manually."
+msgstr "请选中命令并手动复制。"
+
+#: src/policies/modals/PolicyModal/policy-inputs/PolicyCompressionInput.tsx:83
+msgid "Select compression algorithm"
+msgstr "选择压缩算法"
+
+#: src/core/LocalPathInput.tsx:21
+msgid "Select directory"
+msgstr "选择目录"
+
+#: src/core/LocalPathInput.tsx:21
+msgid "Select file"
+msgstr "选择文件"
+
+#: src/repo/ConfigureRepoSection.tsx:270
+msgid "Select Provider"
+msgstr "选择存储服务"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:62
+msgid "Select Snapshot Frequency"
+msgstr "选择快照频率"
+
+#: src/repo/ConfigureRepoSection.tsx:270
+msgid "Select the preferred storage type"
+msgstr "选择存储类型"
+
+#: src/preferences/components/NotificationCard.tsx:82
+msgid "Send test notification"
+msgstr "发送测试通知"
+
+#: src/preferences/modals/EmailModal.tsx:234
+msgid "sender email address"
+msgstr "发件人邮箱地址"
+
+#: src/core/Footer/ConnectionInfo.tsx:36
+#: src/core/Footer/ConnectionInfo.tsx:50
+msgid "Server"
+msgstr "服务器"
+
+#: src/repo/sections/KopiaRepoServerRepo.tsx:25
+#: src/repo/sections/KopiaRepoServerRepo.tsx:46
+msgid "Server address"
+msgstr "服务器地址"
+
+#: src/repo/sections/AmazonS3Repo.tsx:40
+#: src/repo/sections/AmazonS3Repo.tsx:74
+msgid "Server Endpoint"
+msgstr "服务器端点"
+
+#: src/repo/ConnectRepoSection.tsx:113
+msgid "Server Password"
+msgstr "服务器密码"
+
+#: src/core/Footer/ConnectionInfo.tsx:84
+msgid "SERVERS"
+msgstr "服务器"
+
+#: src/repo/sections/AmazonS3Repo.tsx:121
+msgid "Session token"
+msgstr "会话令牌"
+
+#: src/preferences/StatisticsSection.tsx:11
+msgid "Settings stored locally"
+msgstr "设置保存在本地"
+
+#: src/repo/repoConstants.ts:55
+#: src/repo/sections/SFTPServerRepo.tsx:147
+msgid "SFTP Server"
+msgstr "SFTP 服务器"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:178
+msgid "Shallow Restore At Depth"
+msgstr "浅恢复起始深度"
+
+#: src/snapshot-history/components/SnapshotCountControl.tsx:40
+msgid "Show {totalLength} individual snapshots"
+msgstr "显示 {totalLength} 个独立快照"
+
+#: src/preferences/AppearanceSection.tsx:147
+msgid "Show all snapshots by default"
+msgstr "默认显示全部快照"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:227
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:91
+#: src/snapshot-history/SnapshotHistory.tsx:209
+#: src/snapshots/SnapshotsPage.tsx:283
+msgid "Size"
+msgstr "大小"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:88
+msgid "Size over time"
+msgstr "容量变化"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:164
+msgid "Skip previously restored files and symlinks"
+msgstr "跳过已恢复的文件和符号链接"
+
+#: src/tasks/components/TaskCounterGrid.tsx:55
+msgid "Skipped Bytes"
+msgstr "已跳过字节"
+
+#: src/tasks/components/TaskCounterGrid.tsx:56
+msgid "Skipped Files"
+msgstr "已跳过文件"
+
+#: src/preferences/modals/EmailModal.tsx:221
+msgid "SMTP Port"
+msgstr "SMTP 端口"
+
+#: src/i18n.ts:26
+#: src/preferences/modals/EmailModal.tsx:216
+msgid "SMTP Server"
+msgstr "SMTP 服务器"
+
+#: src/preferences/modals/EmailModal.tsx:217
+msgid "SMTP server DNS name, e.g. smtp.gmail.com"
+msgstr "SMTP 服务器域名，例如 smtp.gmail.com"
+
+#: src/i18n.ts:28
+#: src/preferences/modals/EmailModal.tsx:230
+msgid "SMTP server password"
+msgstr "SMTP 服务器密码"
+
+#: src/preferences/modals/EmailModal.tsx:226
+msgid "SMTP server username, typically the email address"
+msgstr "SMTP 服务器用户名，通常为邮箱地址"
+
+#: src/i18n.ts:27
+#: src/preferences/modals/EmailModal.tsx:225
+msgid "SMTP Username"
+msgstr "SMTP 用户名"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:129
+#: src/tasks/components/TaskKindDisplay.tsx:15
+msgid "Snapshot"
+msgstr "快照"
+
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:229
+msgid "Snapshot Actions"
+msgstr "快照操作"
+
+#: src/policies/modals/PolicyModal/constants.ts:130
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:60
+msgid "Snapshot Frequency"
+msgstr "快照频率"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:75
+msgid "Snapshot ID"
+msgstr "快照 ID"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:160
+msgid "Snapshot is mounted at the following path"
+msgstr "快照已挂载到以下路径"
+
+#: src/snapshots/SnapshotsPage.tsx:203
+#: src/snapshots/SnapshotsPage.tsx:410
+msgid "Snapshot logs"
+msgstr "快照日志"
+
+#: src/snapshot-directory/SnapshotDirectory.tsx:159
+msgid "Snapshot Mounted"
+msgstr "快照已挂载"
+
+#: src/snapshots/modals/NewSnapshotModal.tsx:167
+msgid "Snapshot now"
+msgstr "立即创建快照"
+
+#: src/snapshots/SnapshotsPage.tsx:334
+msgid "Snapshot Now"
+msgstr "立即创建快照"
+
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:205
+msgid "Snapshot Retention"
+msgstr "快照保留规则"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:83
+msgid "Snapshot schedules using UNIX crontab syntax:"
+msgstr "使用 UNIX crontab 语法设置快照计划："
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:35
+msgid "Snapshot unmounted"
+msgstr "快照已卸载"
+
+#: src/snapshot-history/SnapshotHistory.tsx:296
+msgid "Snapshot(s) deleted"
+msgstr "快照已删除"
+
+#: src/core/Header/Header.tsx:61
+#: src/core/Header/Header.tsx:67
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:83
+#: src/snapshot-history/SnapshotHistory.tsx:90
+#: src/snapshots/SnapshotsPage.tsx:164
+msgid "Snapshots"
+msgstr "快照"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:80
+msgid "Snapshots by date"
+msgstr "按日期统计快照"
+
+#: src/policies/modals/PolicyModal/tabs/CompressionTab.tsx:24
+msgid "Specify compression algorithm to use when snapshotting files in this directory and subdirectories"
+msgstr "指定为此目录及其子目录中的文件创建快照时使用的压缩算法"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:64
+#: src/repo/CreateRepoSection.tsx:158
+msgid "Splitter"
+msgstr "分块"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:172
+msgid "Splitter Algorithm"
+msgstr "分块算法"
+
+#: src/repo/sections/SFTPServerRepo.tsx:66
+#: src/repo/sections/SFTPServerRepo.tsx:247
+msgid "SSH Arguments"
+msgstr "SSH 参数"
+
+#: src/repo/sections/SFTPServerRepo.tsx:65
+#: src/repo/sections/SFTPServerRepo.tsx:242
+msgid "SSH Command"
+msgstr "SSH 命令"
+
+#: src/repo/sections/SFTPServerRepo.tsx:162
+msgid "SSH host name (e.g., example.com)"
+msgstr "SSH 主机名（例如 example.com）"
+
+#: src/snapshot-history/SnapshotHistory.tsx:142
+#: src/tasks/TasksPage.tsx:196
+msgid "Start Time"
+msgstr "开始时间"
+
+#: src/tasks/TaskDetailsPage.tsx:89
+msgid "Started"
+msgstr "已开始"
+
+#: src/preferences/PreferencesPage.tsx:30
+msgid "Statistics"
+msgstr "统计"
+
+#: src/core/Header/Header.tsx:88
+#: src/tasks/TasksPage.tsx:205
+msgid "Status"
+msgstr "状态"
+
+#: src/repo/sections/AzureBlobStorageRepo.tsx:35
+#: src/repo/sections/AzureBlobStorageRepo.tsx:66
+msgid "Storage Account"
+msgstr "存储账户"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:32
+#: src/preferences/modals/EmailModal.tsx:204
+#: src/preferences/modals/PushoverModal.tsx:122
+#: src/preferences/modals/WebhookModal.tsx:163
+msgid "Success"
+msgstr "成功"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:91
+msgid "supported format details."
+msgstr "支持的格式说明。"
+
+#: src/core/context/ServerInstanceContext.tsx:93
+msgid "Switched instance"
+msgstr "实例已切换"
+
+#: src/snapshot-history/components/SnapshotHistoryStats.tsx:103
+msgid "Symlinks"
+msgstr "符号链接"
+
+#: src/snapshots/SnapshotsPage.tsx:226
+msgid "Sync"
+msgstr "同步"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:139
+msgid "Tar File"
+msgstr "Tar 文件"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:61
+msgid "Task canceled"
+msgstr "任务已取消"
+
+#: src/tasks/TasksPage.tsx:67
+msgid "Task cancelled"
+msgstr "任务已取消"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:43
+msgid "Task failed"
+msgstr "任务失败"
+
+#: src/tasks/TasksPage.tsx:191
+msgid "Task ID"
+msgstr "任务 ID"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:16
+msgid "Task in progress"
+msgstr "任务运行中"
+
+#: src/tasks/components/TaskSummaryDisplay.tsx:32
+msgid "Task succeeded"
+msgstr "任务已成功完成"
+
+#: src/core/Header/Header.tsx:101
+#: src/tasks/TasksPage.tsx:100
+msgid "Tasks"
+msgstr "任务"
+
+#: src/preferences/NotificationsSection.tsx:50
+msgid "Test notification sent"
+msgstr "测试通知已发送"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:71
+msgid "The repository description was successfully updated"
+msgstr "仓库描述已成功更新"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:59
+msgid "The repository was successfully disconnected"
+msgstr "仓库连接已成功断开"
+
+#: src/snapshots/SnapshotsPage.tsx:152
+msgid "The repository was synchronized successfully"
+msgstr "仓库已成功同步"
+
+#: src/snapshot-history/SnapshotHistory.tsx:297
+msgid "The snapshot(s) was delete successfully"
+msgstr "快照已成功删除"
+
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:36
+msgid "The snapshout was unmounted from the host"
+msgstr "快照已从主机卸载"
+
+#: src/tasks/TasksPage.tsx:68
+msgid "The task was cancelled"
+msgstr "任务已取消"
+
+#: src/preferences/AppearanceSection.tsx:88
+msgid "Theme"
+msgstr "主题"
+
+#: src/policies/modals/PolicyModal/tabs/OtherTab.tsx:42
+msgid "This is the internal representation of a policy"
+msgstr "这是策略的内部表示"
+
+#: src/policies/modals/PolicyModal/constants.ts:138
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:71
+msgid "Time Of Day"
+msgstr "每天指定时刻"
+
+#: src/policies/modals/PolicyModal/constants.ts:171
+#: src/policies/modals/PolicyModal/constants.ts:185
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:85
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:90
+msgid "Timeout - After"
+msgstr "后置命令超时"
+
+#: src/policies/modals/PolicyModal/constants.ts:164
+#: src/policies/modals/PolicyModal/constants.ts:178
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:44
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:48
+msgid "Timeout - Before"
+msgstr "前置命令超时"
+
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:45
+#: src/policies/modals/PolicyModal/tabs/FolderActionsTab.tsx:86
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:49
+#: src/policies/modals/PolicyModal/tabs/SnapshotActionsTab.tsx:91
+msgid "Timeout in seconds before Kopia kills the process"
+msgstr "Kopia 终止进程前的超时时间（秒）"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:119
+msgid "Times of upcoming snapshots calculated based on policy parameters"
+msgstr "根据策略参数计算的后续快照时间"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:128
+msgid "Timestamp"
+msgstr "时间戳"
+
+#: src/preferences/modals/EmailModal.tsx:249
+msgctxt "email-to"
+msgid "To"
+msgstr "收件人"
+
+#: src/repo/sections/KopiaRepoTokenRepo.tsx:24
+#: src/repo/sections/KopiaRepoTokenRepo.tsx:43
+msgid "Token"
+msgstr "令牌"
+
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:22
+msgid "Treat directory read errors as non-fatal"
+msgstr "将目录读取错误视为非致命错误"
+
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:31
+msgid "Treat file errors as non-fatal"
+msgstr "将文件错误视为非致命错误"
+
+#: src/policies/modals/PolicyModal/tabs/ErrorHandlingTab.tsx:40
+msgid "Treat unrecognized/unsupported directory entries as non-fatal errors."
+msgstr "将无法识别或不支持的目录条目视为非致命错误。"
+
+#: src/repo/sections/KopiaRepoServerRepo.tsx:26
+#: src/repo/sections/KopiaRepoServerRepo.tsx:52
+msgid "Trusted server certificate fingerprint (SHA256)"
+msgstr "可信服务器证书指纹（SHA256）"
+
+#: src/snapshot-directory/components/BrowseMountedDirectory.tsx:25
+msgid "Unable to browse mounted directory"
+msgstr "无法浏览挂载目录"
+
+#: src/core/CLIEquivalent.tsx:66
+msgid "Unable to copy command"
+msgstr "无法复制命令"
+
+#: src/core/CLIEquivalent.tsx:35
+#: src/core/CLIEquivalent.tsx:42
+#: src/core/CLIEquivalent.tsx:50
+msgid "Unable to load CLI information"
+msgstr "无法加载命令行信息"
+
+#: src/preferences/modals/EmailModal.tsx:193
+#: src/preferences/modals/PushoverModal.tsx:111
+#: src/preferences/modals/WebhookModal.tsx:152
+msgid "Unique name for this notification profile"
+msgstr "此通知配置的唯一名称"
+
+#: src/core/context/AppContext.tsx:111
+#: src/core/context/LoginModal.tsx:44
+msgid "Unknown"
+msgstr "未知"
+
+#: src/repo/ConfigureRepoSection.tsx:115
+msgid "Unknown provider"
+msgstr "未知存储服务"
+
+#: src/snapshot-directory/components/MountButton.tsx:49
+#: src/snapshot-mounts/SnapshotMountsPage.tsx:93
+msgid "Unmount"
+msgstr "卸载"
+
+#: src/policies/modals/PolicyModal/tabs/SchedulingTab.tsx:118
+msgid "Upcoming Snapshots"
+msgstr "后续快照计划"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:130
+msgid "Update"
+msgstr "更新"
+
+#: src/snapshot-history/modals/UpdateDescriptionModal.tsx:50
+#: src/snapshot-history/SnapshotHistory.tsx:233
+msgid "Update description"
+msgstr "更新描述"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:70
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:81
+msgid "Update items"
+msgstr "更新条目"
+
+#: src/preferences/AppearanceSection.tsx:62
+msgid "Updated"
+msgstr "已更新"
+
+#: src/policies/components/PolicyFeatureBadge.tsx:84
+#: src/policies/modals/PolicyModal/PolicyModal.tsx:223
+msgid "Upload"
+msgstr "上传"
+
+#: src/snapshots/components/UploadingLoader.tsx:55
+msgid "Uploaded bytes"
+msgstr "已上传字节"
+
+#: src/tasks/components/TaskCounterGrid.tsx:49
+msgid "Uploaded Bytes"
+msgstr "已上传字节"
+
+#: src/snapshots/components/UploadingLoader.tsx:17
+msgid "Uploading"
+msgstr "上传中"
+
+#: src/preferences/modals/WebhookModal.tsx:173
+msgid "URL Endpoint"
+msgstr "URL 地址"
+
+#: src/repo/sections/AmazonS3Repo.tsx:44
+#: src/repo/sections/AmazonS3Repo.tsx:82
+msgid "Use HTTP connection (insecure)"
+msgstr "使用 HTTP 连接（不安全）"
+
+#: src/repo/repoConstants.ts:79
+#: src/repo/sections/KopiaRepoTokenRepo.tsx:32
+msgid "Use Repository Token"
+msgstr "使用仓库令牌"
+
+#: src/repo/ConnectRepoSection.tsx:107
+#: src/repo/CreateRepoSection.tsx:122
+msgid "Used to encrypt content of the repository"
+msgstr "用于加密仓库内容"
+
+#: src/repo/sections/SFTPServerRepo.tsx:55
+#: src/repo/sections/SFTPServerRepo.tsx:176
+msgid "User"
+msgstr "用户"
+
+#: src/core/context/LoginModal.tsx:60
+#: src/core/context/LoginModal.tsx:62
+#: src/i18n.ts:18
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:39
+#: src/policies/PoliciesPage.tsx:190
+#: src/repo/ConnectRepoSection.tsx:138
+#: src/repo/CreateRepoSection.tsx:203
+#: src/repo/sections/SFTPServerRepo.tsx:177
+#: src/repo/sections/WebDavRepo.tsx:28
+#: src/repo/sections/WebDavRepo.tsx:55
+#: src/repo/sections/WebDavRepo.tsx:55
+msgid "Username"
+msgstr "用户名"
+
+#: src/preferences/modals/EmailModal.tsx:151
+#: src/preferences/modals/EmailModal.tsx:165
+#: src/preferences/modals/WebhookModal.tsx:125
+msgid "Value"
+msgstr "值"
+
+#: src/policies/modals/PolicyModal/components/PolicyEffectiveLabel.tsx:27
+msgid "Value defined in policy"
+msgstr "策略中定义的值"
+
+#: src/policies/modals/PolicyListModal/PolicyListModal.tsx:24
+#: src/policies/modals/PolicyTodModal/PolicyTodModal.tsx:26
+msgid "Value is required"
+msgstr "请填写值"
+
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:81
+msgid "Value is too short"
+msgstr "内容太短"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:23
+#: src/preferences/modals/EmailModal.tsx:203
+#: src/preferences/modals/PushoverModal.tsx:121
+#: src/preferences/modals/WebhookModal.tsx:162
+msgid "Verbose"
+msgstr "详细"
+
+#: src/snapshots/SnapshotsPage.tsx:346
+msgid "View Policy"
+msgstr "查看策略"
+
+#: src/preferences/components/NotificationSeverityDisplay.tsx:50
+#: src/preferences/modals/EmailModal.tsx:206
+#: src/preferences/modals/PushoverModal.tsx:124
+#: src/preferences/modals/WebhookModal.tsx:165
+msgid "Warning"
+msgstr "警告"
+
+#: src/repo/repoConstants.ts:67
+#: src/repo/sections/WebDavRepo.tsx:37
+msgid "WebDAV Server"
+msgstr "WebDAV 服务器"
+
+#: src/repo/sections/WebDavRepo.tsx:27
+#: src/repo/sections/WebDavRepo.tsx:49
+msgid "WebDAV Server URL"
+msgstr "WebDAV 服务器 URL"
+
+#: src/preferences/NotificationsSection.tsx:78
+msgid "Webhook"
+msgstr "Webhook"
+
+#: src/preferences/modals/WebhookModal.tsx:153
+msgid "webhook-1"
+msgstr "webhook-1"
+
+#: src/policies/modals/PolicyModal/constants.ts:110
+#: src/policies/modals/PolicyModal/tabs/SnapshotRetentionTab.tsx:52
+#: src/snapshot-history/components/RetentionBadge.tsx:13
+msgid "Weekly"
+msgstr "每周"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:170
+msgid "When a restore error occurs, attempt to continue instead of failing fast"
+msgstr "恢复发生错误时尝试继续，而不是立即停止"
+
+#: src/preferences/StatisticsSection.tsx:19
+msgid "When enabled, will show snapshot statistics"
+msgstr "启用后显示快照统计"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:42
+msgid "When set, ignore rules from the parent directory are ignored"
+msgstr "启用后不继承父目录的忽略规则"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:77
+msgid "When set, the files larger than the specified size are ignored (specified in bytes)"
+msgstr "启用后忽略大于指定大小的文件（单位：字节）"
+
+#: src/policies/modals/PolicyModal/tabs/FilesTab.tsx:59
+msgid "When set, the files specifying ignore rules (.kopiaignore, etc.) from the parent directory are ignored"
+msgstr "启用后不继承父目录的忽略规则文件（如 .kopiaignore）"
+
+#: src/snapshot-history/modals/DeleteSnapshotModal.tsx:68
+msgid "Wipe all snapshots and the policy for this source"
+msgstr "删除此来源的全部快照和策略"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:237
+msgid "Write files atomically"
+msgstr "以原子方式写入文件"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:244
+msgid "Write Sparse Files"
+msgstr "写入稀疏文件"
+
+#: src/policies/modals/PolicyModal/components/InheritYesNoPolicyControl.tsx:49
+#: src/repo/ConnectedRepoSection/ConnectedRepoSection.tsx:204
+msgid "Yes"
+msgstr "是"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:149
+msgid "You can also restore to a .zip or .tar file by providing the appropriate extension"
+msgstr "指定对应扩展名也可以恢复为 .zip 或 .tar 文件"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:138
+msgid "Zip File"
+msgstr "ZIP 文件"
+
+#: src/snapshot-directory/modals/RestoreModal.tsx:254
+msgid "Zip options"
+msgstr "ZIP 选项"

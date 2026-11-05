@@ -11,7 +11,12 @@ import {
 } from "electron";
 import pkg from "electron-updater";
 const autoUpdater = pkg.autoUpdater;
-import { iconsPath, publicPath, selectByOS } from "./utils.js";
+import {
+  defaultServerBinary,
+  iconsPath,
+  publicPath,
+  selectByOS,
+} from "./utils.js";
 import {
   toggleLaunchAtStartup,
   willLaunchAtStartup,
@@ -30,7 +35,6 @@ import {
   deleteConfigIfDisconnected,
   addNewConfig,
   configDir,
-  isFirstRun,
   isPortableConfig,
 } from "./config.js";
 
@@ -38,6 +42,8 @@ import Store from "electron-store";
 import log from "electron-log";
 import path from "path";
 import crypto from "crypto";
+import { registerPathDialogs } from "./path-dialogs.js";
+import { registerUpdateAndShutdown } from "./update-and-shutdown.js";
 
 // Store to save parameters
 const store = new Store();
@@ -93,12 +99,17 @@ function getDisplayConfiguration() {
 function showRepoWindow(repositoryID) {
   let primaryScreenBounds = screen.getPrimaryDisplay().bounds;
   if (repositoryWindows[repositoryID]) {
-    repositoryWindows[repositoryID].focus();
+    const window = repositoryWindows[repositoryID];
+    if (window.isMinimized()) {
+      window.restore();
+    }
+    window.show();
+    window.focus();
     return;
   }
 
   let windowOptions = {
-    title: "KopiaUI is Loading...",
+    title: "KopiaUI 正在加载...",
     // default width
     width: 1000,
     // default height
@@ -133,6 +144,23 @@ function showRepoWindow(repositoryID) {
   const webContentsID = repositoryWindow.webContents.id;
   repositoryWindows[repositoryID] = repositoryWindow;
   repoIDForWebContents[webContentsID] = repositoryID;
+
+  const repositorySession = repositoryWindow.webContents.session;
+  const onDownload = (_event, item, webContents) => {
+    if (webContents?.id === webContentsID) {
+      item.setSaveDialogOptions({ title: "保存下载文件", buttonLabel: "保存" });
+      item.once("done", (_event, state) => {
+        if (state === "interrupted") {
+          log.error("file download interrupted", item.getFilename());
+          dialog.showErrorBox("下载失败", "文件下载中断，请重试。");
+        }
+      });
+    }
+  };
+  repositorySession.on("will-download", onDownload);
+  repositoryWindow.once("closed", () => {
+    repositorySession.removeListener("will-download", onDownload);
+  });
 
   // Failed to load the content, retry
   repositoryWindow.webContents.on("did-fail-load", () => {
@@ -195,14 +223,7 @@ if (!app.requestSingleInstanceLock()) {
   app.quit();
 } else {
   app.on("second-instance", (_event, _commandLine, _workingDirectory) => {
-    // Someone tried to run a second instance, we should focus our window.
-    for (let repositoryID in repositoryWindows) {
-      let rw = repositoryWindows[repositoryID];
-      if (rw.isMinimized()) {
-        rw.restore();
-      }
-      rw.focus();
-    }
+    showAllRepoWindows();
   });
 }
 
@@ -254,20 +275,51 @@ app.on(
  */
 app.on("window-all-closed", function () {});
 
-ipcMain.handle("select-dir", async (_event, _arg) => {
-  const result = await dialog.showOpenDialog({
-    properties: ["openDirectory"],
-  });
-
-  if (result.filePaths) {
-    return result.filePaths[0];
-  } else {
+function repositoryForEvent(event) {
+  const repositoryID = repoIDForWebContents[event.sender.id];
+  const window = repositoryWindows[repositoryID];
+  const address = window && serverForRepo(repositoryID).getServerAddress();
+  if (
+    !window ||
+    !address ||
+    event.senderFrame !== event.sender.mainFrame ||
+    new URL(event.senderFrame.url).origin !== new URL(address).origin
+  ) {
     return null;
   }
+  return { id: repositoryID, window };
+}
+
+registerPathDialogs({
+  ipcMain,
+  dialog,
+  getWindow(event) {
+    return repositoryForEvent(event)?.window;
+  },
+});
+
+registerUpdateAndShutdown({
+  ipcMain,
+  dialog,
+  getRepository: repositoryForEvent,
+  getSources: (id) => serverForRepo(id).getSources(),
+  getSnapshotCommand(id) {
+    const args = ["--config-file", path.resolve(configDir(), id + ".config")];
+    if (isPortableConfig()) {
+      args.push(
+        "--cache-directory",
+        path.resolve(configDir(), "cache", id),
+        "--log-dir",
+        path.resolve(configDir(), "logs", id),
+      );
+    }
+    return [defaultServerBinary(), args];
+  },
+  log,
 });
 
 ipcMain.handle("browse-dir", async (_event, path) => {
-  shell.openPath(path);
+  return shell.openPath(path);
 });
 
 ipcMain.on("server-status-updated", updateTrayContextMenu);
@@ -300,11 +352,8 @@ autoUpdater.on("update-available", (a) => {
   if (checkForUpdatesTriggeredFromUI) {
     dialog
       .showMessageBox({
-        buttons: ["Yes", "No"],
-        message:
-          "An updated KopiaUI v" +
-          a.version +
-          " is available.\n\nDo you want to install it now?",
+        buttons: ["是", "否"],
+        message: "KopiaUI 有可用更新 v" + a.version + "。\n\n现在安装吗？",
       })
       .then((r) => {
         if (r.response == 0) {
@@ -318,11 +367,8 @@ autoUpdater.on("update-available", (a) => {
     lastNotifiedVersion = a.version;
 
     const notification = new Notification({
-      title: "New version of KopiaUI",
-      body:
-        "Version v" +
-        a.version +
-        " is available.\n\nClick here to download and install it.",
+      title: "KopiaUI 有新版本",
+      body: "版本 v" + a.version + " 已发布。\n\n点击此处下载并安装。",
     });
 
     notification.on("click", () => installUpdate());
@@ -337,8 +383,8 @@ autoUpdater.on("update-not-available", () => {
   updateTrayContextMenu();
   if (checkForUpdatesTriggeredFromUI) {
     dialog.showMessageBox({
-      buttons: ["OK"],
-      message: "No updates available.",
+      buttons: ["确定"],
+      message: "当前没有可用更新。",
     });
     checkForUpdatesTriggeredFromUI = false;
   }
@@ -347,7 +393,7 @@ autoUpdater.on("update-not-available", () => {
 autoUpdater.on("download-progress", (progress) => {
   if (updateAvailableInfo) {
     updateDownloadStatusInfo =
-      "Downloading Update: v" +
+      "正在下载更新：v" +
       updateAvailableInfo.version +
       " (" +
       Math.round(progress.percent * 10) / 10.0 +
@@ -358,7 +404,7 @@ autoUpdater.on("download-progress", (progress) => {
 
 autoUpdater.on("update-downloaded", (_info) => {
   updateDownloadStatusInfo =
-    "Installing Update: v" + updateAvailableInfo.version + " ...";
+    "正在安装更新：v" + updateAvailableInfo.version + " ...";
   updateTrayContextMenu();
 
   setTimeout(() => {
@@ -376,20 +422,17 @@ autoUpdater.on("update-downloaded", (_info) => {
 
 autoUpdater.on("error", (a) => {
   updateAvailableInfo = null;
-  updateDownloadStatusInfo = "Error checking for updates.";
+  updateDownloadStatusInfo = "检查更新时出错。";
   log.info("error checking for updates", a);
   updateTrayContextMenu();
   if (checkForUpdatesTriggeredFromUI) {
-    dialog.showErrorBox(
-      "Error checking for updates.",
-      "There was an error checking for updates, try again later.",
-    );
+    dialog.showErrorBox("检查更新时出错。", "检查更新时发生错误，请稍后重试。");
     checkForUpdatesTriggeredFromUI = false;
   }
 });
 
 function checkForUpdates() {
-  updateDownloadStatusInfo = "Checking for update...";
+  updateDownloadStatusInfo = "正在检查更新...";
   updateAvailableInfo = null;
   updateTrayContextMenu();
 
@@ -402,7 +445,7 @@ function checkForUpdatesNow() {
 }
 
 function installUpdate() {
-  updateDownloadStatusInfo = "Downloading and installing update...";
+  updateDownloadStatusInfo = "正在下载并安装更新...";
   autoUpdater.downloadUpdate();
 }
 
@@ -438,9 +481,9 @@ function maybeMoveToApplicationsFolder() {
 
   dialog
     .showMessageBox({
-      buttons: ["Yes", "No"],
+      buttons: ["是", "否"],
       message:
-        "For best experience, Kopia needs to be installed in Applications folder.\n\nDo you want to move it now?",
+        "为获得最佳体验，请将 Kopia 安装到“应用程序”文件夹。\n\n现在移动吗？",
     })
     .then((r) => {
       if (r.response == 0) {
@@ -532,18 +575,7 @@ app.on("ready", () => {
 
   allConfigs().forEach((repoID) => serverForRepo(repoID).actuateServer());
 
-  if (isFirstRun()) {
-    // open all repo windows on first run.
-    showAllRepoWindows();
-
-    // on Windows, also show the notification.
-    if (process.platform === "win32") {
-      tray.displayBalloon({
-        title: "Kopia is running in the background",
-        content: "Click on the system tray icon to open the menu",
-      });
-    }
-  }
+  showAllRepoWindows();
 
   if (isOutsideOfApplicationsFolderOnMac()) {
     setTimeout(maybeMoveToApplicationsFolder, 1000);
@@ -611,12 +643,12 @@ function updateTrayContextMenu() {
     let desc = "";
 
     if (sd.startingUp) {
-      desc = "<starting up>";
+      desc = "<正在启动>";
     } else if (!sd.connected) {
       if (sd.initTaskID) {
-        desc = "<initializing>";
+        desc = "<正在初始化>";
       } else {
-        desc = "<not connected>";
+        desc = "<未连接>";
       }
     } else {
       desc = sd.description;
@@ -649,24 +681,22 @@ function updateTrayContextMenu() {
   } else if (updateAvailableInfo) {
     if (updateFailed) {
       autoUpdateMenuItems.push({
-        label:
-          "Update Failed, click to manually download and install v" +
-          updateAvailableInfo.version,
+        label: "更新失败，点击手动下载并安装 v" + updateAvailableInfo.version,
         click: viewReleaseNotes,
       });
     } else {
       autoUpdateMenuItems.push({
-        label: "Update Available: v" + updateAvailableInfo.version,
+        label: "有可用更新：v" + updateAvailableInfo.version,
         click: viewReleaseNotes,
       });
       autoUpdateMenuItems.push({
-        label: "Download And Install...",
+        label: "下载并安装...",
         click: installUpdate,
       });
     }
   } else {
     autoUpdateMenuItems.push({
-      label: "KopiaUI is up-to-date: " + app.getVersion(),
+      label: "KopiaUI 已是最新版本：" + app.getVersion(),
       enabled: false,
     });
   }
@@ -678,46 +708,46 @@ function updateTrayContextMenu() {
     .concat([
       { type: "separator" },
       {
-        label: "Connect To Another Repository...",
+        label: "连接到其他存储库...",
         click: addAnotherRepository,
       },
       { type: "separator" },
-      { label: "Check For Updates Now", click: checkForUpdatesNow },
+      { label: "立即检查更新", click: checkForUpdatesNow },
     ])
     .concat(autoUpdateMenuItems)
     .concat([
       { type: "separator" },
       {
-        label: "Launch At Startup",
+        label: "开机启动",
         type: "checkbox",
         click: toggleLaunchAtStartup,
         checked: willLaunchAtStartup(),
       },
       {
-        label: "Notifications",
+        label: "通知",
         type: "submenu",
         submenu: [
           {
-            label: "Enabled",
+            label: "已启用",
             type: "radio",
             click: () => setNotificationLevel(2),
             checked: nl === 2,
           },
           {
-            label: "Warnings And Errors",
+            label: "警告和错误",
             type: "radio",
             click: () => setNotificationLevel(1),
             checked: nl === 1,
           },
           {
-            label: "Disabled",
+            label: "已禁用",
             type: "radio",
             click: () => setNotificationLevel(0),
             checked: nl === 0,
           },
         ],
       },
-      { label: "Quit", role: "quit" },
+      { label: "退出", role: "quit" },
     ]);
   tray.setContextMenu(Menu.buildFromTemplate(template));
 }

@@ -247,6 +247,57 @@ function newServerForRepo(repoID) {
       return runningServerAddress;
     },
 
+    async getSources() {
+      if (this.getServerStatus() !== "Running") {
+        throw new Error("仓库服务器尚未就绪");
+      }
+      return new Promise((resolve, reject) => {
+        const req = https.request(
+          new URL("/api/v1/sources", runningServerAddress),
+          {
+            ca: [runningServerCertificate],
+            auth: `kopia:${runningServerPassword}`,
+            timeout: 30000,
+          },
+          (resp) => {
+            let body = "";
+            resp.setEncoding("utf8");
+            resp.on("data", (data) => {
+              body += data;
+              if (body.length > 16 * 1024 * 1024) {
+                req.destroy(new Error("仓库备份源响应过大"));
+              }
+            });
+            resp.on("error", reject);
+            resp.on("end", () => {
+              if (resp.statusCode !== 200) {
+                reject(
+                  new Error(`读取仓库备份源失败 (${resp.statusCode}): ${body}`),
+                );
+                return;
+              }
+              try {
+                const sources = JSON.parse(body);
+                if (
+                  !Array.isArray(sources.sources) ||
+                  typeof sources.localHost !== "string" ||
+                  typeof sources.localUsername !== "string"
+                ) {
+                  throw new Error("仓库备份源响应无效");
+                }
+                resolve(sources);
+              } catch (error) {
+                reject(error);
+              }
+            });
+          },
+        );
+        req.on("timeout", () => req.destroy(new Error("读取仓库备份源超时")));
+        req.on("error", reject);
+        req.end();
+      });
+    },
+
     getServerCertSHA256() {
       return runningServerCertSHA256;
     },

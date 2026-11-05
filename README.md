@@ -67,6 +67,13 @@ Building Kopia
 ---
 See [Build Infrastructure](BUILD.md) for more information on building Kopia and working with the source code.
 
+This fork includes its customized React UI in [htmlui](htmlui/README.md) and the
+Electron shell in [app](app/). To build all three from one checkout, install Node
+dependencies in both directories and run `.\tools\build-local-ui.ps1` from the root.
+See [the bundled UI build instructions](BUILD.md#bundled-custom-ui). The backend
+retains Kopia's upstream history for future merges; the custom UI is maintained
+independently in this repository.
+
 Contribution Guidelines
 ---
 Kopia is open source. For more information see the [Contribution Guidelines](https://kopia.io/docs/contribution-guidelines/).

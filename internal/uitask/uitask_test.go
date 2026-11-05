@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"context"
 	"encoding/json"
+	"fmt"
 	"strings"
 	"testing"
 	"time"
@@ -85,8 +86,8 @@ func testUITaskInternal(t *testing.T, ctx context.Context, m *uitask.Manager) {
 		log(ctx).Info("www")
 		log(ctx).Error("eee")
 
-		// 'first' has aged out
 		verifyTaskLog(t, m, tid1a, []string{
+			"first",
 			"iii",
 			"www",
 			"eee",
@@ -156,6 +157,7 @@ func testUITaskInternal(t *testing.T, ctx context.Context, m *uitask.Manager) {
 
 	// task log still available after task finished.
 	verifyTaskLog(t, m, tid1, []string{
+		"first",
 		"iii",
 		"www",
 		"eee",
@@ -226,6 +228,64 @@ func testUITaskInternal(t *testing.T, ctx context.Context, m *uitask.Manager) {
 	}); diff != "" {
 		t.Fatalf("unexpected summary: %v", diff)
 	}
+}
+
+func TestUITask_retainsErrorsAndRecentLogs(t *testing.T) {
+	const logCount = 2050
+
+	for _, limit := range []int{0, 3, 100} {
+		t.Run(fmt.Sprintf("limit-%v", limit), func(t *testing.T) {
+			m := uitask.NewManager(false)
+			m.MaxLogMessagesPerTask = limit
+
+			var taskID string
+			var want []string
+
+			require.NoError(t, m.Run(context.Background(), "Snapshot", "retention", func(ctx context.Context, ctrl uitask.Controller) error {
+				taskID = ctrl.CurrentTaskID()
+				ignoredLog(ctx).Error("format failure")
+				want = append(want, "format failure")
+				for i := range logCount {
+					if i%2 == 0 {
+						message := fmt.Sprintf("error %v\n%s", i, strings.Repeat("full detail ", 200))
+						log(ctx).Error(message)
+						want = append(want, message)
+					}
+
+					message := fmt.Sprintf("success %v", i)
+					log(ctx).Info(message)
+					if i >= logCount-limit {
+						want = append(want, message)
+					}
+				}
+
+				verifyTaskLog(t, m, taskID, want)
+				return nil
+			}))
+			verifyTaskLog(t, m, taskID, want)
+		})
+	}
+}
+
+func TestUITask_retainsErrorsAfterFailure(t *testing.T) {
+	m := uitask.NewManager(false)
+	require.Equal(t, 100, m.MaxLogMessagesPerTask)
+	m.MaxLogMessagesPerTask = 1
+	failure := errors.New("first line\nfull error detail\nlast line")
+	var taskID string
+
+	err := m.Run(context.Background(), "Snapshot", "failed", func(ctx context.Context, ctrl uitask.Controller) error {
+		taskID = ctrl.CurrentTaskID()
+		log(ctx).Error(failure.Error())
+		log(ctx).Info("old")
+		log(ctx).Info("latest")
+		return failure
+	})
+	require.ErrorIs(t, err, failure)
+	info, ok := m.GetTask(taskID)
+	require.True(t, ok)
+	require.Equal(t, failure.Error(), info.ErrorMessage)
+	verifyTaskLog(t, m, taskID, []string{failure.Error(), "latest"})
 }
 
 func verifyTaskList(t *testing.T, m *uitask.Manager, wantStatuses map[string]uitask.Status) {

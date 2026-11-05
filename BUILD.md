@@ -77,6 +77,74 @@ go run . server start --insecure --without-password --html=../htmlui/build
 
 ## KopiaUI App
 
+### Bundled custom UI
+
+The local `tools/localhtmlui.work` workspace replaces `github.com/kopia/htmluibuild`
+with the React project in `htmlui/`. The root repository retains the upstream
+Kopia Git history; the custom UI is maintained here without importing UI upstream
+updates. No sibling checkout or Git submodule is required.
+
+Install dependencies once after cloning:
+
+```powershell
+Push-Location htmlui
+npm ci
+Pop-Location
+Push-Location app
+npm ci
+Pop-Location
+```
+
+Build the custom UI, embedded Go binary, and Electron package from the root:
+
+```powershell
+& .\tools\build-local-ui.ps1
+# Build only the UI and Go binary:
+& .\tools\build-local-ui.ps1 -SkipElectron
+```
+
+The resulting binary serves the alternate UI without `--html`, keeps CSRF checks
+enabled, and is also used by the Electron packaging step. Assets in `htmlui/dist`
+are generated and are not committed. The script stops on build failure and restores
+the caller's directory and `GOWORK`. Existing upstream build targets remain available;
+plain `go build` without this workspace still uses the upstream prebuilt UI.
+With GNU Make, use `make install-with-local-htmlui-changes` or
+`make kopia-ui-with-local-htmlui-changes` after installing Node dependencies.
+
+For backend updates, commit local changes first, configure
+`git remote add upstream https://github.com/kopia/kopia.git` once, then run
+`git fetch upstream` and `git merge upstream/master`. Do not overwrite the custom
+UI directory with upstream UI sources. Resolve backend and build-file conflicts
+and rebuild the custom UI to verify API compatibility after updating.
+The imported UI's Apache-2.0 license remains in `htmlui/LICENSE`.
+
+Snapshot task logs retain the latest 100 non-error entries and all error entries
+until the task is evicted from the in-memory task history. Rebuild both the alternate
+UI and Kopia after changing log retention; rebuilding only the UI cannot recover
+errors discarded by an older server.
+
+Restore defaults are saved under **Preferences > Restore** in the server's UI
+preferences file. The restore dialog only asks for the format and destination.
+UI restores check the destination before creating a task or opening an output
+file. Existing non-empty directories and existing files (including ZIP/TAR)
+require **Replace all** or **Cancel**, regardless of the overwrite defaults.
+Replace all merges directories, overwrites matching files and symlinks, and
+disables incremental skipping for that restore; unrelated files are retained.
+Cancel starts no task and writes nothing. Rebuild the UI and Kopia together.
+KopiaUI opens repository windows on every launch, not only on its first run;
+closing the windows still leaves the application running in the tray.
+
+The desktop repository page provides **Update and shut down** before **Disconnect**.
+After native confirmation it snapshots every source belonging to the connected
+repository's local user and host, including manual sources, using that repository's
+configuration. Updates run sequentially through the bundled CLI and are recorded
+in the CLI logs, not the server task list. Failed commands, incomplete snapshots,
+ignored errors, and active server backups prevent shutdown. Identical snapshots
+may be skipped according to retention policy. Windows, macOS, and Linux schedule
+shutdown in 60 seconds without forcing applications closed; the OS must grant
+shutdown permission. Browser-only and multi-server pages do not offer this action.
+Rebuild the alternate UI, Kopia binary, and Electron package together.
+
 KopiaUI is built using [Electron](https://electronjs.org) and packaged as native binary using [Electron Builder](https://electron.build). The app is just a shell that invokes `kopia server --ui` and connects the browser to it, plus it provides native system tray integration. Kopia executable is embedded as a resource inside KopiaUI app, to simplify usage.
 
 To build the app:
@@ -99,15 +167,8 @@ $ make -C app dev
 
 >NOTE: this also opens the browser window due to CRA development server, but it can be safely disregarded. Because KopiaUI configuration pages are built using CRA, they also benefit from hot-reload while developing this way.
 
-To build KopiaUI with uncommitted changes to `htmlui`, you need to have three repositories checked out side-by-side:
-
-```
-$ git clone https://github.com/kopia/kopia
-$ git clone https://github.com/kopia/htmlui
-$ git clone https://github.com/kopia/htmluibuild
-```
-
-Then in `kopia` repository run:
+To build KopiaUI using the bundled custom UI, install dependencies in `htmlui`
+and `app`, then run from this repository:
 
 ```
 $ make kopia-ui-with-local-htmlui-changes
@@ -132,4 +193,3 @@ $ make -C site server
 ```
 
 This starts a server on http://localhost:1313 where the website can be browsed.
-
